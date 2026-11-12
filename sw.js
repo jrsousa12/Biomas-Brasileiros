@@ -1,5 +1,5 @@
 /* Service worker: guarda o app no aparelho para funcionar offline.
-   Ao alterar qualquer arquivo do app, aumente a versão abaixo. */
+   A versão abaixo é trocada automaticamente na publicação (GitHub Actions). */
 const CACHE = "biomas-v1";
 const FILES = [
   "./",
