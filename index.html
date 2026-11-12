@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0f5132">
 <title>Trilhas dos Biomas Brasileiros – 7º ano</title>
+<meta name="description" content="Trilhas, quizzes e desafios sobre os biomas brasileiros – Ciências, 7º ano.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Biomas">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{--bg:#f3f7f2;--ink:#1d2b21;--mut:#5c6b60;--card:#fff;--c1:#1b8a4b;--c2:#0d5c33;--ok:#1e9e5a;--bad:#d64545;--gold:#f2b705}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -94,6 +103,9 @@ pre.code{background:#f0f4ef;border-radius:12px;padding:10px;font-size:13px;white
  #certArea,#certArea *{visibility:visible}
  #certArea{position:absolute;left:0;top:0;width:100%}
 }
+#installBtn{position:fixed;right:14px;bottom:calc(76px + env(safe-area-inset-bottom));z-index:20;border:0;border-radius:999px;padding:10px 16px;background:var(--gold);color:#1d2b21;font:inherit;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer}
+#installBtn[hidden]{display:none}
+@media print{#installBtn{display:none!important}}
 </style>
 </head>
 <body>
@@ -545,6 +557,23 @@ function vCert(){
 /* ============ INÍCIO ============ */
 view=S.name?"home":"name";
 render();
+</script>
+<button id="installBtn" hidden>📲 Instalar app</button>
+<script>
+/* ============ APP INSTALÁVEL (PWA) ============ */
+(function(){
+ if("serviceWorker" in navigator && location.protocol!=="file:"){
+  window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
+ }
+ var btn=document.getElementById("installBtn"),deferred=null;
+ window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferred=e;btn.hidden=false});
+ btn.addEventListener("click",function(){
+  if(!deferred)return;
+  deferred.prompt();
+  deferred.userChoice.finally(function(){deferred=null;btn.hidden=true});
+ });
+ window.addEventListener("appinstalled",function(){btn.hidden=true});
+})();
 </script>
 </body>
 </html>
