@@ -4,12 +4,25 @@ Este projeto prioriza a economia de contexto e tokens. Toda interação deve seg
 
 ## 0. Contexto do Projeto
 
-- **Stack**: [preencha: ex. Node.js + TypeScript, Python + FastAPI]
+- **Stack**: HTML + CSS + JavaScript puro, sem framework e sem dependências. App instalável (PWA) que funciona offline.
+- **Estrutura**:
+  - `index.html`: esqueleto da página e ordem de carregamento dos scripts.
+  - `css/app.css`: todo o visual.
+  - `js/dados/`: conteúdo (biomas, mitos, fontes).
+  - `js/`: estado, navegação, quiz, início (`main.js`) e instalação (`pwa.js`); `js/telas/`: telas do app.
+  - `sw.js` (cache offline), `manifest.webmanifest`, `icons/`.
 - **Comandos úteis**:
-  - Build: `[preencha]`
-  - Testes: `[preencha]`
-  - Lint: `[preencha]`
-- **Convenções**: [preencha: ex. camelCase, testes com Jest, etc.]
+  - Rodar local: `python3 -m http.server 8000` → abrir `http://localhost:8000`
+  - Build: não há (o deploy copia os arquivos)
+  - Testes: não há testes automatizados
+  - Lint: não há
+- **Deploy**: automático no GitHub Pages a cada push na `main` (`.github/workflows/pages.yml`).
+- **Convenções**:
+  - Textos da interface em português (pt-BR), público do 7º ano.
+  - Scripts comuns (não ES modules) com funções globais, chamadas por `onclick`; a ordem dos `<script>` no `index.html` importa.
+  - Não editar a versão `CACHE` em `sw.js`: o deploy troca sozinho.
+  - Arquivo novo do app → incluir na lista `FILES` do `sw.js` (e em `pages.yml` se estiver fora de `css/`, `js/` e `icons/`), senão não é publicado nem fica offline.
+  - Progresso do aluno fica no `localStorage` (chave `biomas7_v1`): mudar a estrutura apaga o progresso salvo.
 
 > Mantenha esta seção curta. Regras específicas de domínio vão nos `CLAUDE.md` dos subdiretórios.
 
@@ -32,7 +45,7 @@ Este projeto prioriza a economia de contexto e tokens. Toda interação deve seg
 ## 3. Estratégia de Edição e Leitura de Código
 
 - **Prefira Edições Cirúrgicas**: Sempre que possível, edite o arquivo existente usando as ferramentas de edição de linha, em vez de reescrevê-lo por completo. Isso evita a geração de tokens desnecessários.
-- **Leitura Sob Demanda**: Não leia arquivos inteiros de forma indiscriminada. Use `@nome_do_arquivo` para anexar apenas os arquivos diretamente relevantes para a tarefa atual. Evite varrer o projeto em busca de contexto que não será usado.
+- **Leitura Sob Demanda**: Não leia arquivos inteiros de forma indiscriminada. Leia apenas os arquivos (ou trechos) diretamente relevantes para a tarefa atual; o usuário pode anexá-los com `@nome_do_arquivo`. Evite varrer o projeto em busca de contexto que não será usado.
 - **Plano Antes do Código**: Para tarefas complexas, descreva o plano em passos lógicos (ou um diagrama simples) e valide com o usuário antes de tocar nos arquivos. Isso reduz drasticamente o consumo de tokens em retrabalho.
 
 ## 4. Higiene de Comandos e Saída de Terminal
@@ -42,7 +55,7 @@ Este projeto prioriza a economia de contexto e tokens. Toda interação deve seg
 
 ## 5. Protocolo de Sessão (Lembretes)
 
-- **Troca de Tarefa**: Se o usuário solicitar uma tarefa completamente não relacionada à anterior, lembre-o (ou execute proativamente) o comando `/clear` para zerar o contexto e economizar cota.
+- **Troca de Tarefa**: Se o usuário solicitar uma tarefa completamente não relacionada à anterior, lembre-o de usar o comando `/clear` (só o usuário pode executá-lo) para zerar o contexto e economizar cota.
 - **Tarefa Longa (Mesmo Assunto)**: Se a conversa sobre uma mesma tarefa estiver muito longa, sugira o uso de `/compact` com um direcionamento (ex: `/compact mantenha as decisões de arquitetura e os arquivos alterados`).
 
 ## 6. Protocolo de Monitoramento de Contexto (Vigia)
