@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html manifest.webmanifest sw.js _site/
-          cp -r icons _site/
+          cp -r icons css js _site/
           VERSAO="biomas-${GITHUB_SHA::8}"
           sed -i -E "s/const CACHE = \"[^\"]*\";/const CACHE = \"${VERSAO}\";/" _site/sw.js
           grep -q "const CACHE = \"${VERSAO}\";" _site/sw.js
