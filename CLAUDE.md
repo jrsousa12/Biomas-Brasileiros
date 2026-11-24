@@ -28,6 +28,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - Saída de comandos: silenciosa/filtrada (`-q`, `| grep`); após mudanças, rodar `node tests/smoke.js`.
 
 ## Sessão
+- Responder ao usuário sempre em português (pt-BR).
 - Avisar em uma frase quando: arquivo passa do limite; conversa longa e repetitiva; releitura desnecessária.
 - Mesma tarefa, conversa longa → sugerir `/compact <o que manter>`.
 - Tarefa concluída ou assunto novo → lembrar o usuário de usar `/clear` (só ele executa).
