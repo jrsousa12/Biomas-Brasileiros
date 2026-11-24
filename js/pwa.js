@@ -1,5 +1,7 @@
 /* ============ APP INSTALÁVEL (PWA) ============ */
 (function(){
+ /* pede ao navegador para não apagar o progresso quando faltar espaço */
+ if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(function(){});
  if("serviceWorker" in navigator && location.protocol!=="file:"){
   window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
  }
