@@ -2,7 +2,7 @@
 "use strict";
 const { norm } = require("./lib");
 
-const STATUS = ["", "Vulnerável", "Em perigo", "Criticamente em perigo"];
+const STATUS = ["", "Vulnerável", "Em perigo", "Criticamente em perigo", "Extinta na natureza"];
 const txt = (v) => typeof v === "string" && v.trim() !== "";
 const frases = (s) => (String(s).match(/[.!?](\s|$)/g) || []).length;
 const palavras = (s) => String(s).trim().split(/\s+/).length;

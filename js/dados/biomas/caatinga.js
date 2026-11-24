@@ -34,5 +34,9 @@ BIOMES.push(
   {n:"Tatu-bola",e:"🦔",st:"Em Perigo",f:"Se enrola em forma de bola para se proteger."},
   {n:"Guigó-da-caatinga",e:"🐒",st:"Em Perigo",f:"Primata pequeno que vive na Caatinga."},
   {n:"Arara-azul-de-lear",e:"🦜",st:"Vulnerável",f:"Sua situação melhorou nos últimos anos."},
-  {n:"Soldadinho-do-araripe",e:"🐦",st:"Em Perigo",f:"Pequena ave de cabeça vermelha da Chapada do Araripe."}]}
+  {n:"Soldadinho-do-araripe",e:"🐦",st:"Em Perigo",f:"Pequena ave de cabeça vermelha da Chapada do Araripe."},
+  {n:"Ararinha-azul",e:"🦜",st:"Extinta na natureza",f:"Sumiu da natureza e voltou a ser solta no sertão baiano em 2022."},
+  {n:"Jacucaca",e:"🐦",st:"Vulnerável",f:"Ave terrestre endêmica que procura frutos e sementes no chão."},
+  {n:"Zabelê",e:"🐦",st:"Vulnerável",f:"Ave terrestre das matas secas, conhecida por seu canto."},
+  {n:"Arapaçu-do-nordeste",e:"🐦",st:"Vulnerável",f:"Procura insetos enquanto sobe pelos troncos das árvores."}]}
 );
