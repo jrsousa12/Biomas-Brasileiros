@@ -34,7 +34,7 @@ Bioma: <BIOMA>
 Conteúdo que já existe (não repita assuntos nem perguntas):
 <COLE AQUI A SAÍDA DE: node tools/contexto.js <bioma>>
 
-Crie 5 perguntas NOVAS: 3 do tipo "mc", 1 "tf" e 1 "order". Formatos exatos:
+Crie 15 perguntas NOVAS: 9 do tipo "mc", 3 "tf" e 3 "order". Uma pergunta por assunto, sem repetir assunto entre elas. Formatos exatos:
 
 {t:"mc",q:"Pergunta?",o:["opção 0","opção 1","opção 2","opção 3"],a:2,e:"Explicação curta do porquê."},
 {t:"tf",q:"Verdadeiro ou falso: afirmação.",a:true,e:"Verdadeiro. Explicação."},
@@ -42,7 +42,7 @@ Crie 5 perguntas NOVAS: 3 do tipo "mc", 1 "tf" e 1 "order". Formatos exatos:
 
 Detalhes:
 - mc: exatamente 4 opções. "a" é o índice da correta (0 a 3); varie a posição. Opções erradas plausíveis e de tamanho parecido com a certa.
-- tf: "a" é true ou false. Faça uma verdadeira ou uma falsa, sem padrão.
+- tf: "a" é true ou false. Misture verdadeiras e falsas, sem padrão.
 - order: 4 itens já na ORDEM CORRETA (o app embaralha). Bom para cadeias alimentares, etapas e sequências no tempo.
 - "e" com no máximo 2 frases; comece o tf com "Verdadeiro." ou "Falso.".
 - Temas variados: clima, solo, flora, fauna, água, povos e cultura, ameaças, conservação.
