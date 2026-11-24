@@ -4,7 +4,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 
 ## Projeto
 - HTML + CSS + JS puro, sem dependências. PWA instalável e offline. Público: 7º ano, textos em pt-BR.
-- `index.html` (esqueleto + ordem dos `<script>`), `css/app.css`, `js/` (estado, navegação, quiz, `main.js`, `pwa.js`), `js/telas/`, `js/dados/` (`biomas/<bioma>.js`, mitos, fontes), `sw.js`, `manifest.webmanifest`, `icons/`.
+- `index.html` (esqueleto + ordem dos `<script>`), `css/app.css`, `js/` (estado, navegação, quiz, `sessao.js` continuar de onde parou, `dialogo.js` confirmações, `voltar.js` botão voltar do celular, `main.js`, `pwa.js`), `js/telas/`, `js/dados/` (`biomas/<bioma>.js`, mitos, fontes), `sw.js`, `manifest.webmanifest`, `icons/`.
 - Rodar: `python3 -m http.server 8000`. Testar: `node tests/smoke.js` (imprime `OK` ou as falhas). Sem build/lint.
 - Deploy: automático no GitHub Pages a cada push na `main` (`.github/workflows/pages.yml`).
 
@@ -13,6 +13,8 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - Arquivo novo → incluir em `FILES` do `sw.js` (e no `pages.yml` se fora de `css/`, `js/`, `icons/`).
 - Não editar `CACHE` no `sw.js`: o deploy troca sozinho.
 - Progresso no `localStorage` (`biomas7_v1`): mudar a estrutura apaga o progresso dos alunos.
+- Lição/quiz em andamento em `biomas7_sessao` (12 h): `render()` grava, `endQuiz()` apaga. Tela nova com passos → tratar em `voltarUmPasso()` (`voltar.js`).
+- Confirmações com `dialogo({...})`, nunca `confirm()`/`alert()`.
 
 ## Tamanho de arquivo
 - Máx. 300 linhas ou ~10 KB por arquivo; ideal < 200 linhas.
