@@ -26,4 +26,5 @@ function render(){
  else if(view==="cert")h=vCert();
  document.getElementById("app").innerHTML=h;
  renderNav();
+ sessSave();
 }

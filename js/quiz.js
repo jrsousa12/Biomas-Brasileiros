@@ -38,7 +38,7 @@ function vQuiz(){
   h+='<div class="fb '+(Q.chk?"ok":"bad")+' pop"><b>'+(Q.chk?"✅ Muito bem! ":"❌ Quase lá! ")+'</b>'+q.e+(q.t==="order"&&!Q.chk?'<br><br><b>Ordem certa:</b> '+q.items.join(" → "):"")+'</div>';
   h+='<button class="btn" onclick="nextQ()">'+(Q.i===Q.list.length-1?"Ver resultado":"Próxima ▶")+'</button>';
  }
- h+='<button class="btn sec" onclick="quitQuiz()">Sair</button></main>';
+ h+='<button class="btn sec" onclick="askQuit()">Sair</button></main>';
  return h;
 }
 function finishAns(correct){
@@ -65,6 +65,7 @@ function nextQ(){
  else endQuiz();
 }
 function quitQuiz(){view="home";tab="home";Q=null;render()}
+function askQuit(){dialogo({ic:"⏸️",titulo:"Sair do quiz?",texto:"Seu lugar fica guardado. Na tela inicial, toque em <b>Continuar de onde parei</b>.",ok:"Sair",cancelar:"Ficar",onOk:quitQuiz})}
 
 function endQuiz(){
  var n=Q.list.length,ok=Q.ok,p=ok/n;
@@ -86,7 +87,7 @@ function endQuiz(){
   extra='<p>Você acertou de primeira '+Q.fixed+' questão(ões) que antes tinha errado.</p>';
   btns='<button class="btn sec" onclick="go(\'home\')">Voltar às trilhas</button>';
  }
- save();
+ save();sessClear();
  var h=headerHTML(Q.title,"Resultado")+'<main><div class="card big-result pop"><div class="m">'+m+'</div><h2>'+ok+' de '+n+' acertos</h2><p>'+msg+'</p>'+extra+'</div>'+btns;
  if(S.wrong.length&&Q.mode!=="review")h+='<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button>';
  h+='</main>';

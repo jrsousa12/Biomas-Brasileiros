@@ -54,6 +54,35 @@ const server = http.createServer((req, res) => {
     await page.evaluate(() => startFinal());
     check(/Questão 1/.test(await page.locator("#app").innerText()), "desafio final não iniciou");
 
+    // Continuar de onde parou: lição
+    await page.evaluate(() => { go("home"); startTrail("cer"); lessonNext(); });
+    await page.reload();
+    check(await page.locator("text=Continuar de onde parei").count() === 1, "botão Continuar não apareceu (lição)");
+    await page.evaluate(() => sessResume());
+    check(await page.evaluate(() => view === "lesson" && TR.step === 1), "lição não voltou no passo 2");
+    // Voltar do celular: volta um passo na lição
+    await page.goBack();
+    check(await page.evaluate(() => view === "lesson" && TR.step === 0), "voltar do celular não voltou um passo");
+    // Continuar de onde parou: quiz (responde a 1ª e fecha)
+    await page.evaluate(() => { const b = bio("cer"); startQuiz({ title: "T", list: b.q.slice(), mode: "trail", bid: "cer" }); finishAns(true); });
+    await page.reload();
+    await page.evaluate(() => sessResume());
+    check(await page.evaluate(() => view === "quiz" && Q.i === 1 && Q.ok === 1), "quiz não voltou na questão 2");
+    // Sair do quiz pede confirmação; voltar do celular também
+    await page.click("text=Sair");
+    check(await page.locator("#dlg").count() === 1, "Sair do quiz não pediu confirmação");
+    await page.click("#dlgNo");
+    await page.goBack();
+    check(await page.locator("#dlg").count() === 1, "voltar no quiz não pediu confirmação");
+    await page.click("#dlgOk");
+    check(await page.evaluate(() => view === "home") && await page.locator("text=Continuar de onde parei").count() === 1, "após sair, Continuar sumiu");
+    await page.evaluate(() => { sessResume(); while (view === "quiz") { finishAns(true); nextQ(); } });
+    check(await page.evaluate(() => sessGet() === null), "sessão não foi apagada ao terminar o quiz");
+    await page.evaluate(() => go("home"));
+    await page.goBack();
+    check(/Deseja sair/.test(await page.locator("#app, #dlg").allInnerTexts().then((t) => t.join(" "))), "voltar na tela inicial não perguntou se quer sair");
+    await page.evaluate(() => dlgFechar());
+
     const salvo = await page.evaluate(() => JSON.parse(localStorage.getItem("biomas7_v1")));
     check(salvo && salvo.name === "Teste", "progresso não foi salvo em biomas7_v1");
 
