@@ -29,6 +29,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 
 ## Roteiro (código e conteúdo feitos em outras IAs; aqui só montagem)
 1. Conteúdo: ampliar perguntas, mitos e espécies (`docs/prompts-conteudo.md`); sempre acrescentar no FIM das listas.
+   - Um bioma por vez: prompt A (perguntas) + C (espécies); B (mitos) cobre os 6 de uma vez. Tudo passa pelo D (revisão) antes de vir para cá, indicando o arquivo de destino.
 2. Sorteio de 8 perguntas por partida (feito aqui).
 3. Código (`docs/prompts-codigo.md`), nesta ordem: P4 sequência → P3 medalhas → P6 glossário → P1 ligar pares → P2 qual bioma → P5 mapa → P7 relatório.
 - "Monte a entrega do P<n>" → integrar render/go, `index.html`, `sw.js`, `voltar.js`, rodar teste e marcar aqui como feito.
