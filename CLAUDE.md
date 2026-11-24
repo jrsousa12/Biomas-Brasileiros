@@ -27,6 +27,12 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - Tarefa complexa → plano curto validado pelo usuário antes de mexer.
 - Saída de comandos: silenciosa/filtrada (`-q`, `| grep`); após mudanças, rodar `node tests/smoke.js`.
 
+## Roteiro (código e conteúdo feitos em outras IAs; aqui só montagem)
+1. Conteúdo: ampliar perguntas, mitos e espécies (`docs/prompts-conteudo.md`); sempre acrescentar no FIM das listas.
+2. Sorteio de 8 perguntas por partida (feito aqui).
+3. Código (`docs/prompts-codigo.md`), nesta ordem: P4 sequência → P3 medalhas → P6 glossário → P1 ligar pares → P2 qual bioma → P5 mapa → P7 relatório.
+- "Monte a entrega do P<n>" → integrar render/go, `index.html`, `sw.js`, `voltar.js`, rodar teste e marcar aqui como feito.
+
 ## Sessão
 - Responder ao usuário sempre em português (pt-BR).
 - Avisar em uma frase quando: arquivo passa do limite; conversa longa e repetitiva; releitura desnecessária.
