@@ -32,7 +32,7 @@ Regras:
 ```
 Bioma: <BIOMA>
 Conteúdo que já existe (não repita assuntos nem perguntas):
-<COLE AQUI O ARQUIVO DO BIOMA>
+<COLE AQUI A SAÍDA DE: node tools/contexto.js <bioma>>
 
 Crie 5 perguntas NOVAS: 3 do tipo "mc", 1 "tf" e 1 "order". Formatos exatos:
 
@@ -54,7 +54,7 @@ Detalhes:
 
 ```
 Conteúdo que já existe (não repita):
-<COLE AQUI O ARQUIVO js/dados/mitos-fontes.js>
+<COLE AQUI A SAÍDA DE: node tools/contexto.js mitos>
 
 Crie 6 afirmações NOVAS sobre os biomas brasileiros: 1 por bioma (Amazônia, Cerrado, Caatinga, Mata Atlântica, Pantanal, Pampa). Faça mitos comuns entre os alunos e algumas verdades surpreendentes. Formato exato:
 
@@ -71,7 +71,7 @@ Crie 6 afirmações NOVAS sobre os biomas brasileiros: 1 por bioma (Amazônia, C
 ```
 Bioma: <BIOMA>
 Espécies que já existem (não repita):
-<COLE AQUI A LISTA sp: DO ARQUIVO DO BIOMA>
+<COLE AQUI A SAÍDA DE: node tools/contexto.js <bioma>>
 
 Crie 4 cartas NOVAS de espécies típicas do bioma (misture animais e plantas). Formato exato:
 

@@ -21,6 +21,7 @@ const server = http.createServer((req, res) => {
   await new Promise((r) => server.listen(0, r));
   const url = "http://localhost:" + server.address().port + "/";
   const fails = [], check = (ok, msg) => { if (!ok) fails.push(msg); };
+  fails.push(...require("../tools/verificar.js")()); // tamanho, sw.js, index.html, dados
   const browser = await chromium.launch();
   const ctx = await browser.newContext();
   const page = await ctx.newPage();

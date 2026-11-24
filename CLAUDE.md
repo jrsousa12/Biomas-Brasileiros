@@ -6,6 +6,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - HTML + CSS + JS puro, sem dependências. PWA instalável e offline. Público: 7º ano, textos em pt-BR.
 - `index.html` (esqueleto + ordem dos `<script>`), `css/app.css`, `js/` (estado, navegação, quiz, `sessao.js` continuar de onde parou, `dialogo.js` confirmações, `voltar.js` botão voltar do celular, `main.js`, `pwa.js`), `js/telas/`, `js/dados/` (`biomas/<bioma>.js`, mitos, fontes), `sw.js`, `manifest.webmanifest`, `icons/`.
 - Rodar: `python3 -m http.server 8000`. Testar: `node tests/smoke.js` (imprime `OK` ou as falhas). Sem build/lint.
+- Motores (`tools/`, fora do site; uso em `tools/CLAUDE.md`): `importar` conteúdo, `contexto` p/ prompts, `contar` painel, `integrar` arquivo novo, `verificar` (roda no smoke).
 - Deploy: automático no GitHub Pages a cada push na `main` (`.github/workflows/pages.yml`).
 
 ## Convenções
@@ -28,11 +29,11 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - Saída de comandos: silenciosa/filtrada (`-q`, `| grep`); após mudanças, rodar `node tests/smoke.js`.
 
 ## Roteiro (código e conteúdo feitos em outras IAs; aqui só montagem)
-1. Conteúdo: ampliar perguntas, mitos e espécies (`docs/prompts-conteudo.md`); sempre acrescentar no FIM das listas.
+1. Conteúdo: ampliar perguntas, mitos e espécies (`docs/prompts-conteudo.md`); colar a saída revisada num `.txt` e rodar `node tools/importar.js` (acrescenta no FIM; não abrir os arquivos de dados).
    - Um bioma por vez: prompt A (perguntas) + C (espécies); B (mitos) cobre os 6 de uma vez. Tudo passa pelo D (revisão) antes de vir para cá, indicando o arquivo de destino.
 2. Sorteio de 8 perguntas por partida (feito aqui).
 3. Código (`docs/prompts-codigo.md`), nesta ordem: P4 sequência → P3 medalhas → P6 glossário → P1 ligar pares → P2 qual bioma → P5 mapa → P7 relatório.
-- "Monte a entrega do P<n>" → integrar render/go, `index.html`, `sw.js`, `voltar.js`, rodar teste e marcar aqui como feito.
+- "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão
 - Responder ao usuário sempre em português (pt-BR).
