@@ -11,6 +11,7 @@
   if(view==="lesson"&&TR){if(TR.step>0)lessonPrev();else go("home");return}
   if(view==="quiz"&&Q)return askQuit();
   if(view==="home"||view==="name")return perguntarSair();
+  if(view==="relatorio")return go("result");
   go("home");
  }
  function perguntarSair(){

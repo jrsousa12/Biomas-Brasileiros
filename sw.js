@@ -29,6 +29,7 @@ const FILES = [
   "./js/telas/resultado.js",
   "./js/quiz-pares.js",
   "./js/telas/glossario.js",
+  "./js/telas/relatorio.js",
   "./js/qual-bioma.js",
   "./js/main.js",
   "./js/pwa.js",
@@ -36,7 +37,8 @@ const FILES = [
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/maskable-512.png",
-  "./icons/apple-touch-icon.png"
+  "./icons/apple-touch-icon.png",
+  "./css/relatorio.css"
 ];
 
 self.addEventListener("install", (e) => {

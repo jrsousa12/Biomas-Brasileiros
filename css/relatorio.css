@@ -1,0 +1,19 @@
+.relatorio-pagina{max-width:760px;margin:0 auto}
+.relatorio-pagina h2{margin:24px 0 10px;color:var(--ink);font-size:1.15rem}
+.relatorio-resumo h2{margin:0 0 12px}
+.relatorio-linha{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.relatorio-status{padding:5px 9px;border-radius:999px;font-size:.78rem;font-weight:700}
+.relatorio-ok{background:var(--ok);color:#fff}
+.relatorio-pendente{background:var(--bg);color:var(--mut)}
+.relatorio-ok-texto{border-left:5px solid var(--ok)}
+.relatorio-lista{margin:0;padding:12px 12px 12px 34px;background:var(--card);border-radius:12px}
+.relatorio-lista li{margin:0 0 12px;color:var(--ink)}
+.relatorio-acoes{display:grid;gap:10px;margin-top:24px}
+.relatorio-acoes .btn{min-height:44px}
+@media print{
+ nav,.relatorio-nao-imprimir{display:none !important}
+ body{background:#fff !important;color:#000 !important}
+ .relatorio-pagina{max-width:none}
+ .relatorio-pagina .card,.relatorio-lista{break-inside:avoid;box-shadow:none !important;border:1px solid #bbb}
+ .relatorio-status{border:1px solid #777;background:transparent !important;color:#000 !important}
+}
