@@ -42,7 +42,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
    - Ordem: prompt E (conteúdo, em `docs/prompts-conteudo.md`) + D → P8 tela Estudar (`docs/prompts-codigo.md`) → montagem aqui → fase 2: erro na questão aponta "📖 Reveja: <seção>" → só então ampliar questões.
    - ✅ "Cartas X/72" corrigido em `telas/resultado.js` (total calculado).
 6. Motor de teoria ✅ (`tools/teoria.js` + `tools/fichas/<bioma>.json`, teste `tests/teoria.js`). Fichas são RASCUNHO: o dono confere/amplia (6 a 10 ideias erradas por bioma). Rodar `node tools/teoria.js <arq.txt> <bioma>` antes do importar. Banco atual: 13 avisos reais (6 certa longa, 7 absolutas) em `docs/teoria-relatorio.md`, ainda não corrigidos.
-7. Reformulação visual ✅ (25/11/2026): "cor por bioma". P9 montado: `css/app.css` virou `base.css`+`componentes.css`+`telas.css`; `js/tema.js` (setTheme agora define também `--c3`, fundo claro); Pampa trocou para dourado. Amostra em `docs/amostra-visual.html`. P9 não foi guardado em `docs/prompts-codigo.md` (arquivo perto do limite).
+7. Visual "colorido e divertido" ✅ (25/11/2026; o "cor por bioma" ficou engessado): amostra `docs/amostra-divertida.html`; cartões-figurinha, papagaio guia, estrelas, passos "você está aqui", caixas Resumo/Atenção no Estudar. Modo escuro `js/modo.js` (botão 🌙, chave `biomas7_modo`). `tema.js` escurece cor de bioma fraca sozinho. Teste `node tests/visual-app.js` (todas as telas, claro/escuro, 3 larguras) após mexer em visual.
 - "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão

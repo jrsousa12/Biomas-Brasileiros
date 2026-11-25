@@ -10,10 +10,13 @@ const B = "BIOMES[0]";
 const TELAS = [
   ["nome", ""],
   ["inicio", 'S.name="Ana";go("home")'],
+  ["inicio-estrelas", 'S.trails.amz={best:8,total:8};S.trails.cer={best:5,total:8};go("home")'],
   ["licao", 'startTrail("amz")'],
+  ["licao-2", 'startTrail("cer");TR.step=1;render()'],
   ["quiz", `startQuiz({title:"🌳 Teste",list:${B}.q.slice(0,8),color:[${B}.c1,${B}.c2],mode:"trail",bid:${B}.id})`],
   ["quiz-erro", 'var i=Q.opts?Q.opts.findIndex(function(o){return !o.ok}):-1;if(i>=0)pickMC(i);else pickTF(0)'],
   ["estudar", 'startTrail("caa");go("estudar")'],
+  ["estudar-resumo", "ES.sec=10;render()"], ["estudar-ameacas", "ES.sec=8;render()"],
   ["cartas", 'go("cards")'], ["mitos", 'go("mitos")'], ["desafio", 'go("final")'],
   ["resultado", 'go("result")'], ["fontes", 'go("fontes")'], ["certificado", 'go("cert")'],
   ["medalhas", 'go("medalhas")'], ["glossario", 'go("glossario")'], ["relatorio", 'go("relatorio")'],

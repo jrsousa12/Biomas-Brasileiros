@@ -72,3 +72,11 @@
     grid-template-columns: 1fr;
   }
 }
+/* Caixas didáticas: Resumo e Ameaças (Atenção!) */
+.estudar-texto.sec-resumo,.estudar-texto.sec-ameacas{border-radius:16px;padding:12px 14px;border:3px solid var(--pink);background:var(--pinkbg)}
+.estudar-texto.sec-ameacas{border:3px dashed var(--bad);background:var(--badbg)}
+.estudar-texto.sec-resumo:before,.estudar-texto.sec-ameacas:before{display:block;font-weight:900;margin-bottom:6px}
+.estudar-texto.sec-resumo:before{content:"✏️ Para lembrar"}
+.estudar-texto.sec-ameacas:before{content:"⚠️ Atenção!"}
+.estudar-texto p:last-child{margin-bottom:0}
+.estudar-intro h2,.estudar-secao h2,.estudar-preparacao h2{color:var(--tx)}

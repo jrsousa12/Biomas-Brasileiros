@@ -6,16 +6,18 @@ function vName(){
 function saveName(){var v=document.getElementById("nm").value.trim();if(!v){document.getElementById("nm").focus();return}S.name=v;save();go("home")}
 
 /* ============ HOME ============ */
+function estrelas(b){var t=S.trails[b.id],p=t?t.best/t.total:-1,n=p>=0.9?3:p>=0.7?2:p>=0?1:0;return '<div class="stars" aria-label="'+n+' de 3 estrelas">'+"⭐".repeat(n)+'<b>'+"⭐".repeat(3-n)+'</b></div>'}
+function guiaHTML(done){var m=done===0?"Escolha um bioma e vamos explorar juntos!":done===6?"Uau! Você fez as 6 trilhas! Que tal o Desafio final? 🏆":"Muito bem! Faltam "+(6-done)+" trilha"+(6-done>1?"s":"")+". Bora!";return '<div class="guia"><div class="av" aria-hidden="true">🦜</div><div class="balao">'+m+'</div></div>'}
 function medal(b){var t=S.trails[b.id];if(!t)return"";var p=t.best/t.total;return p>=0.9?"🥇":p>=0.7?"🥈":"🥉"}
 function vHome(){
  var bar=BIOMES.map(function(b){return '<b title="'+b.nome+'" style="width:'+b.pct.replace(",",".").replace("%","")+'%;background:'+b.c1+'" onclick="startTrail(\''+b.id+'\')"></b>'}).join("");
  var done=BIOMES.filter(function(b){return S.trails[b.id]}).length;
  var tiles=BIOMES.map(function(b){
   var t=S.trails[b.id];
-  return '<div class="tile" style="background:linear-gradient(145deg,'+b.c1+','+b.c2+')" onclick="startTrail(\''+b.id+'\')">'+(t?'<span class="medal">'+medal(b)+'</span>':'')+'<div><div class="em">'+b.emoji+'</div><h3>'+b.nome+'</h3><div class="pc">'+b.pct+' do Brasil</div></div><div class="st">'+(t?"Refazer • "+t.best+"/"+t.total:"Começar")+'</div></div>';
+  return '<div class="tile" style="background:linear-gradient(145deg,'+b.c1+','+b.c2+')" onclick="startTrail(\''+b.id+'\')">'+(t?'<span class="medal">'+medal(b)+'</span>':'')+'<div><div class="em">'+b.emoji+'</div><h3>'+b.nome+'</h3><div class="pc">'+b.pct+' do Brasil</div>'+estrelas(b)+'</div><div class="st">'+(t?"Refazer • "+t.best+"/"+t.total:"Começar")+'</div></div>';
  }).join("");
  return headerHTML("Olá, "+esc(S.name||"explorador(a)")+"! 👋","Escolha um bioma e comece sua trilha")+
- '<main>'+seqHTML()+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div><div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+'<div class="card"><div class="small"><b>🗺️ Mapa do seu progresso</b> (cinza = trilha ainda não feita)</div>'+mapaHTML()+'</div>'+
+ '<main>'+guiaHTML(done)+seqHTML()+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div><div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+'<div class="card"><div class="small"><b>🗺️ Mapa do seu progresso</b> (cinza = trilha ainda não feita)</div>'+mapaHTML()+'</div>'+
  '<h2>Suas trilhas <span class="small">('+done+'/6 concluídas)</span></h2><div class="tiles">'+tiles+'</div>'+
  '<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button><button class="btn sec" onclick="go(\'medalhas\')">🏅 Minhas medalhas</button><button class="btn sec" onclick="go(\'glossario\')">📖 Glossário</button><button class="btn sec" onclick="startPares()">🔗 Ligar pares</button><button class="btn sec" onclick="startQualBioma()">🧭 Qual bioma sou eu?</button></main>';
 }

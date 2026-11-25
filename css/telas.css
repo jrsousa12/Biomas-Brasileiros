@@ -46,3 +46,21 @@ pre.code{background:var(--soft);color:var(--ink);border-radius:12px;padding:10px
 .tit-bioma{color:var(--bc)}
 :root[data-theme="dark"] .tit-bioma{color:var(--bcl)}
 .cert .small{color:#5b6578}
+/* Guia (papagaio), estrelas, passos "você está aqui" */
+.guia{display:flex;gap:10px;align-items:flex-end;margin:6px 0 14px}
+.guia .av{font-size:44px;line-height:1;animation:pula 2.4s ease-in-out infinite}
+.balao{position:relative;background:var(--card);border:3px solid var(--line);border-radius:18px;padding:10px 14px;font-weight:700;box-shadow:4px 4px 0 var(--line)}
+.balao:before{content:"";position:absolute;left:-12px;bottom:12px;border:8px solid transparent;border-right:10px solid var(--line)}
+@keyframes pula{50%{transform:translateY(-6px) rotate(-6deg)}}
+.stars{font-size:15px;letter-spacing:2px;margin-top:2px}
+.stars b{opacity:.35;filter:grayscale(1)}
+.passos{display:flex;align-items:center;margin:4px 8px 14px}
+.passos span{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:900;border:3px solid var(--line);background:var(--card)}
+.passos span.feito{background:var(--c1);color:#fff}
+.passos span.aqui{background:var(--gold);color:#24324a;transform:scale(1.2);box-shadow:0 0 0 5px rgba(255,198,46,.4)}
+.passos i{flex:1;min-width:6px;height:5px;background:var(--mut);opacity:.35}
+.passos i.feito{background:var(--c1);opacity:1}
+.aqui-txt{font-size:14px;font-weight:800;color:var(--mut);text-align:center;margin:-6px 0 10px}
+.tile.medalha{background:linear-gradient(145deg,#946200,#6e4800)}
+.tile .small{color:inherit}
+#pares-itens .btn,#pares-destinos .btn{font-size:16px;padding:10px 6px;overflow-wrap:anywhere;hyphens:auto}

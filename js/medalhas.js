@@ -69,7 +69,7 @@ function checarMedalhas() {
 function medalhaHTML(m) {
   var ganhou = S.medalhas && S.medalhas[m.id];
   var estilo = ganhou ? "" : ' style="filter:grayscale(1);opacity:.48;background:var(--card);color:var(--ink)"';
-  return '<div class="tile"' + estilo + '><div><div class="em">' + esc(m.emoji) + "</div>" +
+  return '<div class="tile' + (ganhou ? ' medalha' : '') + '"' + estilo + '><div><div class="em">' + esc(m.emoji) + "</div>" +
     "<h3>" + esc(m.nome) + "</h3>" +
     '<div class="small">' + esc(m.desc) + "</div></div>" +
     '<div class="st">' + (ganhou ? "Conquistada" : "Bloqueada") + "</div></div>";

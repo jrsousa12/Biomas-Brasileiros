@@ -199,7 +199,7 @@ function secaoEstudarHTML(textos) {
   html += esc(String(ES.sec + 1)) + " de " + esc(String(textos.length));
   html += "</p>";
   html += "<h2>" + esc(secao.t) + "</h2>";
-  html += '<div class="estudar-texto">';
+  html += '<div class="estudar-texto sec-' + esc(secao.id) + '">';
   html += paragrafosEstudarHTML(secao);
   html += "</div></article>";
   html += navegacaoEstudarHTML(textos);

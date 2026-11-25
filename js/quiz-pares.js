@@ -177,7 +177,7 @@ function itensParesHTML() {
     estilo = "";
 
     if (item.resolvido) {
-      estilo = "background:var(--ok);color:#fff;";
+      estilo = "background:var(--ok);color:var(--lfg);";
     } else if (selecionado) {
       estilo = "outline:3px solid var(--gold);";
     }
@@ -201,7 +201,7 @@ function destinosParesHTML() {
   for (i = 0; i < PARES.destinos.length; i++) {
     destino = PARES.destinos[i];
     estilo = destino.resolvido ?
-      "background:var(--ok);color:#fff;" : "";
+      "background:var(--ok);color:var(--lfg);" : "";
 
     html += '<button id="pares-bio-' + esc(destino.id) + '" ';
     html += 'class="btn" style="min-height:54px;' + estilo + '" ';
