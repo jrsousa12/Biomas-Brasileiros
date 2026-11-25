@@ -13,7 +13,13 @@ var MITOS=[
  {s:"Na Caatinga, muitas plantas perdem as folhas durante a seca.",v:true,e:"Verdade. Essa adaptação ajuda a diminuir a perda de água."},
  {s:"A Mata Atlântica existe somente perto das praias.",v:false,e:"Mito. O bioma também alcança áreas distantes do litoral e regiões serranas."},
  {s:"O Pantanal é uma grande planície inundável.",v:true,e:"Verdade. A água ocupa diferentes áreas da planície ao longo do ciclo anual."},
- {s:"O Pampa não possui árvores nem áreas úmidas.",v:false,e:"Mito. O bioma também apresenta capões de mata, matas ciliares e banhados."}
+ {s:"O Pampa não possui árvores nem áreas úmidas.",v:false,e:"Mito. O bioma também apresenta capões de mata, matas ciliares e banhados."},
+ {s:"Na Amazônia, todos os rios têm a mesma cor.",v:false,e:"Mito. Existem rios de águas claras, escuras e barrentas."},
+ {s:"O Cerrado não possui formações florestais.",v:false,e:"Mito. O Cerrado inclui formações campestres, savânicas e florestais."},
+ {s:"A Caatinga pode ficar verde depois das chuvas.",v:true,e:"Verdade. Muitas plantas produzem folhas e flores quando a água volta a ficar disponível."},
+ {s:"A Mata Atlântica abriga campos de altitude.",v:true,e:"Verdade. Esses ambientes abertos ocorrem nas partes altas de algumas serras."},
+ {s:"As cheias naturais do Pantanal não ajudam os peixes.",v:false,e:"Mito. Áreas inundadas podem oferecer alimento e abrigo para muitas espécies."},
+ {s:"O Pampa possui plantas adaptadas a afloramentos rochosos.",v:true,e:"Verdade. Algumas espécies crescem em solos rasos e nas frestas das rochas."}
 ];
 
 var FONTES=[
