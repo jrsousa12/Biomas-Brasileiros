@@ -1,82 +1,10 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Amostra divertida — Trilhas dos Biomas</title>
-<style>
-/* Amostra do visual "colorido e divertido". Mesmas classes do app, para depois virar só CSS. */
-:root{--ink:#24324a;--mut:#6a7487;--card:#fff;--c1:#1fa35b;--c2:#0f6b3a;--c3:#e9f8ef;--ok:#1fa35b;--bad:#f08a24;--gold:#ffc62e;--pink:#ff5d8f;--sky:#3fa9f5}
-*{box-sizing:border-box}
-body{margin:0;font-family:"Nunito","Trebuchet MS",system-ui,sans-serif;color:var(--ink);font-size:17px;line-height:1.55;
- background:var(--c3) radial-gradient(circle,rgba(0,0,0,.05) 2px,transparent 2.5px) 0 0/22px 22px}
-.wrap{max-width:560px;margin:0 auto;padding:0 0 40px}
-.sec-t{margin:26px 16px 8px;font-size:13px;font-weight:900;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
-/* Cabeçalho com onda */
-header.top{position:relative;background:var(--c1);color:#fff;padding:18px 16px 34px}
-header.top:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:22px;
- background:radial-gradient(circle at 12px -6px,transparent 16px,var(--c3) 17px) 0 0/24px 22px repeat-x}
-header.top h1{margin:0;font-size:24px;font-weight:900;text-shadow:0 2px 0 var(--c2)}
-.sub{font-size:14px;opacity:.95}
-.xpbar{height:14px;margin-top:10px;border-radius:999px;background:rgba(0,0,0,.18);overflow:hidden;border:2px solid rgba(255,255,255,.6)}
-.xpbar i{display:block;height:100%;width:62%;border-radius:999px;background:repeating-linear-gradient(45deg,var(--gold) 0 10px,#ffd965 10px 20px)}
-.xpline{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-top:4px}
-main{padding:4px 14px 0}
-/* Mascote que fala */
-.guia{display:flex;gap:10px;align-items:flex-end;margin:6px 0 14px}
-.guia .av{font-size:44px;line-height:1;animation:pula 2.4s ease-in-out infinite}
-.balao{position:relative;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:10px 14px;font-weight:700;box-shadow:4px 4px 0 var(--ink)}
-.balao:before{content:"";position:absolute;left:-12px;bottom:12px;border:8px solid transparent;border-right:10px solid var(--ink)}
-@keyframes pula{50%{transform:translateY(-6px) rotate(-6deg)}}
-/* Cartões de bioma estilo figurinha */
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.tile{position:relative;border-radius:20px;padding:12px;color:#fff;min-height:140px;display:flex;flex-direction:column;justify-content:space-between;
- border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transform:rotate(-1.2deg);transition:transform .15s}
-.tile:nth-child(even){transform:rotate(1.2deg)}
-.tile:active{transform:scale(.96)}
-.tile .em{font-size:40px;line-height:1;filter:drop-shadow(0 3px 0 rgba(0,0,0,.2))}
-.tile h3{margin:4px 0 0;font-size:18px;font-weight:900}
-.stars{font-size:16px;letter-spacing:2px}
-.stars b{opacity:.35;filter:grayscale(1)}
-.selo{position:absolute;top:-10px;right:-8px;background:var(--gold);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:2px 8px;font-size:12px;font-weight:900;transform:rotate(8deg)}
-/* Trilha com etapas numeradas */
-.card{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:16px;box-shadow:5px 5px 0 var(--ink);margin-bottom:16px}
-.passos{display:flex;align-items:center;margin:4px 0 14px}
-.passos span{flex:0 0 38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;border:3px solid var(--ink);background:#fff}
-.passos span.feito{background:var(--c1);color:#fff}
-.passos span.aqui{background:var(--gold);transform:scale(1.2);box-shadow:0 0 0 5px rgba(255,198,46,.4)}
-.passos i{flex:1;height:5px;background:var(--ink);opacity:.25}
-.passos i.feito{background:var(--c1);opacity:1}
-.aqui-txt{font-size:13px;font-weight:800;color:var(--mut);text-align:center;margin:-6px 0 10px}
-.card h2{margin:0 0 6px;font-size:21px;font-weight:900;color:var(--c2)}
-mark{background:linear-gradient(transparent 55%,var(--gold) 55%);color:inherit;padding:0 2px}
-/* Botões gordinhos */
-.btn{display:block;width:100%;min-height:54px;margin-top:12px;border:3px solid var(--ink);border-radius:16px;font:inherit;font-size:18px;font-weight:900;color:#fff;background:var(--c1);box-shadow:0 5px 0 var(--ink);cursor:pointer}
-.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
-.btn.sec{background:#fff;color:var(--ink)}
-.btn.ler{background:var(--sky)}
-/* Quiz */
-.q{font-size:20px;font-weight:900;margin:4px 0 12px}
-.opt{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:16px;padding:12px;margin-bottom:10px;font:inherit;font-size:17px;font-weight:700;box-shadow:0 4px 0 rgba(36,50,74,.35)}
-.opt .l{flex:0 0 32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--c3);font-weight:900}
-.opt.right{background:#e3f9ea;border-color:var(--ok)}
-.opt.right .l{background:var(--ok);color:#fff}
-.opt.wrong{background:#fff1e3;border-color:var(--bad)}
-.opt.wrong .l{background:var(--bad);color:#fff}
-.fb{border-radius:16px;padding:12px 14px;margin:12px 0 0;font-weight:700;border:3px solid}
-.fb.ok{border-color:var(--ok);background:#e3f9ea}
-.fb.bad{border-color:var(--bad);background:#fff1e3}
-.fb .rev{display:inline-block;margin-top:8px;background:var(--sky);color:#fff;border-radius:999px;padding:4px 12px;font-weight:900}
-.pop{display:inline-block;animation:pop .5s}
-@keyframes pop{0%{transform:scale(.3)}70%{transform:scale(1.25)}100%{transform:scale(1)}}
-/* Estudar: caixas didáticas */
-.box{border-radius:16px;padding:12px 14px;margin:12px 0;border:3px dashed}
-.box b.t{display:block;font-weight:900;margin-bottom:2px}
-.box.sabia{border-color:var(--sky);background:#e8f5ff}
-.box.aten{border-color:var(--bad);background:#fff3e6}
-.box.resumo{border-color:var(--pink);background:#ffeef4;border-style:solid}
-.box.resumo ul{margin:4px 0 0;padding-left:20px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style></head><body><div class="wrap">
+<link rel="stylesheet" href="amostra-divertida.css"></head><body><div class="wrap">
 
 <header class="top">
+ <button class="modo" id="modo" onclick="trocaModo()" aria-label="Modo escuro">🌙</button>
  <h1>🌎 Trilhas dos Biomas</h1>
  <div class="sub">Olá, explorador(a)! Nível 3 — Guarda-florestal</div>
  <div class="xpbar"><i></i></div>
@@ -87,12 +15,12 @@ mark{background:linear-gradient(transparent 55%,var(--gold) 55%);color:inherit;p
 <div class="sec-t">1 · Início</div>
 <div class="guia"><div class="av">🦜</div><div class="balao">Escolha um bioma e vamos explorar juntos!</div></div>
 <div class="tiles">
- <div class="tile" style="background:#1fa35b"><span class="selo">🏅 Feito!</span><div class="em">🌳</div><div><h3>Amazônia</h3><div class="stars">⭐⭐⭐</div></div></div>
- <div class="tile" style="background:#f0812b"><div class="em">🦒</div><div><h3>Cerrado</h3><div class="stars">⭐⭐<b>⭐</b></div></div></div>
- <div class="tile" style="background:#d4573b"><div class="em">🌵</div><div><h3>Caatinga</h3><div class="stars">⭐<b>⭐⭐</b></div></div></div>
- <div class="tile" style="background:#139e9a"><div class="em">🐒</div><div><h3>Mata Atlântica</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
- <div class="tile" style="background:#2f7fe0"><div class="em">🐊</div><div><h3>Pantanal</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
- <div class="tile" style="background:#d9a400"><div class="em">🌾</div><div><h3>Pampa</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
+ <div class="tile" style="background:#157a43"><span class="selo">🏅 Feito!</span><div class="em">🌳</div><div><h3>Amazônia</h3><div class="stars">⭐⭐⭐</div></div></div>
+ <div class="tile" style="background:#b0501a"><div class="em">🦒</div><div><h3>Cerrado</h3><div class="stars">⭐⭐<b>⭐</b></div></div></div>
+ <div class="tile" style="background:#a8402a"><div class="em">🌵</div><div><h3>Caatinga</h3><div class="stars">⭐<b>⭐⭐</b></div></div></div>
+ <div class="tile" style="background:#0b726e"><div class="em">🐒</div><div><h3>Mata Atlântica</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
+ <div class="tile" style="background:#1f5fb0"><div class="em">🐊</div><div><h3>Pantanal</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
+ <div class="tile" style="background:#856500"><div class="em">🌾</div><div><h3>Pampa</h3><div class="stars"><b>⭐⭐⭐</b></div></div></div>
 </div>
 
 <div class="sec-t">2 · Trilha (lição)</div>
@@ -133,4 +61,12 @@ mark{background:linear-gradient(transparent 55%,var(--gold) 55%);color:inherit;p
  <p>Você acertou <mark><b>6 de 8</b></mark>. Ganhou o selo <b>Amigo do Cerrado</b>!</p>
  <button class="btn">Jogar de novo 🔁</button>
 </div>
-</main></div></body></html>
+</main></div><script>
+/* Modo escuro: segue o celular na 1ª vez; depois lembra a escolha do aluno. */
+function aplicaModo(m){document.documentElement.dataset.theme=m;var b=document.getElementById("modo");
+ b.textContent=m=="dark"?"☀️":"🌙";b.setAttribute("aria-label",m=="dark"?"Modo claro":"Modo escuro")}
+function trocaModo(){var m=document.documentElement.dataset.theme=="dark"?"light":"dark";aplicaModo(m);try{localStorage.setItem("biomas7_modo",m)}catch(e){}}
+(function(){var m;try{m=localStorage.getItem("biomas7_modo")}catch(e){}
+ if(!m)m=matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";aplicaModo(m)})();
+</script>
+</body></html>
