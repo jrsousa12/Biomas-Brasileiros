@@ -29,7 +29,7 @@ Regras técnicas OBRIGATÓRIAS:
 
 O que já existe e pode ser usado (não reescreva):
 - BIOMES: lista de biomas. Cada bioma tem {id,nome,emoji,c1,c2,pct,km,lema,cards:[{e,h,p}],q:[perguntas],sp:[{n,e,st,f}]}.
-  Os ids são "ama","cer","caa","mat","pan" e "pam".
+  Os ids são "amz","cer","caa","mat","pan" e "pam".
 - bio(id) devolve um bioma. shuffle(lista) embaralha a própria lista.
 - Perguntas: {t:"mc",q,o:[4 opções],a:índice} | {t:"tf",q,a:true/false} | {t:"order",q,items:[ordem certa]}. Todas têm a explicação em e.
   Cada pergunta tem um q.id fixo. QMAP[id] devolve a pergunta.
@@ -107,7 +107,7 @@ Para trazer junto: cole o arquivo js/telas/resultado.js para a IA ver como os da
 ```
 Crie js/telas/estudar.js. É uma tela de leitura do texto completo de um bioma.
 Os textos ficam em window.TEXTOS[idBioma] = [{id:"local",t:"📍 Onde fica",p:["parágrafo","parágrafo"]}, ...] (cerca de 11 seções; ids possíveis: local, clima, solo, agua, plantas, animais, povos, economia, ameacas, conservacao, resumo). Pode faltar o texto de algum bioma: nesse caso mostre "Texto em preparação" e um botão para voltar.
-- Estado da tela: var ES={b:"ama",sec:-1}. sec=-1 é o sumário; 0, 1, 2... é a seção aberta.
+- Estado da tela: var ES={b:"amz",sec:-1}. sec=-1 é o sumário; 0, 1, 2... é a seção aberta.
 - estudar(id) abre o sumário do bioma. estudarSecao(id,idSecao) abre direto numa seção (vai ser usada depois para "📖 Reveja: <seção>" quando o aluno errar).
 - vEstudar(): use setTheme(b.c1,b.c2) e headerHTML("📖 "+b.nome,"Estudar").
   - Sumário: uma lista de botões grandes, um por seção, com ✅ nas seções já lidas.
