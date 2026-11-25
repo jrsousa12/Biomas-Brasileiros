@@ -69,10 +69,16 @@ function estudarSecao(id, idSecao) {
   go("estudar");
 }
 
-/* volta para a trilha (se veio dela) ou para o início */
+/* volta para a lição ou para a questão (se veio de lá) ou para o início */
 function estudarSair() {
   if (ES.de === "lesson" && TR) {
     view = "lesson";
+    render();
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (ES.de === "quiz" && Q) {
+    view = "quiz";
     render();
     window.scrollTo(0, 0);
     return;

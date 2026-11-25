@@ -44,6 +44,8 @@ const FILES = [
   "./js/dados/biomas/cerrado-extra.js",
   "./js/dados/textos/mata-atlantica.js",
   "./js/telas/estudar.js",
+  "./js/dados/secoes.js",
+  "./js/reveja.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",

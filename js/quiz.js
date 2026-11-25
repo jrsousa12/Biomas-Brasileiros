@@ -36,6 +36,7 @@ function vQuiz(){
  h+='</div>';
  if(Q.ans){
   h+='<div class="fb '+(Q.chk?"ok":"bad")+' pop"><b>'+(Q.chk?"✅ Muito bem! ":"❌ Quase lá! ")+'</b>'+q.e+(q.t==="order"&&!Q.chk?'<br><br><b>Ordem certa:</b> '+q.items.join(" → "):"")+'</div>';
+  if(!Q.chk)h+=revejaHTML(q);
   h+='<button class="btn" onclick="nextQ()">'+(Q.i===Q.list.length-1?"Ver resultado":"Próxima ▶")+'</button>';
  }
  h+='<button class="btn sec" onclick="askQuit()">Sair</button></main>';
