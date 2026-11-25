@@ -33,6 +33,12 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
    - Um bioma por vez: prompt A (perguntas) + C (espécies); B (mitos) cobre os 6 de uma vez. Tudo passa pelo D (revisão) antes de vir para cá, indicando o arquivo de destino.
 2. Sorteio de 8 perguntas por partida (feito aqui). ✅ feito (`trilha.js`)
 3. Código (`docs/prompts-codigo.md`), nesta ordem: P4 sequência ✅ (`sequencia.js`) → P3 medalhas ✅ → P6 glossário ✅ (`glossario.js`) → P1 ligar pares ✅ (`quiz-pares.js`) → P2 qual bioma ✅ (`qual-bioma.js`) → P5 mapa ✅ (`mapa.js`, na Home) → P7 relatório ✅ (`telas/relatorio.js`, botão em Resultado).
+4. Protocolo token: aplicar e conferir ANTES do item 5. ⏳ pendente
+5. Plano A — seção 📖 Estudar (só após o item 4). ⏳ pendente
+   - Texto completo por bioma, 8–10 seções (local, clima, solo, água, plantas, animais, povos, economia, ameaças, conservação, resumo), linguagem de 12 anos, cobrindo os assuntos das questões.
+   - Dados em `js/dados/textos/<bioma>.js` (≤10 KB cada). Trilha mantém os 3 cartões + botão "Quero ler mais".
+   - Ordem: prompt E (conteúdo, em `docs/prompts-conteudo.md`) + D → P8 tela Estudar (`docs/prompts-codigo.md`) → montagem aqui → fase 2: erro na questão aponta "📖 Reveja: <seção>" → só então ampliar questões.
+   - Junto: corrigir "Cartas X/24" em `telas/resultado.js` (hoje são 72 espécies).
 - "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão
