@@ -7,7 +7,13 @@ var MITOS=[
  {s:"O Pampa é só pasto.",v:false,e:"Mito. São cerca de 3 mil espécies de plantas e animais endêmicos. O campo nativo é um ecossistema."},
  {s:"O Cerrado é o único bioma presente nas cinco regiões do Brasil.",v:true,e:"Verdade (IBGE, 2019)."},
  {s:"A Caatinga existe somente no Brasil.",v:true,e:"Verdade. É o único bioma exclusivamente brasileiro."},
- {s:"A Mata Atlântica tem uma lei federal só para ela.",v:true,e:"Verdade. É a Lei 11.428/2006, a Lei da Mata Atlântica."}
+ {s:"A Mata Atlântica tem uma lei federal só para ela.",v:true,e:"Verdade. É a Lei 11.428/2006, a Lei da Mata Atlântica."},
+ {s:"A Amazônia é formada apenas por floresta fechada.",v:false,e:"Mito. O bioma também possui rios, áreas alagadas e outras formações vegetais."},
+ {s:"O Cerrado possui apenas campos sem árvores.",v:false,e:"Mito. O bioma reúne campos, savanas e formações florestais."},
+ {s:"Na Caatinga, muitas plantas perdem as folhas durante a seca.",v:true,e:"Verdade. Essa adaptação ajuda a diminuir a perda de água."},
+ {s:"A Mata Atlântica existe somente perto das praias.",v:false,e:"Mito. O bioma também alcança áreas distantes do litoral e regiões serranas."},
+ {s:"O Pantanal é uma grande planície inundável.",v:true,e:"Verdade. A água ocupa diferentes áreas da planície ao longo do ciclo anual."},
+ {s:"O Pampa não possui árvores nem áreas úmidas.",v:false,e:"Mito. O bioma também apresenta capões de mata, matas ciliares e banhados."}
 ];
 
 var FONTES=[
