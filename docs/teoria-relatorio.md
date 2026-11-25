@@ -22,6 +22,8 @@
   - Por que o Cerrado é conhecido como “berço das águas”?
 - **Cerrado #16** [sugestao] sugestão de errada: "O fogo nunca existiu naturalmente" (Muitas plantas têm casca grossa e se adaptam ao fogo natural.)
   - Qual característica protege algumas árvores do Cerrado contra o calor do fogo?
+- **Cerrado #43** [longa] certa bem mais longa que as erradas
+  - Qual atividade pode causar perda de vegetação nativa no Cerrado?
 - **Mata Atlântica #6** [longa] certa bem mais longa que as erradas
   - O que significa dizer que a Mata Atlântica é um “hotspot de biodiversidade”?
 - **Mata Atlântica #6** [sugestao] sugestão de errada: "Região com poucas espécies" (Hotspot tem muitas espécies, muitas só ali, e é muito ameaçado.)
@@ -60,6 +62,10 @@
   - O que diferencia uma pastagem exótica de um campo nativo?
 - **Pampa #14** [sugestao] sugestão de errada: "Plantas nativas do Pampa" (Exóticas vêm de fora, como capins trazidos de outras terras.)
   - O que diferencia uma pastagem exótica de um campo nativo?
+- **Pampa #39** [sugestao] sugestão de errada: "Ocupa o Paraná e Santa Catarina" (No Brasil, o Pampa ocorre só no Rio Grande do Sul.)
+  - Em qual estado brasileiro o bioma Pampa está localizado?
+- **Pampa #43** [sugestao] sugestão de errada: "Floresta alta de árvores gigantes" (O Pampa tem campos com gramíneas, poucos arbustos.)
+  - Por que a conservação dos campos nativos é importante?
 - **Pantanal #3** [longa] certa bem mais longa que as erradas
   - O que é o “pulso de inundação” do Pantanal?
 - **Pantanal #3** [sugestao] sugestão de errada: "Alagamento fixo o ano todo" (O Pantanal enche e seca em ciclos anuais.)
@@ -68,3 +74,7 @@
   - Qual é a ave símbolo do Pantanal?
 - **Pantanal #13** [absoluta] palavra absoluta em 2+ erradas e não na certa
   - O que caracteriza um cambarazal no Pantanal?
+- **Pantanal #39** [longa] certa bem mais longa que as erradas
+  - Qual característica torna o Pantanal conhecido no Brasil?
+- **Pantanal #43** [longa] certa bem mais longa que as erradas
+  - Por que o Pantanal é importante para a biodiversidade?
