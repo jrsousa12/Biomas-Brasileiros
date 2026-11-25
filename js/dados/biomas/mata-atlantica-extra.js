@@ -3,7 +3,7 @@
 (function(b){
 b.q.push.apply(b.q,[
  {t:"mc",q:"O que são campos de altitude na Mata Atlântica?",o:["Áreas úmidas junto ao mar","Vegetações abertas no alto das serras","Florestas plantadas em planícies","Manguezais cercados por montanhas"],a:1,e:"Campos de altitude são ambientes abertos encontrados nas partes altas de algumas serras."},
- {t:"mc",q:"O que caracteriza uma floresta semidecidual?",o:["Todas as árvores perdem folhas juntas","Parte das árvores perde folhas na seca","Nenhuma árvore troca suas folhas","Somente palmeiras formam a vegetação"],a:1,e:"Nessa floresta, parte das árvores perde folhas durante a estação mais seca."},
+ {t:"mc",q:"O que caracteriza uma floresta semidecidual?",o:["A maioria das árvores perde folhas juntas","Parte das árvores perde folhas na seca","As árvores não trocam folhas em momento algum","Somente palmeiras formam a vegetação"],a:1,e:"Nessa floresta, parte das árvores perde folhas durante a estação mais seca."},
  {t:"mc",q:"Por que a neblina pode ser importante nas florestas serranas?",o:["Leva sal marinho para o solo","Aumenta a umidade disponível","Impede a formação de folhas","Transforma córregos em lagos"],a:1,e:"As gotículas da neblina aumentam a umidade sobre folhas e outros elementos da floresta."},
  {t:"mc",q:"Qual animal ajuda a controlar insetos durante a noite?",o:["Morcego insetívoro","Tartaruga marinha","Peixe de água doce","Lagarto herbívoro"],a:0,e:"Morcegos insetívoros capturam insetos enquanto voam durante a noite."},
  {t:"mc",q:"O que é uma muçununga na Mata Atlântica?",o:["Floresta aberta sobre solo arenoso","Campo alagado coberto por arroz","Plantação de árvores exóticas","Mata fechada sobre solo congelado"],a:0,e:"A muçununga é uma formação vegetal associada a solos arenosos."},

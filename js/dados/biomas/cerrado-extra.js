@@ -22,7 +22,7 @@ b.q.push.apply(b.q,[
  {t:"mc",q:"Qual animal é símbolo do Cerrado brasileiro?",o:["Mico-leão-dourado","Lobo-guará","Peixe-boi","Pinguim"],a:1,e:"O lobo-guará é uma das espécies mais conhecidas do bioma."},
  {t:"mc",q:"Qual fruto é nativo do Cerrado?",o:["Pinhão","Pequi","Maçã","Uva"],a:1,e:"O pequi é muito usado na culinária regional."},
  {t:"mc",q:"Grande parte das nascentes de importantes rios brasileiros está associada a qual bioma?",o:["Pampa","Pantanal","Cerrado","Caatinga"],a:2,e:"O Cerrado é conhecido por sua importância hídrica."},
- {t:"mc",q:"Qual atividade pode causar perda de vegetação nativa no Cerrado?",o:["Expansão agrícola sem planejamento","Observação de aves","Pesquisa científica","Turismo controlado"],a:0,e:"A remoção da vegetação reduz áreas naturais."},
+ {t:"mc",q:"Qual atividade pode causar perda de vegetação nativa no Cerrado?",o:["Expansão agrícola sem planejamento","Observação de aves em trilhas com guias e regras de respeito","Pesquisa científica com coleta de dados em áreas protegidas","Turismo controlado com visitação em trilhas sinalizadas"],a:0,e:"A remoção da vegetação reduz áreas naturais."},
  {t:"mc",q:"Qual grupo de plantas é muito comum nas paisagens do Cerrado?",o:["Cactos gigantes","Gramíneas","Pinheiros","Algas marinhas"],a:1,e:"As gramíneas formam grande parte da cobertura vegetal."},
  {t:"mc",q:"Qual estratégia ajuda a conservar a fauna do Cerrado?",o:["Fragmentar habitats","Criar corredores ecológicos","Drenar nascentes","Remover árvores nativas"],a:1,e:"Corredores ecológicos facilitam o deslocamento dos animais."},
  {t:"tf",q:"Verdadeiro ou falso: O Cerrado é um bioma que apresenta períodos de seca e de chuva bem definidos.",a:true,e:"Verdadeiro. As estações secas e chuvosas são marcantes."},
