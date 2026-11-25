@@ -27,6 +27,7 @@ function render(){
  else if(view==="medalhas")h=vMedalhas();
  else if(view==="glossario")h=vGlossario();
  else if(view==="pares")h=vPares();
+ else if(view==="qualBioma")h=vQualBioma();
  document.getElementById("app").innerHTML=h;
  renderNav();
  sessSave();

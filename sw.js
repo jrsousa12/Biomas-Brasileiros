@@ -28,6 +28,7 @@ const FILES = [
   "./js/telas/resultado.js",
   "./js/quiz-pares.js",
   "./js/telas/glossario.js",
+  "./js/qual-bioma.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",
