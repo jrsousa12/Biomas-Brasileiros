@@ -17,5 +17,5 @@ function vHome(){
  return headerHTML("Olá, "+esc(S.name||"explorador(a)")+"! 👋","Escolha um bioma e comece sua trilha")+
  '<main>'+seqHTML()+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div><div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+
  '<h2>Suas trilhas <span class="small">('+done+'/6 concluídas)</span></h2><div class="tiles">'+tiles+'</div>'+
- '<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button><button class="btn sec" onclick="go(\'medalhas\')">🏅 Minhas medalhas</button><button class="btn sec" onclick="go(\'glossario\')">📖 Glossário</button></main>';
+ '<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button><button class="btn sec" onclick="go(\'medalhas\')">🏅 Minhas medalhas</button><button class="btn sec" onclick="go(\'glossario\')">📖 Glossário</button><button class="btn sec" onclick="startPares()">🔗 Ligar pares</button></main>';
 }

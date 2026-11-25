@@ -26,6 +26,7 @@ function render(){
  else if(view==="cert")h=vCert();
  else if(view==="medalhas")h=vMedalhas();
  else if(view==="glossario")h=vGlossario();
+ else if(view==="pares")h=vPares();
  document.getElementById("app").innerHTML=h;
  renderNav();
  sessSave();

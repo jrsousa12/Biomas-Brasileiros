@@ -26,6 +26,7 @@ const FILES = [
   "./js/quiz.js",
   "./js/telas/atividades.js",
   "./js/telas/resultado.js",
+  "./js/quiz-pares.js",
   "./js/telas/glossario.js",
   "./js/main.js",
   "./js/pwa.js",
