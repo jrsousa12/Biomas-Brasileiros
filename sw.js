@@ -20,6 +20,7 @@ const FILES = [
   "./js/dados/glossario.js",
   "./js/dados/textos/amazonia.js",
   "./js/dados/textos/cerrado.js",
+  "./js/dados/textos/caatinga.js",
   "./js/estado.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
