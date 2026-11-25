@@ -16,7 +16,7 @@ function vQuiz(){
  if(q.t==="mc"){
   h+=Q.opts.map(function(o,i){
    var cls="";if(Q.ans){if(o.ok)cls="right";else if(Q.sel===i)cls="wrong"}
-   return '<button class="opt '+cls+'" '+(Q.ans?"disabled":"")+' onclick="pickMC('+i+')">'+o.t+'</button>';
+   return '<button class="opt l '+cls+'" '+(Q.ans?"disabled":"")+' onclick="pickMC('+i+')">'+o.t+'</button>';
   }).join("");
  }else if(q.t==="tf"){
   [true,false].forEach(function(v,i){
@@ -34,6 +34,7 @@ function vQuiz(){
   if(!Q.ans)h+='<button class="btn sec" onclick="clearOrd()">Limpar</button>';
  }
  h+='</div>';
+ if(Q.ans&&Q.chk)h+=festaHTML();
  if(Q.ans){
   h+='<div class="fb '+(Q.chk?"ok":"bad")+' pop"><b>'+(Q.chk?"✅ Muito bem! ":"❌ Quase lá! ")+'</b>'+q.e+(q.t==="order"&&!Q.chk?'<br><br><b>Ordem certa:</b> '+q.items.join(" → "):"")+'</div>';
   if(!Q.chk)h+=revejaHTML(q);
@@ -41,6 +42,10 @@ function vQuiz(){
  }
  h+='<button class="btn sec" onclick="askQuit()">Sair</button></main>';
  return h;
+}
+function festaHTML(){
+ var e=["🎉","⭐","✨","🎊","🌟","🎈"],x=[-120,110,-60,70,0,-140],y=[-90,-110,-140,-60,-120,-30];
+ return '<div class="festa" aria-hidden="true">'+e.map(function(c,i){return '<i style="--x:'+x[i]+'px;--y:'+y[i]+'px;--r:'+(i%2?50:-40)+'deg;--d:'+(i*0.05)+'s">'+c+'</i>'}).join("")+'</div>';
 }
 function finishAns(correct){
  var q=Q.list[Q.i];Q.ans=true;Q.chk=correct;
