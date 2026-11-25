@@ -1,0 +1,116 @@
+<title>Paleta dos Biomas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: guia à esquerda (escolha do bioma + amostras), celular de exemplo à direita; empilha no celular. */
+:root{
+  --pag:#eef2ec; --tinta:#1b261e; --mut:#5a685e; --cartao:#fff; --linha:#d6ded5;
+  --ok:#1e8f52; --okc:#e2f4e9; --erro:#c63b3b; --erroc:#fbe5e5; --ouro:#e0a800;
+  --b:#1f6b3a; --bc:#e3f1e6; --be:#0f3f22;
+  --fonte:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--pag);color:var(--tinta);font:16px/1.45 var(--fonte);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 40px}
+.wrap{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start}
+@media (max-width:820px){.wrap{grid-template-columns:1fr}}
+h1{font-size:26px;margin:0 0 4px;text-wrap:balance}
+.lead{color:var(--mut);margin:0 0 20px;max-width:60ch}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:24px 0 10px}
+.biomas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:480px){.biomas{grid-template-columns:repeat(2,1fr)}}
+.bio{border:2px solid transparent;border-radius:14px;padding:12px;color:#fff;text-align:left;cursor:pointer;font:inherit;min-height:84px;display:flex;flex-direction:column;justify-content:space-between}
+.bio b{font-size:15px}.bio small{opacity:.9;font-size:12px}
+.bio[aria-pressed=true]{border-color:var(--tinta);box-shadow:0 0 0 3px var(--cartao) inset}
+.bio:focus-visible,.btn:focus-visible,.op:focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+.fitas{display:flex;gap:8px;flex-wrap:wrap}
+.fita{flex:1 1 90px;border-radius:10px;padding:10px;font-size:12px;border:1px solid var(--linha);background:var(--cartao)}
+.fita i{display:block;height:34px;border-radius:6px;margin-bottom:6px}
+.nota{background:var(--cartao);border:1px solid var(--linha);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--mut)}
+.nota ul{margin:6px 0 0;padding-left:18px}
+/* celular */
+.cel{background:var(--bc);border:10px solid #222;border-radius:36px;overflow:hidden;max-width:100%;transition:background .3s}
+.topo{background:linear-gradient(135deg,var(--b),var(--be));color:#fff;padding:18px 16px 16px;border-radius:0 0 22px 22px}
+.topo .linha1{display:flex;justify-content:space-between;align-items:center;font-size:13px;opacity:.9}
+.topo h3{margin:8px 0 2px;font-size:22px;display:flex;gap:8px;align-items:center}
+.barra{height:10px;background:rgba(255,255,255,.25);border-radius:99px;margin-top:12px;overflow:hidden}
+.barra i{display:block;height:100%;width:62%;background:var(--ouro);border-radius:99px}
+.corpo{padding:14px;display:grid;gap:12px}
+.card{background:var(--cartao);border-radius:16px;padding:14px;box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.card .tag{display:inline-block;background:var(--bc);color:var(--be);font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
+.card p{margin:8px 0 0;font-size:15px}
+.op{display:block;width:100%;text-align:left;font:inherit;font-size:15px;padding:12px 14px;border-radius:12px;border:2px solid var(--linha);background:var(--cartao);color:var(--tinta);margin-top:8px}
+.op.certa{border-color:var(--ok);background:var(--okc)}
+.op.errada{border-color:var(--erro);background:var(--erroc)}
+.reveja{font-size:13px;color:var(--be);font-weight:600;margin-top:10px}
+.btn{width:100%;border:0;border-radius:14px;padding:14px;font:inherit;font-weight:700;font-size:16px;color:#fff;background:var(--b);box-shadow:0 4px 0 var(--be);cursor:pointer}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--be)}
+.btn2{background:var(--cartao);color:var(--be);box-shadow:0 4px 0 var(--linha);border:2px solid var(--bc)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <div>
+    <h1>Paleta dos Biomas</h1>
+    <p class="lead">Amostra da proposta "cor por bioma". Toque num bioma: o celular ao lado troca de cor como se o aluno entrasse naquela trilha. Verde e vermelho de certo/errado ficam iguais em todos os biomas.</p>
+
+    <h2>Escolha um bioma</h2>
+    <div class="biomas" id="biomas"></div>
+
+    <h2>Cores do bioma escolhido</h2>
+    <div class="fitas">
+      <div class="fita"><i style="background:var(--b)"></i>Principal (botões, topo)</div>
+      <div class="fita"><i style="background:var(--be)"></i>Escura (sombras, títulos)</div>
+      <div class="fita"><i style="background:var(--bc)"></i>Clara (fundo da tela)</div>
+      <div class="fita"><i style="background:var(--ouro)"></i>Ouro (XP, medalhas)</div>
+    </div>
+
+    <h2>O que muda no app</h2>
+    <div class="nota">
+      <ul>
+        <li>Cada trilha usa a cor do seu bioma no topo, nos botões e no fundo.</li>
+        <li>Início e Mapa mostram os 6 biomas como cartões coloridos.</li>
+        <li>Botões mais "de jogo": maiores, com sombra que afunda ao tocar.</li>
+        <li>Barra de XP dourada; certo/errado sempre verde/vermelho.</li>
+        <li>Mesma letra do sistema (rápida e offline). Nada muda no progresso salvo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cel" id="cel" aria-label="Exemplo de tela de pergunta">
+    <div class="topo">
+      <div class="linha1"><span>← Voltar</span><span>Pergunta 3 de 8</span></div>
+      <h3><span id="emo">🌳</span><span id="nome">Amazônia</span></h3>
+      <div class="barra"><i></i></div>
+    </div>
+    <div class="corpo">
+      <div class="card">
+        <span class="tag" id="tag">Trilha da Amazônia</span>
+        <p id="perg">Por que a floresta consegue crescer tanto, mesmo com o solo pobre?</p>
+        <button class="op" type="button">Porque chove pouco o ano todo.</button>
+        <button class="op errada" type="button">Porque o solo é muito fértil. ✗</button>
+        <button class="op certa" type="button">Porque as folhas que caem viram nutrientes rápido. ✓</button>
+        <div class="reveja">📖 Reveja: Solo</div>
+      </div>
+      <button class="btn" type="button">Próxima pergunta</button>
+      <button class="btn btn2" type="button">📖 Quero ler mais</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const B=[
+ {n:"Amazônia",e:"🌳",d:"Floresta e rios",b:"#1f6b3a",be:"#0f3f22",bc:"#e3f1e6",p:"Por que a floresta consegue crescer tanto, mesmo com o solo pobre?"},
+ {n:"Mata Atlântica",e:"🦋",d:"Serra e litoral",b:"#0d7466",be:"#06443c",bc:"#ddf1ee",p:"Quanto sobrou da Mata Atlântica original, aproximadamente?"},
+ {n:"Cerrado",e:"🌾",d:"Savana e nascentes",b:"#a85a12",be:"#5e3108",bc:"#f8eadb",p:"Por que muitas árvores do Cerrado têm casca grossa?"},
+ {n:"Caatinga",e:"🌵",d:"Seca e sertão",b:"#9c3f24",be:"#5a2312",bc:"#f6e4dc",p:"O que muitas plantas da Caatinga fazem na época seca?"},
+ {n:"Pantanal",e:"🐊",d:"Cheias e vazantes",b:"#1d5d96",be:"#0d3459",bc:"#e0ecf7",p:"O que acontece com a planície do Pantanal na época das cheias?"},
+ {n:"Pampa",e:"🐎",d:"Campos do Sul",b:"#7a6a0c",be:"#463c05",bc:"#f3efd6",p:"Qual é a vegetação que mais aparece no Pampa?"}
+];
+const box=document.getElementById('biomas'),r=document.documentElement.style;
+function escolher(i){const x=B[i];r.setProperty('--b',x.b);r.setProperty('--be',x.be);r.setProperty('--bc',x.bc);
+ emo.textContent=x.e;nome.textContent=x.n;tag.textContent='Trilha d'+(x.n==='Pantanal'||x.n==='Pampa'||x.n==='Cerrado'?'o ':'a ')+x.n;perg.textContent=x.p;
+ box.querySelectorAll('.bio').forEach((el,j)=>el.setAttribute('aria-pressed',j===i));}
+B.forEach((x,i)=>{const el=document.createElement('button');el.type='button';el.className='bio';el.style.background=`linear-gradient(135deg,${x.b},${x.be})`;
+ el.innerHTML=`<b>${x.e} ${x.n}</b><small>${x.d}</small>`;el.onclick=()=>escolher(i);box.appendChild(el);});
+escolher(0);
+</script>

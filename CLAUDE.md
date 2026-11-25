@@ -42,6 +42,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
    - Ordem: prompt E (conteúdo, em `docs/prompts-conteudo.md`) + D → P8 tela Estudar (`docs/prompts-codigo.md`) → montagem aqui → fase 2: erro na questão aponta "📖 Reveja: <seção>" → só então ampliar questões.
    - ✅ "Cartas X/72" corrigido em `telas/resultado.js` (total calculado).
 6. Motor de teoria ✅ (`tools/teoria.js` + `tools/fichas/<bioma>.json`, teste `tests/teoria.js`). Fichas são RASCUNHO: o dono confere/amplia (6 a 10 ideias erradas por bioma). Rodar `node tools/teoria.js <arq.txt> <bioma>` antes do importar. Banco atual: 13 avisos reais (6 certa longa, 7 absolutas) em `docs/teoria-relatorio.md`, ainda não corrigidos.
+7. Reformulação visual ⏳ (25/11/2026). Decidido: "cor por bioma" (topo, botões e fundo na cor da trilha; certo/errado fixos), código feito em outra IA (pedido P9), amostra antes. Amostra: `docs/amostra-visual.html` (aguarda aprovação). Depois: P9 em `docs/prompts-codigo.md` → dividir `app.css` em base/componentes/telas → aplicar por partes (Início+Mapa → Trilha/Lição → atividades → Resultado/Medalhas/Relatório).
 - "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão
