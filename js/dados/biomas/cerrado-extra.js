@@ -16,7 +16,20 @@ b.q.push.apply(b.q,[
  {t:"tf",q:"Verdadeiro ou falso: afloramentos rochosos podem abrigar plantas especializadas.",a:true,e:"Verdadeiro. Algumas plantas conseguem viver em frestas e solos muito rasos."},
  {t:"order",q:"Coloque em ordem: polinização de uma flor por um morcego.",items:["A flor se abre à noite","O morcego busca alimento","O pólen adere ao corpo","O pólen chega a outra flor"],e:"Ao visitar flores diferentes, o morcego pode transportar pólen entre elas."},
  {t:"order",q:"Coloque em ordem: trabalho comunitário com sementes nativas.",items:["As plantas matrizes são identificadas","As sementes maduras são coletadas","As sementes são selecionadas","As sementes são armazenadas"],e:"A coleta exige identificação, cuidado e armazenamento adequado das sementes."},
- {t:"order",q:"Coloque em ordem: ação dos cupins sobre um galho caído.",items:["O galho cai no chão","Os cupins encontram o material","O galho começa a ser decomposto","Nutrientes retornam ao ambiente"],e:"A decomposição transforma restos vegetais e participa da reciclagem de nutrientes."}
+ {t:"order",q:"Coloque em ordem: ação dos cupins sobre um galho caído.",items:["O galho cai no chão","Os cupins encontram o material","O galho começa a ser decomposto","Nutrientes retornam ao ambiente"],e:"A decomposição transforma restos vegetais e participa da reciclagem de nutrientes."},
+ {t:"mc",q:"Qual característica é comum em muitas árvores do Cerrado?",o:["Troncos retorcidos","Folhas gigantes flutuantes","Raízes aéreas","Caules cheios de sal"],a:0,e:"Muitas árvores têm troncos retorcidos e casca espessa."},
+ {t:"mc",q:"Qual é a estação mais seca no Cerrado?",o:["Primavera","Verão","Outono","Inverno"],a:3,e:"O inverno costuma ter pouca chuva."},
+ {t:"mc",q:"Qual animal é símbolo do Cerrado brasileiro?",o:["Mico-leão-dourado","Lobo-guará","Peixe-boi","Pinguim"],a:1,e:"O lobo-guará é uma das espécies mais conhecidas do bioma."},
+ {t:"mc",q:"Qual fruto é nativo do Cerrado?",o:["Pinhão","Pequi","Maçã","Uva"],a:1,e:"O pequi é muito usado na culinária regional."},
+ {t:"mc",q:"Grande parte das nascentes de importantes rios brasileiros está associada a qual bioma?",o:["Pampa","Pantanal","Cerrado","Caatinga"],a:2,e:"O Cerrado é conhecido por sua importância hídrica."},
+ {t:"mc",q:"Qual atividade pode causar perda de vegetação nativa no Cerrado?",o:["Expansão agrícola sem planejamento","Observação de aves","Pesquisa científica","Turismo controlado"],a:0,e:"A remoção da vegetação reduz áreas naturais."},
+ {t:"mc",q:"Qual grupo de plantas é muito comum nas paisagens do Cerrado?",o:["Cactos gigantes","Gramíneas","Pinheiros","Algas marinhas"],a:1,e:"As gramíneas formam grande parte da cobertura vegetal."},
+ {t:"mc",q:"Qual estratégia ajuda a conservar a fauna do Cerrado?",o:["Fragmentar habitats","Criar corredores ecológicos","Drenar nascentes","Remover árvores nativas"],a:1,e:"Corredores ecológicos facilitam o deslocamento dos animais."},
+ {t:"tf",q:"Verdadeiro ou falso: O Cerrado é um bioma que apresenta períodos de seca e de chuva bem definidos.",a:true,e:"Verdadeiro. As estações secas e chuvosas são marcantes."},
+ {t:"tf",q:"Verdadeiro ou falso: No Cerrado não existem árvores, apenas gramíneas.",a:false,e:"Falso. O bioma possui gramíneas, arbustos e árvores."},
+ {t:"tf",q:"Verdadeiro ou falso: Muitas espécies do Cerrado dependem da polinização realizada por animais.",a:true,e:"Verdadeiro. Insetos, aves e outros animais participam desse processo."},
+ {t:"order",q:"Coloque em ordem: etapas da polinização no Cerrado.",items:["Flor produz pólen","Animal visita a flor","Pólen alcança outra flor","Formam-se sementes"],e:"A polinização ajuda na reprodução das plantas."},
+ {t:"order",q:"Coloque em ordem: caminho da água até um rio.",items:["Chuva cai no solo","Água infiltra no terreno","Alimenta nascentes","Chega aos rios"],e:"A infiltração é importante para os recursos hídricos."}
 ]);
 b.sp.push.apply(b.sp,[
  {n:"Pato-mergulhão",e:"🦆",st:"Criticamente em perigo",f:"Depende de rios limpos e transparentes para capturar suas presas."},
