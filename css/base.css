@@ -1,20 +1,30 @@
-/* Base: cores, corpo, cabeçalho, barra de XP, impressão. --c1/--c2/--c3 mudam por bioma (js/tema.js). */
-:root{--bg:#f3f7f2;--ink:#1d2b21;--mut:#5c6b60;--card:#fff;--c1:#1b8a4b;--c2:#0d5c33;--c3:#eef2ec;--ok:#1e9e5a;--bad:#d64545;--gold:#f2b705}
+/* Base "colorido e divertido": cores (claro/escuro), corpo, cabeçalho com onda, barra de XP, impressão.
+   --c1/--c2/--c3/--tx mudam por bioma (js/tema.js). --line = contorno e sombra "de desenho". Modo escuro: js/modo.js. */
+:root{--ink:#24324a;--mut:#5b6578;--card:#fff;--line:#24324a;--soft:#eef1f6;--dot:rgba(0,0,0,.05);
+ --c1:#1b8a4b;--c2:#0d5c33;--c3:#e9f8ef;--tx:#0d5c33;--ok:#157a43;--bad:#b05a00;--gold:#ffc62e;--lfg:#fff;
+ --okbg:#e3f9ea;--badbg:#fff1e3;--sky:#1d6fb8;--skybg:#e8f5ff;--pink:#d6336c;--pinkbg:#ffeef4;--mark:#ffd84d;color-scheme:light}
+:root[data-theme="dark"]{--ink:#eef2f8;--mut:#b4bccb;--card:#1f2a3d;--line:#55678c;--soft:#2a3650;--dot:rgba(255,255,255,.05);
+ --ok:#52d18a;--bad:#ffab5c;--lfg:#0a0f18;--okbg:#173a2a;--badbg:#3d2a17;--sky:#6cc0ff;--skybg:#16304a;--pink:#ff8fb3;--pinkbg:#3d1a2a;--mark:#806000;color-scheme:dark}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--c3);color:var(--ink);font-size:16px;line-height:1.5;min-height:100vh}
-#app{max-width:560px;margin:0 auto;padding-bottom:84px}
-header.top{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:18px 16px 16px;border-radius:0 0 24px 24px;box-shadow:0 6px 18px rgba(0,0,0,.12);position:relative}
-header.top h1{margin:0;font-size:21px;line-height:1.2}
-header.top .sub{margin-top:3px;font-size:13px;opacity:.95}
-.xpbar{height:10px;margin-top:10px;border-radius:999px;background:rgba(255,255,255,.28);overflow:hidden}
-.xpbar i{display:block;height:100%;background:var(--gold);border-radius:999px;transition:width .4s}
-.xpline{display:flex;justify-content:space-between;margin-top:5px;font-size:12px;opacity:.95}
-main{padding:14px 14px 0}
-h2{margin:6px 0 10px;color:var(--c2);font-size:18px}
-.small{font-size:13px;color:var(--mut)}
-:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+body{font-family:"Nunito","Trebuchet MS",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;
+ background:var(--c3) radial-gradient(circle,var(--dot) 2px,transparent 2.5px) 0 0/22px 22px}
+#app{max-width:560px;margin:0 auto;padding-bottom:96px}
+header.top{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:18px 16px 34px;position:relative}
+header.top:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:22px;
+ background:radial-gradient(circle at 12px -6px,transparent 16px,var(--c3) 17px) 0 0/24px 22px repeat-x}
+header.top h1{margin:0;font-size:23px;font-weight:900;line-height:1.2;text-shadow:0 2px 0 rgba(0,0,0,.3);padding-right:52px;overflow-wrap:anywhere}
+header.top .sub{margin-top:3px;font-size:14px}
+.modo{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:3px solid #fff;background:rgba(0,0,0,.2);font-size:20px;cursor:pointer;padding:0}
+.xpbar{height:14px;margin-top:10px;border-radius:999px;background:rgba(0,0,0,.25);overflow:hidden;border:2px solid rgba(255,255,255,.6)}
+.xpbar i{display:block;height:100%;border-radius:999px;background:repeating-linear-gradient(45deg,var(--gold) 0 10px,#ffd965 10px 20px);transition:width .4s}
+.xpline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 10px;margin-top:4px;font-size:13px;font-weight:800}
+main{padding:4px 14px 0}
+h2{margin:8px 0 10px;color:var(--tx);font-size:20px;font-weight:900;line-height:1.25}
+.small{font-size:14px;color:var(--mut)}
+mark{background:linear-gradient(transparent 55%,var(--mark) 55%);color:inherit;padding:0 2px}
+:focus-visible{outline:4px solid var(--gold);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){
  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }

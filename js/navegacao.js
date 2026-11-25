@@ -9,7 +9,7 @@ function renderNav(){
 }
 function headerHTML(title,sub){
  var l=level(),lo=LEVELS[l],hi=LEVELS[l+1]||LEVELS[l]+1,pc=l>=LEVELS.length-1?100:Math.min(100,Math.round((S.xp-lo)/(hi-lo)*100));
- return '<header class="top"><h1>'+title+'</h1><div class="sub">'+(sub||"")+'</div><div class="xpbar"><i style="width:'+pc+'%"></i></div><div class="xpline"><span>Nível '+(l+1)+': '+LNAMES[l]+'</span><span>'+S.xp+' XP</span></div></header>';
+ return '<header class="top">'+modoBtnHTML()+'<h1>'+title+'</h1><div class="sub">'+(sub||"")+'</div><div class="xpbar"><i style="width:'+pc+'%"></i></div><div class="xpline"><span>Nível '+(l+1)+': '+LNAMES[l]+'</span><span>'+S.xp+' XP</span></div></header>';
 }
 function render(){
  setTheme("#1b8a4b","#0d5c33");

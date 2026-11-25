@@ -27,6 +27,7 @@ const FILES = [
   "./js/dados/textos/pampa.js",
   "./js/estado.js",
   "./js/tema.js",
+  "./js/modo.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
   "./js/sessao.js",

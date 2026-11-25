@@ -3,7 +3,7 @@
 .relatorio-resumo h2{margin:0 0 12px}
 .relatorio-linha{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .relatorio-status{padding:5px 9px;border-radius:999px;font-size:.78rem;font-weight:700}
-.relatorio-ok{background:var(--ok);color:#fff}
+.relatorio-ok{background:var(--ok);color:var(--lfg)}
 .relatorio-pendente{background:var(--bg);color:var(--mut)}
 .relatorio-ok-texto{border-left:5px solid var(--ok)}
 .relatorio-lista{margin:0;padding:12px 12px 12px 34px;background:var(--card);border-radius:12px}

@@ -13,7 +13,7 @@ function startReview(){
 function vCards(){
  var tot=0,got=0,h="";
  BIOMES.forEach(function(b){
-  h+='<h2 style="color:'+b.c2+'">'+b.emoji+' '+b.nome+'</h2><div class="grid2">';
+  h+='<h2 class="tit-bioma" style="--bc:'+b.c2+';--bcl:'+mixWhite(b.c1,.55)+'">'+b.emoji+' '+b.nome+'</h2><div class="grid2">';
   b.sp.forEach(function(s){
    tot++;var has=S.cards.indexOf(s.n)>=0;
    if(has){got++;h+='<div class="sp" style="background:linear-gradient(145deg,'+b.c1+','+b.c2+')"><div class="e">'+s.e+'</div><h4>'+s.n+'</h4>'+(s.st?'<div class="tag">'+s.st+'</div>':'')+'<p>'+s.f+'</p></div>'}
