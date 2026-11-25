@@ -98,3 +98,39 @@ Primeiro liste os problemas em até 5 linhas. Depois mostre o código corrigido 
 
 <COLE AQUI A RESPOSTA>
 ```
+
+---
+
+## Prompt E — Texto para estudar (seção 📖 Estudar)
+
+Use com o Bloco BASE, um bioma por vez. Depois passe pelo Prompt D e traga com a frase: "Crie `js/dados/textos/<bioma>.js` com isto".
+
+```
+Bioma: <BIOMA>
+Perguntas que já existem no app (o texto precisa explicar TODOS estes assuntos):
+<COLE AQUI A SAÍDA DE: node tools/contexto.js <bioma>>
+
+Escreva um texto de estudo sobre este bioma, dividido em 11 seções, nesta ordem e com estes ids exatos:
+local (📍 Onde fica), clima (☀️ Clima), solo (🪨 Solo e relevo), agua (💧 Água), plantas (🌳 Plantas), animais (🐾 Animais), povos (👥 Povos e cultura), economia (💰 Economia), ameacas (⚠️ Ameaças), conservacao (🛡️ Conservação), resumo (📝 Resumo).
+
+Formato exato (exceção à regra "um objeto por linha": aqui é um parágrafo por linha):
+
+"use strict";
+(window.TEXTOS=window.TEXTOS||{}).<ID>=[
+ {id:"local",t:"📍 Onde fica",p:[
+  "Primeiro parágrafo.",
+  "Segundo parágrafo."
+ ]},
+ {id:"clima",t:"☀️ Clima",p:[
+  "..."
+ ]}
+];
+
+Detalhes:
+- <ID> é: ama (Amazônia), cer (Cerrado), caa (Caatinga), mat (Mata Atlântica), pan (Pantanal) ou pam (Pampa).
+- Cada seção com 2 ou 3 parágrafos; cada parágrafo com até 3 frases curtas. Resumo: 4 a 6 frases, uma por parágrafo, começando com "•".
+- Texto puro: sem HTML, sem markdown, sem negrito.
+- Linguagem de 12 anos. Ao usar uma palavra difícil, explique logo em seguida.
+- O arquivo inteiro deve ter no máximo 9.000 caracteres.
+- No fim, FORA do código, escreva uma linha: COBERTURA: quais assuntos das perguntas ficaram em cada seção (ex.: "clima: chuva, estações; agua: igarapés, vazante").
+```

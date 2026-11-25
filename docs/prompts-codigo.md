@@ -103,6 +103,20 @@ Crie js/telas/relatorio.js com vRelatorio(). É uma página para imprimir (com @
 Para trazer junto: cole o arquivo js/telas/resultado.js para a IA ver como os dados são lidos.
 ```
 
+**P8 – Tela Estudar (📖)**
+```
+Crie js/telas/estudar.js. É uma tela de leitura do texto completo de um bioma.
+Os textos ficam em window.TEXTOS[idBioma] = [{id:"local",t:"📍 Onde fica",p:["parágrafo","parágrafo"]}, ...] (cerca de 11 seções; ids possíveis: local, clima, solo, agua, plantas, animais, povos, economia, ameacas, conservacao, resumo). Pode faltar o texto de algum bioma: nesse caso mostre "Texto em preparação" e um botão para voltar.
+- Estado da tela: var ES={b:"ama",sec:-1}. sec=-1 é o sumário; 0, 1, 2... é a seção aberta.
+- estudar(id) abre o sumário do bioma. estudarSecao(id,idSecao) abre direto numa seção (vai ser usada depois para "📖 Reveja: <seção>" quando o aluno errar).
+- vEstudar(): use setTheme(b.c1,b.c2) e headerHTML("📖 "+b.nome,"Estudar").
+  - Sumário: uma lista de botões grandes, um por seção, com ✅ nas seções já lidas.
+  - Seção aberta: título, parágrafos (cada um em <p>, com esc()), indicador "3 de 11", botões "◀ Anterior" e "Próxima ▶". Na última seção, troque "Próxima" por "🎯 Fazer a trilha", que chama startTrail(ES.b). Tenha sempre um botão "☰ Sumário".
+  - Ao abrir uma seção, marque como lida em S.lidos={idBioma:{idSecao:true}} (inicialize com segurança) e chame save(). Ao trocar de seção, chame render() e window.scrollTo(0,0).
+- estudarVoltar(): se uma seção estiver aberta, volta ao sumário e retorna true; se já estiver no sumário, retorna false. (O botão voltar do celular vai usar isso.)
+- Fonte do texto com pelo menos 17 px e linhas confortáveis para leitura no celular.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
@@ -122,6 +136,6 @@ Liste os problemas em até 6 linhas e depois devolva a ENTREGA corrigida, no mes
 ---
 
 ## Ordem sugerida
-P4 → P3 → P6 → P1 → P2 → P5 → P7. Vem antes o que é simples e motiva os alunos.
+P4 → P3 → P6 → P1 → P2 → P5 → P7 → P8. Vem antes o que é simples e motiva os alunos.
 
 Mais conteúdo de perguntas, mitos e espécies: veja `docs/prompts-conteudo.md`.
