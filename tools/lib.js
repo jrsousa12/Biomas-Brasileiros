@@ -11,14 +11,21 @@ const ler = (f) => fs.readFileSync(path.join(ROOT, f), "utf8");
 const ORDEM = { mc: ["t", "q", "o", "a", "e"], tf: ["t", "q", "a", "e"], order: ["t", "q", "items", "e"],
   sp: ["n", "e", "st", "f"], mito: ["s", "v", "e"] };
 
-// Carrega cada arquivo de bioma e o mito/fontes. Retorna {biomas:[{id,nome,arq,dados}], mitos, fontes}.
+// Esqueleto do arquivo "-extra" de um bioma (quando o arquivo principal passa do limite de tamanho).
+const modeloExtra = (id) => '// Perguntas e espécies acrescentadas depois (mesma ordem de sempre, no fim das listas).\n"use strict";\n' +
+  '(function(b){\nb.q.push.apply(b.q,[\n]);\nb.sp.push.apply(b.sp,[\n]);\n})(BIOMES.filter(function(x){return x.id==="' + id + '";})[0]);\n';
+
+// Carrega cada arquivo de bioma (+ o "-extra", se houver) e o mito/fontes. Retorna {biomas:[{id,nome,arq,dados}], mitos, fontes}.
 function carregar() {
-  const ordem = [...ler("index.html").matchAll(/src="js\/dados\/biomas\/([^"]+)"/g)].map((m) => m[1]);
+  const ordem = [...ler("index.html").matchAll(/src="js\/dados\/biomas\/((?:(?!-extra)[^"])+)"/g)].map((m) => m[1]);
   const biomas = ordem.map((f) => {
     const ctx = {};
-    vm.runInNewContext(fs.readFileSync(path.join(DIR_BIOMAS, f), "utf8"), ctx);
+    vm.createContext(ctx);
+    vm.runInContext(fs.readFileSync(path.join(DIR_BIOMAS, f), "utf8"), ctx);
+    const extra = path.join(DIR_BIOMAS, f.replace(/\.js$/, "-extra.js"));
+    if (fs.existsSync(extra)) vm.runInContext(fs.readFileSync(extra, "utf8"), ctx); // perguntas/espécies acrescentadas depois
     const b = ctx.BIOMES[0];
-    return { id: b.id, nome: b.nome, arq: path.join(DIR_BIOMAS, f), dados: b };
+    return { id: b.id, nome: b.nome, arq: path.join(DIR_BIOMAS, f), extra, dados: b };
   });
   const ctx = {};
   vm.runInNewContext(fs.readFileSync(ARQ_MITOS, "utf8"), ctx);
@@ -89,4 +96,4 @@ function limite(txt) {
   return { linhas, kb, passou: linhas > 300 || kb > 10 };
 }
 
-module.exports = { ROOT, ARQ_MITOS, ler, carregar, norm, acharBioma, fechar, extrairObjetos, serializar, inserirNoFim, limite };
+module.exports = { modeloExtra, ROOT, ARQ_MITOS, ler, carregar, norm, acharBioma, fechar, extrairObjetos, serializar, inserirNoFim, limite };

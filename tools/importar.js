@@ -4,7 +4,7 @@
 //   --teste: só mostra o que faria, sem gravar. Com qualquer ERRO, nada é gravado.
 "use strict";
 const fs = require("fs"), path = require("path");
-const { ROOT, ARQ_MITOS, carregar, acharBioma, extrairObjetos, serializar, inserirNoFim, limite } = require("./lib");
+const { modeloExtra, ROOT, ARQ_MITOS, carregar, acharBioma, extrairObjetos, serializar, inserirNoFim, limite } = require("./lib");
 const { tipoDe, validar, repeticao } = require("./validar");
 
 const args = process.argv.slice(2), teste = args.includes("--teste");
@@ -53,7 +53,24 @@ function gravar(arqDestino, listas) {
   if (lim.passou) console.log("ATENÇÃO: " + rel + " passa do limite (" + lim.linhas + " linhas, " + lim.kb.toFixed(1) + " KB). Proponha divisão.");
   if (!teste) fs.writeFileSync(arqDestino, t);
 }
-if (bioma) gravar(bioma.arq, [[/\bq:\[/, novos.q, "q"], [/\bsp:\[/, novos.sp, "sp"]]);
+if (bioma && (novos.q.length || novos.sp.length)) {
+  // Destino: o "-extra" se já existe; senão o principal, a menos que estoure o limite (aí nasce o "-extra").
+  const simula = (re1, re2) => { let s = fs.readFileSync(bioma.arq, "utf8");
+    [[re1, novos.q, "q"], [re2, novos.sp, "sp"]].forEach(([re, it, tp]) => { if (it.length) s = inserirNoFim(s, re, it.map((o) => serializar(o, tp === "q" ? o.t : tp))); });
+    return limite(s).passou; };
+  const usaExtra = fs.existsSync(bioma.extra) || simula(/\bq:\[/, /\bsp:\[/);
+  if (!usaExtra) gravar(bioma.arq, [[/\bq:\[/, novos.q, "q"], [/\bsp:\[/, novos.sp, "sp"]]);
+  else {
+    if (!fs.existsSync(bioma.extra)) {
+      if (!teste) fs.writeFileSync(bioma.extra, modeloExtra(bioma.id));
+      const rel = path.relative(ROOT, bioma.extra);
+      console.log("Novo arquivo " + rel + " — rode: node tools/integrar.js " + rel + " --antes js/dados/mitos-fontes.js");
+    }
+    const base = fs.existsSync(bioma.extra) ? bioma.extra : null;
+    if (base) gravar(base, [[/\bq\.push\.apply\(b\.q,\[/, novos.q, "q"], [/\bsp\.push\.apply\(b\.sp,\[/, novos.sp, "sp"]]);
+    else console.log("(simulação) iria para o arquivo -extra de " + bioma.nome);
+  }
+}
 if (novos.mito.length) gravar(ARQ_MITOS, [[/var MITOS=\[/, novos.mito, "mito"]]);
 
 if (teste) console.log("Simulação: nada gravado (tire --teste para gravar).");
