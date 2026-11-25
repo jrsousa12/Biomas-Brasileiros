@@ -22,6 +22,7 @@ const FILES = [
   "./js/dados/textos/cerrado.js",
   "./js/dados/textos/pantanal.js",
   "./js/dados/textos/caatinga.js",
+  "./js/dados/textos/pampa.js",
   "./js/estado.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
