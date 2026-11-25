@@ -42,6 +42,7 @@ const FILES = [
   "./js/qual-bioma.js",
   "./js/dados/biomas/amazonia-extra.js",
   "./js/dados/biomas/cerrado-extra.js",
+  "./js/dados/textos/mata-atlantica.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",
