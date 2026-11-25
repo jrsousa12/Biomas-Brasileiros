@@ -1,0 +1,74 @@
+.estudar-pagina {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.estudar-intro h2,
+.estudar-secao h2,
+.estudar-preparacao h2 {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.estudar-lista {
+  display: grid;
+  gap: 10px;
+}
+
+.estudar-sumario-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 54px;
+  text-align: left;
+}
+
+.estudar-secao {
+  padding: 20px;
+}
+
+.estudar-indicador {
+  margin-top: 0;
+  color: var(--mut);
+}
+
+.estudar-texto {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.estudar-texto p {
+  margin: 0 0 18px;
+}
+
+.estudar-navegacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.estudar-navegacao .btn,
+.estudar-sumario-link,
+.estudar-voltar-home,
+.estudar-preparacao .btn {
+  min-height: 48px;
+}
+
+.estudar-sumario-link,
+.estudar-voltar-home {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.estudar-navegacao .btn:disabled {
+  opacity: .45;
+}
+
+@media (max-width: 380px) {
+  .estudar-navegacao {
+    grid-template-columns: 1fr;
+  }
+}

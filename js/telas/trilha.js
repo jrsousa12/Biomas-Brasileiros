@@ -10,6 +10,7 @@ function vLesson(){
  return '<header class="top" style="background:linear-gradient(135deg,'+b.c1+','+b.c2+')"><h1>'+b.emoji+' '+b.nome+'</h1><div class="sub">'+b.lema+' • '+b.pct+' do Brasil • '+b.km+' km²</div></header>'+
  '<main><div class="dots">'+dots+'</div><div class="card lesson pop"><div class="big">'+c.e+'</div><h3>'+c.h+'</h3>'+c.p+'</div>'+
  '<button class="btn" onclick="lessonNext()">'+(last?"Ir para as questões ▶":"Próximo ▶")+'</button>'+
+ '<button class="btn sec" onclick="estudar(TR.b.id)">📖 Quero ler mais</button>'+
  '<button class="btn sec" onclick="'+(TR.step>0?"lessonPrev()":"go('home')")+'">'+(TR.step>0?"◀ Voltar":"Sair da trilha")+'</button></main>';
 }
 function lessonNext(){

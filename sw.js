@@ -43,6 +43,7 @@ const FILES = [
   "./js/dados/biomas/amazonia-extra.js",
   "./js/dados/biomas/cerrado-extra.js",
   "./js/dados/textos/mata-atlantica.js",
+  "./js/telas/estudar.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",
@@ -50,7 +51,8 @@ const FILES = [
   "./icons/icon-512.png",
   "./icons/maskable-512.png",
   "./icons/apple-touch-icon.png",
-  "./css/relatorio.css"
+  "./css/relatorio.css",
+  "./css/estudar.css"
 ];
 
 self.addEventListener("install", (e) => {

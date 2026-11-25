@@ -12,6 +12,7 @@
   if(view==="quiz"&&Q)return askQuit();
   if(view==="home"||view==="name")return perguntarSair();
   if(view==="relatorio")return go("result");
+  if(view==="estudar"){if(!estudarVoltar())estudarSair();return}
   go("home");
  }
  function perguntarSair(){

@@ -29,6 +29,7 @@ function render(){
  else if(view==="pares")h=vPares();
  else if(view==="qualBioma")h=vQualBioma();
  else if(view==="relatorio")h=vRelatorio();
+ else if(view==="estudar")h=vEstudar();
  document.getElementById("app").innerHTML=h;
  renderNav();
  sessSave();
