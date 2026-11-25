@@ -1,7 +1,7 @@
 "use strict";
 var BIOMES=BIOMES||[];
 BIOMES.push(
-{id:"pam",nome:"Pampa",emoji:"🌱",c1:"#6aa84f",c2:"#3d7a2c",pct:"2,3%",km:"193.996",lema:"Os campos do Sul",
+{id:"pam",nome:"Pampa",emoji:"🌱",c1:"#8a7410",c2:"#4f4207",pct:"2,3%",km:"193.996",lema:"Os campos do Sul",
  cards:[
   {e:"🏞️",h:"Campos do Sul",p:"<ul><li>Ocupa <b>2,3%</b> do Brasil e fica <b>só no Rio Grande do Sul</b>. Continua no Uruguai e na Argentina.</li><li>Relevo de planícies e <b>coxilhas</b> (colinas suaves).</li><li>Clima subtropical com <b>quatro estações marcadas</b>, inverno frio e geadas.</li></ul>"},
   {e:"🌾",h:"Riqueza no campo",p:"<ul><li>Cerca de <b>3 mil espécies de plantas</b>, 450 delas gramíneas (Embrapa).</li><li>Fauna: quero-quero (ave símbolo do RS), ema, joão-de-barro, tuco-tuco e veado-campeiro.</li><li>O campo nativo é um ecossistema, e <b>não</b> “só pasto”.</li></ul>"},

@@ -35,5 +35,4 @@ function bio(id){for(var i=0;i<BIOMES.length;i++)if(BIOMES[i].id===id)return BIO
 var LEVELS=[0,80,200,350,500];
 var LNAMES=["Curioso(a)","Explorador(a)","Rastreador(a)","Guardião(ã) de Bioma","Mestre dos Biomas"];
 function level(){var l=0;for(var i=0;i<LEVELS.length;i++)if(S.xp>=LEVELS[i])l=i;return l}
-function setTheme(c1,c2){document.documentElement.style.setProperty("--c1",c1);document.documentElement.style.setProperty("--c2",c2)}
 function addXP(n){S.xp+=n}

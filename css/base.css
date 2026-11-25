@@ -1,0 +1,26 @@
+/* Base: cores, corpo, cabeçalho, barra de XP, impressão. --c1/--c2/--c3 mudam por bioma (js/tema.js). */
+:root{--bg:#f3f7f2;--ink:#1d2b21;--mut:#5c6b60;--card:#fff;--c1:#1b8a4b;--c2:#0d5c33;--c3:#eef2ec;--ok:#1e9e5a;--bad:#d64545;--gold:#f2b705}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--c3);color:var(--ink);font-size:16px;line-height:1.5;min-height:100vh}
+#app{max-width:560px;margin:0 auto;padding-bottom:84px}
+header.top{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:18px 16px 16px;border-radius:0 0 24px 24px;box-shadow:0 6px 18px rgba(0,0,0,.12);position:relative}
+header.top h1{margin:0;font-size:21px;line-height:1.2}
+header.top .sub{margin-top:3px;font-size:13px;opacity:.95}
+.xpbar{height:10px;margin-top:10px;border-radius:999px;background:rgba(255,255,255,.28);overflow:hidden}
+.xpbar i{display:block;height:100%;background:var(--gold);border-radius:999px;transition:width .4s}
+.xpline{display:flex;justify-content:space-between;margin-top:5px;font-size:12px;opacity:.95}
+main{padding:14px 14px 0}
+h2{margin:6px 0 10px;color:var(--c2);font-size:18px}
+.small{font-size:13px;color:var(--mut)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print{
+ body *{visibility:hidden}
+ #certArea,#certArea *{visibility:visible}
+ #certArea{position:absolute;left:0;top:0;width:100%}
+ #installBtn{display:none!important}
+}

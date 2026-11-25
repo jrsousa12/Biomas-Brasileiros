@@ -1,0 +1,43 @@
+/* Telas: navegação, início, lição, sequência, cartas, mitos, resultado, certificado. */
+.landbar{display:flex;height:22px;margin:6px 0 4px;overflow:hidden;border-radius:11px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.landbar b{display:block;height:100%;cursor:pointer;min-width:4px}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:10;background:#fff;border-top:1px solid #dde5dd;display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs div{display:flex;width:100%;max-width:560px}
+nav.tabs button{flex:1;border:0;background:none;color:var(--mut);font-size:11px;padding:9px 2px 8px;cursor:pointer}
+nav.tabs button span{display:block;font-size:22px;line-height:1.1}
+nav.tabs button.on{color:var(--c2);font-weight:800}
+.slots{display:flex;flex-direction:column;gap:7px;margin-bottom:12px}
+.slot{min-height:44px;display:flex;align-items:center;gap:8px;padding:10px 12px;border:2px dashed #bdd0bf;border-radius:12px;background:#fff}
+.slot b{flex:none;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--c1);color:#fff;font-size:13px}
+.slot.ok{border-color:var(--ok);background:#eaf8ef}
+.slot.bad{border-color:var(--bad);background:#fff0f0}
+.lesson{font-size:16px}
+.lesson .big{margin:4px 0;text-align:center;font-size:56px}
+.lesson h3{margin:0 0 8px;color:var(--c2);font-size:20px}
+.lesson ul{margin:8px 0;padding-left:20px}
+.lesson li{margin-bottom:5px}
+.dots{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
+.dots i{width:9px;height:9px;border-radius:50%;background:#cbd8cb}
+.dots i.on{background:var(--c1)}
+.sp{min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:14px;border-radius:18px;color:#fff;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.sp .e{font-size:50px;line-height:1.1}
+.sp h4{margin:6px 0 2px;font-size:15px}
+.sp .tag{font-size:11px;background:rgba(0,0,0,.28);margin:3px 0}
+.sp p{margin:5px 0 0;font-size:12px;opacity:.95}
+.sp.lock{color:#6d7b6f;background:#c9d3c9;box-shadow:none;justify-content:center}
+.sp.lock .e{font-size:44px;opacity:.5;filter:grayscale(1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mito .row{display:flex;gap:8px;margin-top:8px}
+.mito .row button{flex:1;padding:11px;border-radius:12px;border:2px solid #c6d3c6;background:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.mito .tagv{font-weight:800;color:#fff;margin-bottom:4px}
+.big-result{text-align:center}
+.big-result .m{font-size:70px}
+.cert{background:#fffdf3;border:6px double #b8860b;border-radius:6px;padding:22px 14px;text-align:center}
+.cert h2{margin:0 0 6px;color:#8a6508;font-size:24px}
+.cert .nm{display:inline-block;margin:10px 0;padding:0 14px;font-size:26px;font-weight:800;border-bottom:2px solid #b8860b}
+input.txt{width:100%;margin-top:8px;padding:13px;font-size:17px;border-radius:12px;border:2px solid #cbd8cb}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t td,table.t th{padding:7px 4px;text-align:left;border-bottom:1px solid #e3eae3}
+pre.code{background:#f0f4ef;border-radius:12px;padding:10px;font-size:13px;white-space:pre-wrap;word-break:break-word}
+.pop{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(.85);opacity:0}100%{transform:scale(1);opacity:1}}
