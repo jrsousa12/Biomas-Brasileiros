@@ -19,5 +19,9 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: ação dos cupins sobre um galho caído.",items:["O galho cai no chão","Os cupins encontram o material","O galho começa a ser decomposto","Nutrientes retornam ao ambiente"],e:"A decomposição transforma restos vegetais e participa da reciclagem de nutrientes."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Pato-mergulhão",e:"🦆",st:"Criticamente em perigo",f:"Depende de rios limpos e transparentes para capturar suas presas."},
+ {n:"Cachorro-vinagre",e:"🐕",st:"Vulnerável",f:"Possui pernas curtas, orelhas arredondadas e costuma caçar em grupo."},
+ {n:"Barbatimão",e:"🌳",st:"",f:"Possui casca grossa e flores que atraem diversos insetos."},
+ {n:"Canela-de-ema",e:"🌿",st:"",f:"Suas folhas estreitas formam tufos no alto do caule."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="cer";})[0]);
