@@ -16,7 +16,22 @@ b.q.push.apply(b.q,[
  {t:"tf",q:"Verdadeiro ou falso: matas ciliares também fazem parte da paisagem do Pampa.",a:true,e:"Verdadeiro. Elas crescem junto aos cursos de água e protegem suas margens."},
  {t:"order",q:"Coloque em ordem: alagamento natural de um banhado.",items:["A chuva aumenta o volume da água","A água ocupa as áreas mais baixas","Plantas aquáticas se desenvolvem","Animais usam o ambiente alagado"],e:"A presença de água transforma o banhado em habitat para diferentes espécies."},
  {t:"order",q:"Coloque em ordem: observação responsável de uma ave campestre.",items:["O observador encontra a ave","Mantém uma distância segura","Usa binóculos para observar","Registra a observação sem se aproximar"],e:"A observação à distância evita perturbar a ave."},
- {t:"order",q:"Coloque em ordem: controle de uma planta exótica invasora.",items:["A espécie invasora é identificada","A área ocupada é registrada","O método de controle é escolhido","O local é acompanhado depois do controle"],e:"O acompanhamento mostra se a espécie invasora voltou a crescer."}
+ {t:"order",q:"Coloque em ordem: controle de uma planta exótica invasora.",items:["A espécie invasora é identificada","A área ocupada é registrada","O método de controle é escolhido","O local é acompanhado depois do controle"],e:"O acompanhamento mostra se a espécie invasora voltou a crescer."},
+ {t:"mc",q:"Qual tipo de vegetação é mais comum no Pampa?",o:["Florestas densas","Campos com gramíneas","Manguezais","Vegetação de tundra"],a:1,e:"Os campos abertos com gramíneas são uma marca do Pampa."},
+ {t:"mc",q:"Em qual estado brasileiro o bioma Pampa está localizado?",o:["Amazonas","Bahia","Rio Grande do Sul","Pará"],a:2,e:"O Pampa brasileiro ocorre no Rio Grande do Sul."},
+ {t:"mc",q:"Qual animal pode ser encontrado no Pampa?",o:["Veado-campeiro","Urso-polar","Pinguim-imperador","Mico-leão-dourado"],a:0,e:"O veado-campeiro é uma espécie típica dos campos sulinos."},
+ {t:"mc",q:"Como é a paisagem típica do Pampa?",o:["Montanhas cobertas de neve","Campos abertos e extensos","Floresta inundada","Deserto arenoso"],a:1,e:"O relevo suave e os campos são características do bioma."},
+ {t:"mc",q:"Qual atividade humana tradicional é comum no Pampa?",o:["Criação de gado","Extração de látex","Pesca oceânica","Cultivo de mangue"],a:0,e:"A pecuária faz parte da história da região."},
+ {t:"mc",q:"Por que a conservação dos campos nativos é importante?",o:["Para aumentar geleiras","Para proteger a biodiversidade","Para formar vulcões","Para impedir chuvas"],a:1,e:"Os campos nativos servem de habitat para muitas espécies."},
+ {t:"mc",q:"Qual grupo de plantas é muito abundante no Pampa?",o:["Gramíneas","Algas marinhas","Cactos gigantes","Vitórias-régias"],a:0,e:"As gramíneas dominam grande parte da vegetação."},
+ {t:"mc",q:"Qual problema pode afetar as espécies do Pampa?",o:["Perda de áreas naturais","Congelamento dos rios","Aumento de icebergs","Expansão de manguezais"],a:0,e:"A redução dos campos nativos pode afetar a fauna e a flora."},
+ {t:"mc",q:"Qual característica ajuda muitas aves do Pampa?",o:["Campos abertos para alimentação","Árvores gigantes em toda parte","Gelo permanente","Recifes de coral"],a:0,e:"Os campos oferecem áreas para alimentação e deslocamento."},
+ {t:"tf",q:"Verdadeiro ou falso: O Pampa é conhecido por suas extensas áreas de campos.",a:true,e:"Verdadeiro. Os campos são a principal paisagem do bioma."},
+ {t:"tf",q:"Verdadeiro ou falso: O Pampa ocupa grande parte da Floresta Amazônica.",a:false,e:"Falso. O Pampa ocorre no sul do Brasil."},
+ {t:"tf",q:"Verdadeiro ou falso: O Pampa apresenta grande variedade de espécies de plantas e animais.",a:true,e:"Verdadeiro. O bioma abriga uma biodiversidade importante."},
+ {t:"order",q:"Coloque em ordem: formação de sementes em uma planta do Pampa.",items:["Flor se desenvolve","Ocorre a polinização","Formam-se sementes","As sementes podem ser dispersas"],e:"As sementes ajudam na reprodução das plantas."},
+ {t:"order",q:"Coloque em ordem: recuperação de uma área de campo nativo.",items:["Área é protegida","A vegetação nativa cresce","Animais encontram abrigo","A biodiversidade aumenta"],e:"A recuperação ocorre gradualmente ao longo do tempo."},
+ {t:"order",q:"Coloque em ordem: caminho da água após uma chuva.",items:["Chuva cai sobre o solo","Parte da água infiltra","A água alimenta o subsolo","A água pode abastecer nascentes"],e:"A infiltração contribui para os recursos hídricos."}
 ]);
 b.sp.push.apply(b.sp,[
  {n:"Cardeal-amarelo",e:"🐦",st:"",f:"O macho possui plumagem amarela e uma pequena crista preta."},
