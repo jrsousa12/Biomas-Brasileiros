@@ -12,7 +12,9 @@ nav.tabs button.on{background:var(--soft);border-radius:16px;box-shadow:inset 0 
 .legenda li{display:flex;align-items:center;gap:5px;cursor:pointer}
 .legenda i{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);flex:none}
 .legenda span{color:var(--mut);font-weight:600}
-/* Escuro: contorno mais discreto e sombra escura (em vez de bloco azul-claro) */
+/* Escuro: contorno mais discreto e sombra escura (em vez de bloco azul-claro), em todos os cartões */
+[data-theme="dark"] .card,[data-theme="dark"] .mito,[data-theme="dark"] .btn.sec{border-color:#3a4766;box-shadow:5px 5px 0 #080c14}
+[data-theme="dark"] .card.resume{border-color:var(--gold);box-shadow:5px 5px 0 var(--gold)}
 [data-theme="dark"] .atalho{border-color:#3a4766;box-shadow:4px 4px 0 #080c14}
 [data-theme="dark"] .atalho:active{box-shadow:1px 1px 0 #080c14}
 [data-theme="dark"] nav.tabs button.on{box-shadow:inset 0 0 0 2px #3a4766}
