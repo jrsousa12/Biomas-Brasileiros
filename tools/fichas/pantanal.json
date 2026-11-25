@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "pulso",
+    "inundação"
+   ],
+   "ideia": "Alagamento fixo o ano todo",
+   "por_que": "O Pantanal enche e seca em ciclos anuais."
+  },
+  {
+   "palavras": [
+    "planície",
+    "alagável"
+   ],
+   "ideia": "Uma região de serras altas",
+   "por_que": "É uma grande planície que alaga."
+  },
+  {
+   "palavras": [
+    "cambarazal",
+    "árvore"
+   ],
+   "ideia": "Mata sempre seca e sem cheia",
+   "por_que": "Cambarazal é uma mata de cambará que tolera alagamento."
+  },
+  {
+   "palavras": [
+    "tuiuiú",
+    "ave"
+   ],
+   "ideia": "É um mamífero aquático",
+   "por_que": "O tuiuiú é uma grande ave, símbolo do Pantanal."
+  },
+  {
+   "palavras": [
+    "pantanal",
+    "patrimônio"
+   ],
+   "ideia": "Só existe no Brasil",
+   "por_que": "Ele também chega à Bolívia e ao Paraguai."
+  },
+  {
+   "palavras": [
+    "queimadas",
+    "seca"
+   ],
+   "ideia": "O fogo só afeta a cidade",
+   "por_que": "Seca prolongada favorece queimadas que atingem a fauna e a flora."
+  }
+ ]
+}

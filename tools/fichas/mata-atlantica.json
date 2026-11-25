@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "hotspot",
+    "biodiversidade"
+   ],
+   "ideia": "Região com poucas espécies",
+   "por_que": "Hotspot tem muitas espécies, muitas só ali, e é muito ameaçado."
+  },
+  {
+   "palavras": [
+    "floresta",
+    "litoral"
+   ],
+   "ideia": "Ocupa só o interior do país",
+   "por_que": "Acompanha principalmente a costa, do Nordeste ao Sul."
+  },
+  {
+   "palavras": [
+    "semidecidual",
+    "folhas"
+   ],
+   "ideia": "Perde todas as folhas o ano inteiro",
+   "por_que": "Semidecidual perde parte das folhas na estação seca."
+  },
+  {
+   "palavras": [
+    "restou",
+    "original"
+   ],
+   "ideia": "Restam cerca de 90% da área original",
+   "por_que": "Resta uma pequena parte, por volta de 12%."
+  },
+  {
+   "palavras": [
+    "pau-brasil",
+    "madeira"
+   ],
+   "ideia": "Foi um bioma sem exploração",
+   "por_que": "O pau-brasil foi explorado desde a colonização e quase sumiu."
+  },
+  {
+   "palavras": [
+    "urbanização",
+    "cidades"
+   ],
+   "ideia": "Poucas cidades ficam nesse bioma",
+   "por_que": "Muitas capitais e grande parte da população vivem nele."
+  }
+ ]
+}

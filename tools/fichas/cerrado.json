@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "berço",
+    "águas"
+   ],
+   "ideia": "Tem o maior lago do Brasil",
+   "por_que": "O Cerrado tem nascentes de grandes rios de várias bacias."
+  },
+  {
+   "palavras": [
+    "raízes",
+    "profundas"
+   ],
+   "ideia": "As raízes são rasas para pegar a chuva",
+   "por_que": "Raízes profundas alcançam a água do solo na seca."
+  },
+  {
+   "palavras": [
+    "fogo",
+    "cerrado"
+   ],
+   "ideia": "O fogo nunca existiu naturalmente",
+   "por_que": "Muitas plantas têm casca grossa e se adaptam ao fogo natural."
+  },
+  {
+   "palavras": [
+    "savana",
+    "árvores"
+   ],
+   "ideia": "Floresta densa e fechada como a Amazônia",
+   "por_que": "É uma savana com árvores retorcidas e espaçadas."
+  },
+  {
+   "palavras": [
+    "matopiba",
+    "desmatamento"
+   ],
+   "ideia": "Região de preservação total",
+   "por_que": "Matopiba é fronteira agrícola com muito desmatamento."
+  },
+  {
+   "palavras": [
+    "solo",
+    "ácido"
+   ],
+   "ideia": "Solo muito fértil e escuro",
+   "por_que": "O solo é ácido e pobre em nutrientes."
+  }
+ ]
+}

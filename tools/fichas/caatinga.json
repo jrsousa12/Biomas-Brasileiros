@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "caducifólia",
+    "folhas"
+   ],
+   "ideia": "A planta nunca perde as folhas",
+   "por_que": "Caducifólias perdem as folhas na seca para economizar água."
+  },
+  {
+   "palavras": [
+    "semiárido",
+    "seca"
+   ],
+   "ideia": "Chove o ano todo com muita água",
+   "por_que": "No semiárido a chuva é pouca e irregular."
+  },
+  {
+   "palavras": [
+    "cisterna",
+    "água"
+   ],
+   "ideia": "Um tipo de poço de petróleo",
+   "por_que": "Cisterna guarda água da chuva para as famílias."
+  },
+  {
+   "palavras": [
+    "caatinga",
+    "exclusivo"
+   ],
+   "ideia": "Existe também na África e na Ásia",
+   "por_que": "A Caatinga existe só no Brasil."
+  },
+  {
+   "palavras": [
+    "mandacaru",
+    "cacto"
+   ],
+   "ideia": "Planta que vive só na água",
+   "por_que": "Cactos guardam água no caule."
+  },
+  {
+   "palavras": [
+    "desertificação",
+    "solo"
+   ],
+   "ideia": "É causada pelo excesso de chuvas",
+   "por_que": "Vem do uso excessivo do solo e do desmatamento."
+  }
+ ]
+}

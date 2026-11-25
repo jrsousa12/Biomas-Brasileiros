@@ -6,7 +6,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - HTML + CSS + JS puro, sem dependências. PWA instalável e offline. Público: 7º ano, textos em pt-BR.
 - `index.html` (esqueleto + ordem dos `<script>`), `css/app.css`, `js/` (estado, navegação, quiz, `sessao.js` continuar de onde parou, `dialogo.js` confirmações, `voltar.js` botão voltar do celular, `main.js`, `pwa.js`), `js/telas/`, `js/dados/` (`biomas/<bioma>.js`, mitos, fontes), `sw.js`, `manifest.webmanifest`, `icons/`.
 - Rodar: `python3 -m http.server 8000`. Testar: `node tests/smoke.js` (imprime `OK` ou as falhas). Sem build/lint.
-- Motores (`tools/`, fora do site; uso em `tools/CLAUDE.md`): `importar` conteúdo, `contexto` p/ prompts, `contar` painel, `integrar` arquivo novo, `verificar` (roda no smoke).
+- Motores (`tools/`, fora do site; uso em `tools/CLAUDE.md`): `importar` conteúdo, `contexto` p/ prompts, `contar` painel, `integrar` arquivo novo, `verificar` (roda no smoke), `teoria` (confere perguntas).
 - Deploy: automático no GitHub Pages a cada push na `main` (`.github/workflows/pages.yml`).
 - Protocolo-token: `/protocolo-token` (`.claude/skills/`); barra de contexto em `.claude/settings.json` + `.claude/hooks/`.
 
@@ -41,7 +41,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
    - Dados em `js/dados/textos/<bioma>.js` (≤10 KB cada). Trilha mantém os 3 cartões + botão "Quero ler mais".
    - Ordem: prompt E (conteúdo, em `docs/prompts-conteudo.md`) + D → P8 tela Estudar (`docs/prompts-codigo.md`) → montagem aqui → fase 2: erro na questão aponta "📖 Reveja: <seção>" → só então ampliar questões.
    - ✅ "Cartas X/72" corrigido em `telas/resultado.js` (total calculado).
-6. Motor de teoria (`.claude/skills/protocolo-token/motor-teoria.md`, fichas por bioma) → fazer junto com a ampliação das questões. ⏳
+6. Motor de teoria ✅ (`tools/teoria.js` + `tools/fichas/<bioma>.json`, teste `tests/teoria.js`). Fichas são RASCUNHO: o dono confere/amplia (6 a 10 ideias erradas por bioma). Rodar `node tools/teoria.js <arq.txt> <bioma>` antes do importar. Banco atual: 13 avisos reais (6 certa longa, 7 absolutas) em `docs/teoria-relatorio.md`, ainda não corrigidos.
 - "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão

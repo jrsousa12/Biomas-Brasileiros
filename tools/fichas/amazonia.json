@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "solo",
+    "nutrientes"
+   ],
+   "ideia": "Os rios depositam adubo em todo o solo da floresta",
+   "por_que": "O solo é pobre; os nutrientes vêm das folhas caídas que se decompõem rápido."
+  },
+  {
+   "palavras": [
+    "rios",
+    "voadores"
+   ],
+   "ideia": "Rios que correm sobre o dossel das árvores",
+   "por_que": "Rios voadores são massas de vapor de água levadas pelo vento."
+  },
+  {
+   "palavras": [
+    "floresta",
+    "chuva"
+   ],
+   "ideia": "A chuva vem só do oceano Atlântico",
+   "por_que": "Boa parte da chuva vem da própria floresta, que libera vapor."
+  },
+  {
+   "palavras": [
+    "extrativista",
+    "comunidade"
+   ],
+   "ideia": "Vive só de plantações em grande escala",
+   "por_que": "Extrativistas retiram da floresta, sem derrubá-la, produtos como castanha e látex."
+  },
+  {
+   "palavras": [
+    "desmatamento",
+    "principal"
+   ],
+   "ideia": "A principal causa é a erupção de vulcões",
+   "por_que": "A pecuária e a grilagem de terras são causas importantes."
+  },
+  {
+   "palavras": [
+    "igapó",
+    "várzea"
+   ],
+   "ideia": "Áreas secas de solo arenoso",
+   "por_que": "Várzea e igapó são florestas que alagam com os rios."
+  }
+ ]
+}

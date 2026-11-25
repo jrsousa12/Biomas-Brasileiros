@@ -6,3 +6,4 @@
 - `node tools/integrar.js <arquivo> [--antes js/x.js] [--teste]`: inclui arquivo novo no `index.html`, `FILES` do `sw.js` e `pages.yml` (se preciso). Não duplica.
 - `node tools/verificar.js`: limites de tamanho, index × sw × disco × pages.yml, `confirm/alert`, dados. Já roda dentro de `tests/smoke.js`.
 - Base: `lib.js` (carregar/inserir/serializar) e `validar.js` (regras dos prompts + repetição). Regra nova de conteúdo → `validar.js`.
+- `node tools/teoria.js [arq.txt] [bioma]`: sem arquivo, pente-fino do banco (resumo + `docs/teoria-relatorio.md`); com arquivo, confere só as perguntas novas. Só avisa, nunca altera. Avisos: certa longa, absolutas, eco, "todas as anteriores", negativa sem MAIÚSCULAS, repetidas + até 2 sugestões de errada das fichas em `tools/fichas/`. Teste: `node tests/teoria.js`.

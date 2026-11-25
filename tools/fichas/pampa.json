@@ -1,0 +1,53 @@
+{
+ "_leia": "Ficha de ideias erradas comuns. 'palavras': 2+ termos do enunciado/certa; 'ideia': errada plausível; 'por_que': explicação curta. RASCUNHO: o dono confere.",
+ "teoria": [
+  {
+   "palavras": [
+    "campo",
+    "nativo"
+   ],
+   "ideia": "Floresta alta de árvores gigantes",
+   "por_que": "O Pampa tem campos com gramíneas, poucos arbustos."
+  },
+  {
+   "palavras": [
+    "coxilhas",
+    "relevo"
+   ],
+   "ideia": "Montanhas altas com neve",
+   "por_que": "Coxilhas são colinas suaves e arredondadas."
+  },
+  {
+   "palavras": [
+    "pastagem",
+    "exótica"
+   ],
+   "ideia": "Plantas nativas do Pampa",
+   "por_que": "Exóticas vêm de fora, como capins trazidos de outras terras."
+  },
+  {
+   "palavras": [
+    "espinilho",
+    "árvores"
+   ],
+   "ideia": "Floresta úmida densa",
+   "por_que": "Espinilho é um campo com árvores espinhosas e baixas."
+  },
+  {
+   "palavras": [
+    "pampa",
+    "estado"
+   ],
+   "ideia": "Ocupa o Paraná e Santa Catarina",
+   "por_que": "No Brasil, o Pampa ocorre só no Rio Grande do Sul."
+  },
+  {
+   "palavras": [
+    "soja",
+    "lavoura"
+   ],
+   "ideia": "Cultivo ajuda a proteger o campo nativo",
+   "por_que": "A conversão em lavouras destrói o campo nativo."
+  }
+ ]
+}

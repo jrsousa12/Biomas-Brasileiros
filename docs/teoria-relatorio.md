@@ -1,0 +1,70 @@
+# Relatório do motor de teoria
+
+- **Amazônia #5** [longa] certa bem mais longa que as erradas
+  - O que são os “rios voadores”?
+- **Amazônia #5** [sugestao] sugestão de errada: "Rios que correm sobre o dossel das árvores" (Rios voadores são massas de vapor de água levadas pelo vento.)
+  - O que são os “rios voadores”?
+- **Amazônia #5** [sugestao] sugestão de errada: "A chuva vem só do oceano Atlântico" (Boa parte da chuva vem da própria floresta, que libera vapor.)
+  - O que são os “rios voadores”?
+- **Amazônia #10** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - Por que muitos solos amazônicos têm poucos nutrientes disponíveis?
+- **Amazônia #10** [sugestao] sugestão de errada: "Os rios depositam adubo em todo o solo da floresta" (O solo é pobre; os nutrientes vêm das folhas caídas que se decompõem rápido.)
+  - Por que muitos solos amazônicos têm poucos nutrientes disponíveis?
+- **Amazônia #30** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que caracteriza uma comunidade extrativista?
+- **Amazônia #30** [sugestao] sugestão de errada: "Vive só de plantações em grande escala" (Extrativistas retiram da floresta, sem derrubá-la, produtos como castanha e látex.)
+  - O que caracteriza uma comunidade extrativista?
+- **Cerrado #1** [sugestao] sugestão de errada: "As raízes são rasas para pegar a chuva" (Raízes profundas alcançam a água do solo na seca.)
+  - Por que o Cerrado é chamado de “floresta de cabeça para baixo”?
+- **Cerrado #2** [longa] certa bem mais longa que as erradas
+  - Por que o Cerrado é conhecido como “berço das águas”?
+- **Cerrado #2** [sugestao] sugestão de errada: "Tem o maior lago do Brasil" (O Cerrado tem nascentes de grandes rios de várias bacias.)
+  - Por que o Cerrado é conhecido como “berço das águas”?
+- **Cerrado #16** [sugestao] sugestão de errada: "O fogo nunca existiu naturalmente" (Muitas plantas têm casca grossa e se adaptam ao fogo natural.)
+  - Qual característica protege algumas árvores do Cerrado contra o calor do fogo?
+- **Mata Atlântica #6** [longa] certa bem mais longa que as erradas
+  - O que significa dizer que a Mata Atlântica é um “hotspot de biodiversidade”?
+- **Mata Atlântica #6** [sugestao] sugestão de errada: "Região com poucas espécies" (Hotspot tem muitas espécies, muitas só ali, e é muito ameaçado.)
+  - O que significa dizer que a Mata Atlântica é um “hotspot de biodiversidade”?
+- **Mata Atlântica #25** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que caracteriza uma floresta semidecidual?
+- **Mata Atlântica #25** [sugestao] sugestão de errada: "Perde todas as folhas o ano inteiro" (Semidecidual perde parte das folhas na estação seca.)
+  - O que caracteriza uma floresta semidecidual?
+- **Caatinga #8** [longa] certa bem mais longa que as erradas
+  - Qual tecnologia ajuda as famílias a conviver com a seca no semiárido?
+- **Caatinga #8** [sugestao] sugestão de errada: "Chove o ano todo com muita água" (No semiárido a chuva é pouca e irregular.)
+  - Qual tecnologia ajuda as famílias a conviver com a seca no semiárido?
+- **Caatinga #8** [sugestao] sugestão de errada: "Um tipo de poço de petróleo" (Cisterna guarda água da chuva para as famílias.)
+  - Qual tecnologia ajuda as famílias a conviver com a seca no semiárido?
+- **Caatinga #10** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que significa dizer que uma planta é caducifólia?
+- **Caatinga #10** [sugestao] sugestão de errada: "A planta nunca perde as folhas" (Caducifólias perdem as folhas na seca para economizar água.)
+  - O que significa dizer que uma planta é caducifólia?
+- **Caatinga #16** [sugestao] sugestão de errada: "Chove o ano todo com muita água" (No semiárido a chuva é pouca e irregular.)
+  - O que é estivação em alguns animais do semiárido?
+- **Pampa #1** [sugestao] sugestão de errada: "Ocupa o Paraná e Santa Catarina" (No Brasil, o Pampa ocorre só no Rio Grande do Sul.)
+  - Em qual estado brasileiro fica o bioma Pampa?
+- **Pampa #3** [sugestao] sugestão de errada: "Montanhas altas com neve" (Coxilhas são colinas suaves e arredondadas.)
+  - Como se chamam as colinas suaves típicas do relevo do Pampa?
+- **Pampa #6** [longa] certa bem mais longa que as erradas
+  - Qual é a principal ameaça ao Pampa hoje?
+- **Pampa #10** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que é o campo de espinilho no Pampa?
+- **Pampa #10** [sugestao] sugestão de errada: "Floresta úmida densa" (Espinilho é um campo com árvores espinhosas e baixas.)
+  - O que é o campo de espinilho no Pampa?
+- **Pampa #12** [sugestao] sugestão de errada: "Floresta alta de árvores gigantes" (O Pampa tem campos com gramíneas, poucos arbustos.)
+  - Por que o pastejo precisa ser ajustado ao campo nativo?
+- **Pampa #14** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que diferencia uma pastagem exótica de um campo nativo?
+- **Pampa #14** [sugestao] sugestão de errada: "Floresta alta de árvores gigantes" (O Pampa tem campos com gramíneas, poucos arbustos.)
+  - O que diferencia uma pastagem exótica de um campo nativo?
+- **Pampa #14** [sugestao] sugestão de errada: "Plantas nativas do Pampa" (Exóticas vêm de fora, como capins trazidos de outras terras.)
+  - O que diferencia uma pastagem exótica de um campo nativo?
+- **Pantanal #3** [longa] certa bem mais longa que as erradas
+  - O que é o “pulso de inundação” do Pantanal?
+- **Pantanal #3** [sugestao] sugestão de errada: "Alagamento fixo o ano todo" (O Pantanal enche e seca em ciclos anuais.)
+  - O que é o “pulso de inundação” do Pantanal?
+- **Pantanal #5** [sugestao] sugestão de errada: "É um mamífero aquático" (O tuiuiú é uma grande ave, símbolo do Pantanal.)
+  - Qual é a ave símbolo do Pantanal?
+- **Pantanal #13** [absoluta] palavra absoluta em 2+ erradas e não na certa
+  - O que caracteriza um cambarazal no Pantanal?
