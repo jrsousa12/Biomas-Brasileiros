@@ -36,6 +36,7 @@ Prioridade: economizar contexto e tokens. Regras obrigatórias.
 - "Monte a entrega do P<n>" → `node tools/integrar.js` p/ cada arquivo novo, ligar render/go e `voltar.js`, rodar teste e marcar aqui como feito.
 
 ## Sessão
+- Ao mudar de etapa (ex.: "próxima etapa"), sempre entregar ao usuário o script completo da etapa: Bloco CONTEXTO + pedido P<n> de `docs/prompts-codigo.md`, num bloco de código pronto para colar em outra IA.
 - Responder ao usuário sempre em português (pt-BR).
 - Avisar em uma frase quando: arquivo passa do limite; conversa longa e repetitiva; releitura desnecessária.
 - Mesma tarefa, conversa longa → sugerir `/compact <o que manter>`.
