@@ -13,13 +13,14 @@ function startReview(){
 function vCards(){
  var tot=0,got=0,h="";
  BIOMES.forEach(function(b){
-  h+='<h2 class="tit-bioma" style="--bc:'+b.c2+';--bcl:'+mixWhite(b.c1,.55)+'">'+b.emoji+' '+b.nome+'</h2><div class="grid2">';
+  var g=b.sp.filter(function(s){return S.cards.indexOf(s.n)>=0}).length,n=b.sp.length;
+  h+='<section class="sec-bioma" style="--bc:'+b.c2+';--bc1:'+b.c1+';--bcl:'+mixWhite(b.c1,.55)+'"><h2 class="tit-bioma">'+b.emoji+' '+b.nome+' <span class="cont">'+g+'/'+n+'</span></h2><div class="barra"><i style="width:'+Math.round(100*g/n)+'%"></i></div><div class="grid2">';
   b.sp.forEach(function(s){
    tot++;var has=S.cards.indexOf(s.n)>=0;
    if(has){got++;h+='<div class="sp" style="background:linear-gradient(145deg,'+b.c1+','+b.c2+')"><div class="e">'+s.e+'</div><h4>'+s.n+'</h4>'+(s.st?'<div class="tag">'+s.st+'</div>':'')+'<p>'+s.f+'</p></div>'}
-   else h+='<div class="sp lock"><div class="e">'+s.e+'</div><h4>?</h4><p>Conclua a trilha para desbloquear</p></div>';
+   else h+='<div class="sp lock"><div class="e">'+s.e+'</div><h4 class="q">?</h4><p>Conclua a trilha para desbloquear</p></div>';
   });
-  h+='</div>';
+  h+='</div></section>';
  });
  return headerHTML("Minhas cartas 🃏",got+" de "+tot+" cartas")+'<main>'+h+'<p class="small" style="margin-top:14px">Status de ameaça: Lista Nacional de Fauna Ameaçada (MMA, Portaria 1.704/2026). Essas categorias podem mudar com novas avaliações.</p></main>';
 }
