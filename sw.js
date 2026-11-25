@@ -15,6 +15,7 @@ const FILES = [
   "./js/dados/biomas/mata-atlantica-extra.js",
   "./js/dados/biomas/caatinga-extra.js",
   "./js/dados/biomas/pampa-extra.js",
+  "./js/dados/biomas/pantanal-extra.js",
   "./js/dados/mitos-fontes.js",
   "./js/dados/glossario.js",
   "./js/estado.js",
