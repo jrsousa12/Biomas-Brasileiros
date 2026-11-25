@@ -1,0 +1,14 @@
+/* Visual 2 – R1: atalhos da Home em grade, aba ativa com pílula, legenda da faixa de biomas. */
+.atalhos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 6px}
+.atalho{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:92px;padding:10px 8px;text-align:center;
+ background:var(--card);color:var(--ink);font:inherit;font-size:15px;font-weight:900;line-height:1.2;border:3px solid var(--line);border-radius:18px;box-shadow:4px 4px 0 var(--line);cursor:pointer}
+.atalho:active{transform:translateY(3px);box-shadow:1px 1px 0 var(--line)}
+.atalho .ic{font-size:30px;line-height:1.1}
+.atalho small{font-size:13px;font-weight:700;color:var(--mut)}
+.atalho:last-child:nth-child(odd){grid-column:1/-1;flex-direction:row;gap:10px;min-height:64px}
+nav.tabs button{margin:5px 2px}
+nav.tabs button.on{background:var(--soft);border-radius:16px;box-shadow:inset 0 0 0 3px var(--line)}
+.legenda{display:flex;flex-wrap:wrap;gap:4px 12px;margin:6px 0 6px;padding:0;list-style:none;font-size:14px;font-weight:700}
+.legenda li{display:flex;align-items:center;gap:5px;cursor:pointer}
+.legenda i{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);flex:none}
+.legenda span{color:var(--mut);font-weight:600}
