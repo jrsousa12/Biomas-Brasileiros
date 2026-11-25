@@ -16,22 +16,7 @@ b.q.push.apply(b.q,[
  {t:"tf",q:"Verdadeiro ou falso: a caça ilegal pode diminuir populações de animais silvestres.",a:true,e:"Verdadeiro. A retirada de animais prejudica a reprodução e a conservação das espécies."},
  {t:"order",q:"Coloque em ordem: armazenamento comunitário de sementes.",items:["As plantas adequadas são identificadas","As sementes maduras são coletadas","As sementes são selecionadas","As sementes são guardadas"],e:"A seleção e o armazenamento mantêm sementes disponíveis para plantios futuros."},
  {t:"order",q:"Coloque em ordem: produção de mel por uma abelha sem ferrão.",items:["A abelha visita uma flor","O néctar é coletado","A abelha retorna à colônia","O néctar é transformado em mel"],e:"As abelhas coletam néctar e o processam dentro da colônia."},
- {t:"order",q:"Coloque em ordem: proteção do entorno de uma nascente.",items:["A nascente é localizada","A área de proteção é definida","Uma cerca é instalada","A vegetação ao redor é mantida"],e:"A proteção limita o pisoteio e conserva a vegetação próxima da água."},
- {t:"mc",q:"Qual característica do clima da Caatinga é mais comum?",o:["Frio intenso o ano todo","Chuvas frequentes diárias","Períodos longos de seca","Neve durante o inverno"],a:2,e:"A Caatinga tem clima semiárido, com longos períodos secos."},
- {t:"mc",q:"Qual planta é uma adaptação típica da Caatinga?",o:["Vitória-régia","Mandacaru","Araucária","Mangue-vermelho"],a:1,e:"O mandacaru armazena água e suporta a seca."},
- {t:"mc",q:"O que muitas plantas da Caatinga fazem durante a estação seca?",o:["Produzem neve","Perdem as folhas","Vivem submersas","Mudam de cor para azul"],a:1,e:"A perda de folhas reduz a perda de água."},
- {t:"mc",q:"Qual animal é encontrado na Caatinga?",o:["Arara-azul-de-lear","Pinguim-imperador","Urso-polar","Leão-africano"],a:0,e:"A arara-azul-de-lear vive em áreas do semiárido brasileiro."},
- {t:"mc",q:"Qual é uma importante adaptação de muitos animais da Caatinga?",o:["Respirar debaixo d’água","Suportar escassez de água","Viver apenas no gelo","Produzir luz própria"],a:1,e:"Muitas espécies conseguem economizar água."},
- {t:"mc",q:"Qual atividade ajuda a conservar a Caatinga?",o:["Desmatamento contínuo","Proteção da vegetação nativa","Caça de espécies ameaçadas","Queimadas frequentes"],a:1,e:"A vegetação nativa protege o solo e a biodiversidade."},
- {t:"mc",q:"Como é chamado o bioma exclusivamente brasileiro entre os grandes biomas do país?",o:["Pantanal","Pampa","Caatinga","Amazônia"],a:2,e:"A Caatinga ocorre somente no Brasil."},
- {t:"mc",q:"Durante as chuvas, a paisagem da Caatinga costuma ficar:",o:["Mais verde","Coberta por gelo","Sem vegetação","Totalmente alagada"],a:0,e:"Muitas plantas brotam rapidamente após as chuvas."},
- {t:"mc",q:"Qual problema pode aumentar com a retirada excessiva da vegetação da Caatinga?",o:["Formação de geleiras","Erosão do solo","Aumento de manguezais","Expansão de recifes"],a:1,e:"Sem cobertura vegetal, o solo fica mais vulnerável."},
- {t:"tf",q:"Verdadeiro ou falso: A Caatinga possui espécies de plantas e animais adaptadas à seca.",a:true,e:"Verdadeiro. Muitas espécies têm adaptações para economizar água."},
- {t:"tf",q:"Verdadeiro ou falso: Na Caatinga chove de forma abundante e regular durante todo o ano.",a:false,e:"Falso. As chuvas são irregulares e concentradas em certos períodos."},
- {t:"tf",q:"Verdadeiro ou falso: Cactos são comuns em várias áreas da Caatinga.",a:true,e:"Verdadeiro. Eles ajudam a representar a paisagem do bioma."},
- {t:"order",q:"Coloque em ordem: resposta da vegetação à chegada das chuvas.",items:["Chegam as chuvas","O solo ganha umidade","As plantas brotam","A paisagem fica mais verde"],e:"As chuvas estimulam o crescimento das plantas."},
- {t:"order",q:"Coloque em ordem: formação de um fruto em uma planta da Caatinga.",items:["Flor se abre","Ocorre a polinização","Formam-se sementes","O fruto amadurece"],e:"A reprodução das plantas segue essa sequência básica."},
- {t:"order",q:"Coloque em ordem: caminho da água após uma chuva.",items:["Chuva cai sobre o solo","Parte da água infiltra","Água alimenta o subsolo","Água pode abastecer nascentes"],e:"A infiltração é importante para os recursos hídricos."}
+ {t:"order",q:"Coloque em ordem: proteção do entorno de uma nascente.",items:["A nascente é localizada","A área de proteção é definida","Uma cerca é instalada","A vegetação ao redor é mantida"],e:"A proteção limita o pisoteio e conserva a vegetação próxima da água."}
 ]);
 b.sp.push.apply(b.sp,[
  {n:"Umbuzeiro",e:"🌳",st:"",f:"Suas raízes armazenam água e ajudam a planta durante a seca."},
