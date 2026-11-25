@@ -68,6 +68,7 @@ function quitQuiz(){view="home";tab="home";Q=null;render()}
 function askQuit(){dialogo({ic:"⏸️",titulo:"Sair do quiz?",texto:"Seu lugar fica guardado. Na tela inicial, toque em <b>Continuar de onde parei</b>.",ok:"Sair",cancelar:"Ficar",onOk:quitQuiz})}
 
 function endQuiz(){
+ marcarDia();
  var n=Q.list.length,ok=Q.ok,p=ok/n;
  var m=p>=0.9?"🥇":p>=0.7?"🥈":p>=0.5?"🥉":"💪";
  var msg=p>=0.9?"Incrível! Você domina este assunto!":p>=0.7?"Muito bom! Falta pouco para o ouro.":p>=0.5?"Bom começo! Revise os erros e tente de novo.":"Sem problema: aprender é isso. Releia os cartões e tente outra vez.";

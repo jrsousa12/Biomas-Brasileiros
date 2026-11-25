@@ -15,7 +15,7 @@ function vHome(){
   return '<div class="tile" style="background:linear-gradient(145deg,'+b.c1+','+b.c2+')" onclick="startTrail(\''+b.id+'\')">'+(t?'<span class="medal">'+medal(b)+'</span>':'')+'<div><div class="em">'+b.emoji+'</div><h3>'+b.nome+'</h3><div class="pc">'+b.pct+' do Brasil</div></div><div class="st">'+(t?"Refazer • "+t.best+"/"+t.total:"Começar")+'</div></div>';
  }).join("");
  return headerHTML("Olá, "+esc(S.name||"explorador(a)")+"! 👋","Escolha um bioma e comece sua trilha")+
- '<main>'+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div><div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+
+ '<main>'+seqHTML()+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div><div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+
  '<h2>Suas trilhas <span class="small">('+done+'/6 concluídas)</span></h2><div class="tiles">'+tiles+'</div>'+
  '<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button></main>';
 }
