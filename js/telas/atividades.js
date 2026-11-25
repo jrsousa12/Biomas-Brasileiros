@@ -39,7 +39,7 @@ function vMitos(){
  return headerHTML("Mito ou verdade? 🧐","Descubra o que é fato e o que é boato")+'<main>'+h+'</main>';
 }
 function mitoAns(i,v){
- if(S.mitos[i]!==undefined)return;S.mitos[i]=v;if(v===MITOS[i].v)addXP(5);save();
+ if(S.mitos[i]!==undefined)return;S.mitos[i]=v;if(v===MITOS[i].v)addXP(5);save();checarMedalhas();
  var y=window.scrollY;render();window.scrollTo(0,y)
 }
 

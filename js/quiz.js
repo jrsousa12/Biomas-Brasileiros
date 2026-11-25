@@ -88,7 +88,7 @@ function endQuiz(){
   extra='<p>Você acertou de primeira '+Q.fixed+' questão(ões) que antes tinha errado.</p>';
   btns='<button class="btn sec" onclick="go(\'home\')">Voltar às trilhas</button>';
  }
- save();sessClear();
+ checarMedalhas();save();sessClear();
  var h=headerHTML(Q.title,"Resultado")+'<main><div class="card big-result pop"><div class="m">'+m+'</div><h2>'+ok+' de '+n+' acertos</h2><p>'+msg+'</p>'+extra+'</div>'+btns;
  if(S.wrong.length&&Q.mode!=="review")h+='<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button>';
  h+='</main>';

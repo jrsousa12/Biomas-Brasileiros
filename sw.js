@@ -19,6 +19,7 @@ const FILES = [
   "./js/sessao.js",
   "./js/voltar.js",
   "./js/sequencia.js",
+  "./js/medalhas.js",
   "./js/telas/inicio.js",
   "./js/telas/trilha.js",
   "./js/quiz.js",
