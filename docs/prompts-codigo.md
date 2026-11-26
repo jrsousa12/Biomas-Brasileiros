@@ -126,6 +126,17 @@ Crie js/bncc.js com a função bnccHTML(). Ela retorna um bloco HTML "Habilidade
 - Cada arquivo com no máximo 200 linhas.
 ```
 
+**P11 – Compare biomas**
+```
+Crie js/telas/compara.js com vCompara(). É uma tela em que o aluno escolhe 2 biomas, um toque de cada vez, e vê lado a lado uma tabela com: emoji e nome, pct (% do território), km, lema e uma espécie (a primeira de sp: n e e).
+- Estado: var CP={a:"",b:""}. comparaEscolha(id): se CP.a estiver vazio ou os dois já estiverem escolhidos, CP.a=id e CP.b=""; senão CP.b=id.
+- Se só um bioma estiver escolhido, mostre "Escolha mais um bioma". Se escolher o mesmo nos dois, mostre "Escolha biomas diferentes".
+- Botão "Limpar" (zera CP) e "⬅ Voltar" com go("home").
+- Não grava nada em S e não dá XP. Não invente fatos: use só os dados de BIOMES.
+- Tudo que vem de dados passa por esc(). Até 200 linhas.
+- CSS só se precisar, em css/compara.css, com classes prefixadas por compara-.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
