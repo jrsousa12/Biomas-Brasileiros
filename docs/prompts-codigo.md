@@ -117,6 +117,15 @@ Os textos ficam em window.TEXTOS[idBioma] = [{id:"local",t:"📍 Onde fica",p:["
 - Fonte do texto com pelo menos 17 px e linhas confortáveis para leitura no celular.
 ```
 
+**P10 – BNCC no relatório**
+```
+Crie js/bncc.js com a função bnccHTML(). Ela retorna um bloco HTML "Habilidades da BNCC trabalhadas" para o relatório do professor. Lê a lista BNCC de js/dados/bncc.js (um item por habilidade: {cod:"EF07CI07",txt:"texto oficial",biomas:["amz","cer"]}) e mostra, para cada bioma que o aluno já fez (S.trails[id] existe), o código e o texto das habilidades ligadas a ele, sem repetir código.
+- Não invente códigos nem textos. Use só os itens da lista. Se o txt estiver vazio, mostre só o código.
+- Crie também js/dados/bncc.js com var BNCC=[...]. Coloque os códigos EF07CI07 e EF07CI08 (já citados no app), com os biomas que achar mais adequados e txt:"" (vazio), para o dono conferir e preencher.
+- Tudo que vem de dados passa por esc(). Se nenhuma trilha foi feita, mostre "Nenhuma trilha concluída ainda."
+- Cada arquivo com no máximo 200 linhas.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
