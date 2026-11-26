@@ -1,9 +1,10 @@
 "use strict";
 /* ============ REVISÃO ============ */
 function startReview(){
- var list=S.wrong.map(function(id){return QMAP[id]}).filter(Boolean);
+ var list=revPendentes().map(function(id){return QMAP[id]});
  if(!list.length){
-  document.getElementById("app").innerHTML=headerHTML("Revisão","Tudo certo!")+'<main><div class="card big-result"><div class="m">🎉</div><h2>Nada para revisar</h2><p>Você não tem questões erradas pendentes.</p><button class="btn" onclick="go(\'home\')">Voltar às trilhas</button></div></main>';
+  var x=revProxima(),txt=x>0?'Nada para hoje. Sua próxima revisão volta em <b>'+x+(x===1?' dia':' dias')+'</b>.':'Você não tem questões erradas pendentes.';
+  document.getElementById("app").innerHTML=headerHTML("Revisão","Tudo certo!")+'<main><div class="card big-result"><div class="m">🎉</div><h2>Nada para revisar</h2><p>'+txt+'</p><button class="btn" onclick="go(\'home\')">Voltar às trilhas</button></div></main>';
   view="end";renderNav();document.querySelector("nav.tabs").style.display="flex";return;
  }
  startQuiz({title:"🔁 Revisão de erros",list:list,mode:"review"});

@@ -52,8 +52,8 @@ function finishAns(correct){
  if(correct){
   Q.ok++;
   if(!S.got[q.id]){S.got[q.id]=1;addXP(Q.mode==="review"?5:10)}
-  var ix=S.wrong.indexOf(q.id);if(ix>=0){S.wrong.splice(ix,1);Q.fixed++}
- }else{if(S.wrong.indexOf(q.id)<0)S.wrong.push(q.id)}
+  if(revAcertou(q.id))Q.fixed++;
+ }else revErrou(q.id);
  save();render();
 }
 function pickMC(i){if(Q.ans)return;Q.sel=i;finishAns(Q.opts[i].ok)}
@@ -91,12 +91,13 @@ function endQuiz(){
   S.finalTries++;if(ok>S.final)S.final=ok;addXP(ok>=7&&!S.finalBonus?30:0);if(ok>=7)S.finalBonus=1;
   btns='<button class="btn" onclick="startFinal()">Jogar de novo</button><button class="btn sec" onclick="go(\'home\')">Voltar às trilhas</button>';
  }else{
-  extra='<p>Você acertou de primeira '+Q.fixed+' questão(ões) que antes tinha errado.</p>';
+  extra='<p>🎯 '+Q.fixed+' questão(ões) saíram da lista (2 acertos em dias diferentes).</p><p class="small">As que você acertou pela 1ª vez voltam em 3 dias; as que errou voltam amanhã.</p>';
   btns='<button class="btn sec" onclick="go(\'home\')">Voltar às trilhas</button>';
  }
  checarMedalhas();save();sessClear();
  var h=headerHTML(Q.title,"Resultado")+'<main><div class="card big-result pop"><div class="m">'+m+'</div><h2>'+ok+' de '+n+' acertos</h2><p>'+msg+'</p>'+extra+'</div>'+btns;
- if(S.wrong.length&&Q.mode!=="review")h+='<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+S.wrong.length+')</button>';
+ var pend=revPendentes().length;
+ if(pend&&Q.mode!=="review")h+='<button class="btn sec" onclick="startReview()">🔁 Revisar meus erros ('+pend+' para hoje)</button>';
  h+='</main>';
  view="end";document.getElementById("app").innerHTML=h;renderNav();window.scrollTo(0,0);
  document.querySelector("nav.tabs").style.display="flex";

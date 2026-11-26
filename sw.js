@@ -36,6 +36,7 @@ const FILES = [
   "./js/sequencia.js",
   "./js/medalhas.js",
   "./js/mapa.js",
+  "./js/revisao.js",
   "./js/telas/inicio.js",
   "./js/telas/trilha.js",
   "./js/quiz.js",
