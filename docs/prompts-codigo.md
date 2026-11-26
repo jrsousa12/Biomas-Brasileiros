@@ -137,6 +137,20 @@ Crie js/telas/compara.js com vCompara(). É uma tela em que o aluno escolhe 2 bi
 - CSS só se precisar, em css/compara.css, com classes prefixadas por compara-.
 ```
 
+**P12 – Desafio relâmpago**
+```
+Crie js/telas/relampago.js com vRelampago(). É um desafio de 60 segundos com perguntas misturadas de todos os biomas.
+- Monte o banco juntando as perguntas de BIOMES[].q do tipo "mc" e "tf" (ignore "order"), embaralhe com shuffle() uma cópia e vá sorteando sem repetir na mesma partida.
+- Estado: var RL={fase:"inicio",tempo:60,i:0,acertos:0,erros:0,fila:[],tid:null,trava:false}. fase: "inicio" | "jogo" | "fim".
+- Início: regras em 3 linhas, o recorde (S.relampago.best) e o botão "⚡ Começar". Jogo: contador grande de segundos, pontuação, uma pergunta por vez e as opções como botões (V/F para "tf"). Ao tocar, mostre verde/vermelho por 0,6 s (RL.trava=true) e passe para a próxima sozinho. Sem explicação durante o jogo.
+- O tempo usa setInterval de 1 s guardado em RL.tid. Ao chegar a 0, vá para a fase "fim". Limpe o intervalo SEMPRE ao terminar e ao sair da tela.
+- Fim: acertos, erros, recorde (🏆 "Novo recorde!" se bater), XP ganho e botões "🔁 Jogar de novo" e "⬅ Voltar" (go("home")).
+- XP: 1 por acerto, no máximo 15 por partida: addXP(n) e depois save().
+- Estado novo em S: S.relampago={best:0,jogos:0}. Inicialize com segurança (if(!S.relampago)...). NÃO use nem altere S.wrong, S.got nem S.rev: o desafio não conta como trilha.
+- relampagoParar(): para o tempo (clearInterval), volta RL à fase "inicio" e retorna true se estava em "jogo", senão false. (O botão voltar do celular vai usar isso.)
+- Tudo que vem de dados passa por esc(). Fonte grande, botões com no mínimo 44 px, pensado para celular. Até 200 linhas; CSS só se precisar, em css/relampago.css, com classes prefixadas por relampago-.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
