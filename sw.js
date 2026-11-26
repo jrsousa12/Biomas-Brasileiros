@@ -58,6 +58,8 @@ const FILES = [
   "./icons/maskable-512.png",
   "./icons/apple-touch-icon.png",
   "./css/relatorio.css",
+  "./css/home2.css",
+  "./css/quiz2.css",
   "./css/estudar.css"
 ];
 

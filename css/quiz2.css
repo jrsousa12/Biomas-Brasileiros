@@ -1,0 +1,18 @@
+/* Visual 2 – R3: quiz com letras A/B/C/D, festa no acerto; modo escuro com mapa e estrelas mais claros. */
+.card{counter-reset:letra}
+.opt.l{display:flex;align-items:center;gap:12px}
+.opt.l:before{counter-increment:letra;content:counter(letra,upper-alpha);flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:16px;background:var(--soft);border:3px solid var(--line);color:var(--ink)}
+.opt.l.right:before{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.l.wrong:before{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt.right{animation:salta .5s ease}
+.opt.wrong{animation:treme .4s ease}
+@keyframes salta{30%{transform:translateY(-7px) scale(1.03)}60%{transform:translateY(0) scale(.99)}}
+@keyframes treme{25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-3px)}}
+.festa{position:relative;height:0;overflow:visible;pointer-events:none}
+.festa i{position:absolute;top:0;left:50%;font-style:normal;font-size:22px;opacity:0;animation:solta 1.1s ease-out forwards;animation-delay:var(--d,0s)}
+@keyframes solta{0%{opacity:1;transform:translate(0,0) scale(.4)}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1.1)}}
+.fb.ok b{font-size:18px}
+@media (prefers-reduced-motion:reduce){.opt.right,.opt.wrong,.festa i{animation:none}.festa{display:none}}
+/* escuro: estrelas vazias e região do mapa sem trilha mais visíveis */
+:root[data-theme="dark"] .stars b{opacity:.55;filter:grayscale(1) brightness(.55)}
+:root[data-theme="dark"] svg polygon[fill="#a8adb3"]{fill:#4a566e}

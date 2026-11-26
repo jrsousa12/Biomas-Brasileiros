@@ -10,9 +10,11 @@ function resumo(){
 }
 function vResult(){
  var done=BIOMES.filter(function(b){return S.trails[b.id]}).length;
- var rows=BIOMES.map(function(b){var r=S.trails[b.id];return '<tr><td>'+b.emoji+' '+b.nome+'</td><td>'+(r?r.best+'/'+r.total+' '+medal(b):'—')+'</td></tr>'}).join("");
- return headerHTML("Meu resultado 📋",esc(S.name||""))+'<main><div class="card"><table class="t"><tr><th>Trilha</th><th>Melhor resultado</th></tr>'+rows+'<tr><td>🏆 Desafio final</td><td>'+S.final+'/10</td></tr><tr><td>🃏 Cartas</td><td>'+S.cards.length+'/'+totalCartas()+'</td></tr><tr><td>🔁 Para revisar</td><td>'+S.wrong.length+'</td></tr></table></div>'+
- '<div class="card"><b>Para o professor</b><div class="small">Mostre esta tela ou copie o resumo abaixo e envie por mensagem. Os dados ficam salvos neste aparelho.</div><pre class="code" id="rs">'+esc(resumo())+'</pre><button class="btn" onclick="copyRes()">📋 Copiar resumo</button></div>'+
+ function lin(em,nome,txt,pct,c){return '<div class="res-lin"><div class="res-top"><span>'+em+' '+nome+'</span><b>'+txt+'</b></div><div class="barra" style="--bc:'+c+'"><i style="width:'+pct+'%"></i></div></div>'}
+ var rows=BIOMES.map(function(b){var r=S.trails[b.id];return lin(b.emoji,b.nome,r?r.best+'/'+r.total+' '+medal(b):'—',r?Math.round(100*r.best/r.total):0,b.c2)}).join("");
+ rows+=lin('🏆','Desafio final',S.final+'/10',S.final*10,'#e0a800')+lin('🃏','Cartas',S.cards.length+'/'+totalCartas(),Math.round(100*S.cards.length/totalCartas()),'#8a4fd6');
+ return headerHTML("Meu resultado 📋",esc(S.name||""))+'<main><div class="card">'+rows+'<div class="small" style="margin-top:6px">🔁 Para revisar: <b>'+S.wrong.length+'</b></div></div>'+
+ '<details class="card prof"><summary>👩‍🏫 Para o professor</summary><div class="small">Mostre esta tela ou copie o resumo abaixo e envie por mensagem. Os dados ficam salvos neste aparelho.</div><pre class="code" id="rs">'+esc(resumo())+'</pre><button class="btn" onclick="copyRes()">📋 Copiar resumo</button></details>'+
  (done===6?'<button class="btn" onclick="go(\'cert\')">🎓 Meu certificado de Guardião dos Biomas</button>':'<div class="small" style="text-align:center">Conclua as 6 trilhas ('+done+'/6) para liberar o certificado.</div>')+
  '<button class="btn sec" onclick="go(\'relatorio\')">🖨️ Relatório para imprimir</button>'+
  '<button class="btn sec" onclick="go(\'fontes\')">📚 Fontes do conteúdo</button>'+
