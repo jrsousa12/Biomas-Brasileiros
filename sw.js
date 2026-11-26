@@ -29,6 +29,7 @@ const FILES = [
   "./js/tema.js",
   "./js/modo.js",
   "./js/acesso.js",
+  "./js/telas/relampago.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
   "./js/sessao.js",

@@ -12,6 +12,7 @@
   if(view==="quiz"&&Q)return askQuit();
   if(view==="home"||view==="name")return perguntarSair();
   if(view==="relatorio"||view==="turma")return go("result");
+  if(view==="relampago"){if(!relampagoParar())go("home");return}
   if(view==="estudar"){if(!estudarVoltar())estudarSair();return}
   go("home");
  }

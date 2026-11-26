@@ -32,6 +32,7 @@ function render(){
  else if(view==="estudar")h=vEstudar();
  else if(view==="turma")h=vTurma();
  else if(view==="compara")h=vCompara();
+ else if(view==="relampago")h=vRelampago();
  document.getElementById("app").innerHTML=h;
  renderNav();
  sessSave();
