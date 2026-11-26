@@ -44,6 +44,8 @@ const FILES = [
   "./js/telas/resultado.js",
   "./js/quiz-pares.js",
   "./js/telas/glossario.js",
+  "./js/dados/bncc.js",
+  "./js/bncc.js",
   "./js/telas/relatorio.js",
   "./js/qual-bioma.js",
   "./js/dados/biomas/amazonia-extra.js",

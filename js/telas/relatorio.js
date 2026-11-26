@@ -35,6 +35,7 @@ function vRelatorio(){
  '<main class="relatorio-pagina"><section class="card relatorio-resumo"><h2>'+esc(S.name||"Aluno(a)")+'</h2>'+
  '<div class="relatorio-linha"><span><strong>XP:</strong> '+S.xp+'</span><span><strong>Nível '+(l+1)+':</strong> '+esc(LNAMES[l])+"</span></div></section>"+
  "<section><h2>Trilhas</h2>"+relTrilhasHTML()+"</section>"+
+ "<section><h2>Habilidades BNCC</h2>"+bnccHTML()+"</section>"+
  '<section><h2>Mitos e verdades</h2><div class="card"><strong>'+relMitosCertos()+" de "+MITOS.length+" acertados</strong></div></section>"+
  "<section><h2>Desafio final</h2>"+relFinalHTML()+"</section>"+
  "<section><h2>Questões para revisar</h2>"+relErradasHTML()+"</section>"+
