@@ -10,7 +10,7 @@ function estrelas(b){var t=S.trails[b.id],p=t?t.best/t.total:-1,n=p>=0.9?3:p>=0.
 function guiaHTML(done){var m=done===0?"Escolha um bioma e vamos explorar juntos!":done===6?"Uau! Você fez as 6 trilhas! Que tal o Desafio final? 🏆":"Muito bem! Faltam "+(6-done)+" trilha"+(6-done>1?"s":"")+". Bora!";return '<div class="guia"><div class="av" aria-hidden="true">🦜</div><div class="balao">'+m+'</div></div>'}
 function medal(b){var t=S.trails[b.id];if(!t)return"";var p=t.best/t.total;return p>=0.9?"🥇":p>=0.7?"🥈":"🥉"}
 function atalho(ic,t,sub,fn){return '<button class="atalho" onclick="'+fn+'"><span class="ic">'+ic+'</span><span>'+t+(sub?'<br><small>'+sub+'</small>':'')+'</span></button>'}
-function atalhosHTML(){return atalho("🔁","Revisar meus erros",revResumo(),"startReview()")+atalho("🏅","Minhas medalhas","","go('medalhas')")+atalho("📖","Glossário","","go('glossario')")+atalho("🔗","Ligar pares","","startPares()")+atalho("🧭","Qual bioma sou eu?","","startQualBioma()")}
+function atalhosHTML(){return atalho("🔁","Revisar meus erros",revResumo(),"startReview()")+atalho("🏅","Minhas medalhas","","go('medalhas')")+atalho("📖","Glossário","","go('glossario')")+atalho("🔗","Ligar pares","","startPares()")+atalho("🧭","Qual bioma sou eu?","","startQualBioma()")+atalho("⚖️","Comparar biomas","","go('compara')")}
 function legendaHTML(){return '<ul class="legenda">'+BIOMES.map(function(b){return '<li onclick="startTrail(\''+b.id+'\')"><i style="background:'+b.c1+'"></i>'+b.nome+' <span>'+b.pct+'</span></li>'}).join("")+'</ul>'}
 function vHome(){
  var bar=BIOMES.map(function(b){return '<b title="'+b.nome+'" style="width:'+b.pct.replace(",",".").replace("%","")+'%;background:'+b.c1+'" onclick="startTrail(\''+b.id+'\')"></b>'}).join("");

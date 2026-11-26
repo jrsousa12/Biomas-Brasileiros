@@ -56,6 +56,7 @@ const FILES = [
   "./js/reveja.js",
   "./js/turma-codigo.js",
   "./js/telas/turma.js",
+  "./js/telas/compara.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",
