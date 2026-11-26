@@ -151,6 +151,19 @@ Crie js/telas/relampago.js com vRelampago(). É um desafio de 60 segundos com pe
 - Tudo que vem de dados passa por esc(). Fonte grande, botões com no mínimo 44 px, pensado para celular. Até 200 linhas; CSS só se precisar, em css/relampago.css, com classes prefixadas por relampago-.
 ```
 
+**P13 – Modo projetor**
+```
+Crie js/telas/projetor.js com vProjetor(). É um modo para o professor projetar a pergunta na lousa e a turma responder em voz alta ou levantando a mão. NÃO grava nada do aluno.
+- Escolha: tela com um botão por bioma (BIOMES[], emoji + nome) e um botão "🌎 Todos os biomas". Depois, botão "▶ Começar". Monte o banco com as perguntas q de tipo "mc" e "tf" (ignore "order"), embaralhe uma cópia com shuffle() e sorteie sem repetir.
+- Estado: var PJ={fase:"escolha",bioma:"todos",fila:[],i:0,mostra:false,total:10}. fase: "escolha" | "jogo" | "fim". Partida de 10 perguntas.
+- Jogo: pergunta em fonte MUITO grande (mínimo 2rem, texto centralizado, alto contraste, cor do bioma da pergunta) e opções A, B, C, D (ou VERDADEIRO / FALSO) em blocos grandes. Mostre "Pergunta 3 de 10". Botão "👁 Mostrar resposta": destaca a certa em verde, esmaece as outras e mostra a explicação (campo e) em fonte grande. Depois, botão "➡ Próxima". Botão "⬅ Anterior" também. Sem tempo, sem pontos, sem XP.
+- Fim: "Fim da rodada!", botões "🔁 Outra rodada" e "⬅ Voltar" (go("home")).
+- Botão "⛶ Tela cheia" que usa document.documentElement.requestFullscreen quando existir (sem erro se não existir).
+- Não use nem altere S.xp, S.wrong, S.got, S.rev nem qualquer campo de S; não chame save().
+- projetorParar(): volta PJ à fase "escolha" (zera fila e i) e retorna true se estava em "jogo", senão false. (O botão voltar do celular vai usar isso.)
+- Tudo que vem de dados passa por esc(). Pensado para tela grande, mas também deve caber no celular. Até 200 linhas; CSS só se precisar, em css/projetor.css, com classes prefixadas por projetor-.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
