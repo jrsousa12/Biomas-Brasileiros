@@ -11,7 +11,7 @@
   if(view==="lesson"&&TR){if(TR.step>0)lessonPrev();else go("home");return}
   if(view==="quiz"&&Q)return askQuit();
   if(view==="home"||view==="name")return perguntarSair();
-  if(view==="relatorio")return go("result");
+  if(view==="relatorio"||view==="turma")return go("result");
   if(view==="estudar"){if(!estudarVoltar())estudarSair();return}
   go("home");
  }

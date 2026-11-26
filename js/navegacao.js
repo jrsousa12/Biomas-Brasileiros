@@ -1,7 +1,7 @@
 "use strict";
 /* ============ NAVEGAÇÃO ============ */
 var view="home",TR=null,Q=null,tab="home";
-function go(v){view=v;if(["home","cards","mitos","final","result"].indexOf(v)>=0)tab=v;render();window.scrollTo(0,0)}
+function go(v){pararFala();view=v;if(["home","cards","mitos","final","result"].indexOf(v)>=0)tab=v;render();window.scrollTo(0,0)}
 function renderNav(){
  var items=[["home","🗺️","Trilhas"],["cards","🃏","Cartas"],["mitos","🧐","Mitos"],["final","🏆","Desafio"],["result","📋","Resultado"]];
  document.getElementById("nav").innerHTML=items.map(function(i){return '<button class="'+(tab===i[0]?"on":"")+'" onclick="go(\''+i[0]+'\')"><span>'+i[1]+'</span>'+i[2]+'</button>'}).join("");
@@ -9,7 +9,7 @@ function renderNav(){
 }
 function headerHTML(title,sub){
  var l=level(),lo=LEVELS[l],hi=LEVELS[l+1]||LEVELS[l]+1,pc=l>=LEVELS.length-1?100:Math.min(100,Math.round((S.xp-lo)/(hi-lo)*100));
- return '<header class="top">'+modoBtnHTML()+'<h1>'+title+'</h1><div class="sub">'+(sub||"")+'</div><div class="xpbar"><i style="width:'+pc+'%"></i></div><div class="xpline"><span>Nível '+(l+1)+': '+LNAMES[l]+'</span><span>'+S.xp+' XP</span></div></header>';
+ return '<header class="top">'+ferramentasHTML()+'<h1>'+title+'</h1><div class="sub">'+(sub||"")+'</div><div class="xpbar"><i style="width:'+pc+'%"></i></div><div class="xpline"><span>Nível '+(l+1)+': '+LNAMES[l]+'</span><span>'+S.xp+' XP</span></div></header>';
 }
 function render(){
  setTheme("#1b8a4b","#0d5c33");
@@ -30,6 +30,7 @@ function render(){
  else if(view==="qualBioma")h=vQualBioma();
  else if(view==="relatorio")h=vRelatorio();
  else if(view==="estudar")h=vEstudar();
+ else if(view==="turma")h=vTurma();
  document.getElementById("app").innerHTML=h;
  renderNav();
  sessSave();

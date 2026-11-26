@@ -14,7 +14,9 @@ function vResult(){
  var rows=BIOMES.map(function(b){var r=S.trails[b.id];return lin(b.emoji,b.nome,r?r.best+'/'+r.total+' '+medal(b):'—',r?Math.round(100*r.best/r.total):0,b.c2)}).join("");
  rows+=lin('🏆','Desafio final',S.final+'/10',S.final*10,'#e0a800')+lin('🃏','Cartas',S.cards.length+'/'+totalCartas(),Math.round(100*S.cards.length/totalCartas()),'#8a4fd6');
  return headerHTML("Meu resultado 📋",esc(S.name||""))+'<main><div class="card">'+rows+'<div class="small" style="margin-top:6px">🔁 Para revisar: <b>'+S.wrong.length+'</b></div></div>'+
- '<details class="card prof"><summary>👩‍🏫 Para o professor</summary><div class="small">Mostre esta tela ou copie o resumo abaixo e envie por mensagem. Os dados ficam salvos neste aparelho.</div><pre class="code" id="rs">'+esc(resumo())+'</pre><button class="btn" onclick="copyRes()">📋 Copiar resumo</button></details>'+
+ '<details class="card prof"><summary>👩‍🏫 Para o professor</summary><div class="small">Mostre esta tela ou copie o resumo abaixo e envie por mensagem. Os dados ficam salvos neste aparelho.</div><pre class="code" id="rs">'+esc(resumo())+'</pre><button class="btn" onclick="copyRes()">📋 Copiar resumo</button>'+
+ '<div class="small" style="margin-top:10px">Para o <b>Painel da turma</b>, envie o código:</div><button class="btn" id="codBtn" onclick="copiarCodigo()">🔑 Copiar código</button>'+
+ '<button class="btn sec" onclick="go(\'turma\')">👩‍🏫 Painel do professor</button></details>'+
  (done===6?'<button class="btn" onclick="go(\'cert\')">🎓 Meu certificado de Guardião dos Biomas</button>':'<div class="small" style="text-align:center">Conclua as 6 trilhas ('+done+'/6) para liberar o certificado.</div>')+
  '<button class="btn sec" onclick="go(\'relatorio\')">🖨️ Relatório para imprimir</button>'+
  '<button class="btn sec" onclick="go(\'fontes\')">📚 Fontes do conteúdo</button>'+

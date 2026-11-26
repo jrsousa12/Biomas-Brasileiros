@@ -28,6 +28,7 @@ const FILES = [
   "./js/estado.js",
   "./js/tema.js",
   "./js/modo.js",
+  "./js/acesso.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
   "./js/sessao.js",
@@ -50,6 +51,8 @@ const FILES = [
   "./js/telas/estudar.js",
   "./js/dados/secoes.js",
   "./js/reveja.js",
+  "./js/turma-codigo.js",
+  "./js/telas/turma.js",
   "./js/main.js",
   "./js/pwa.js",
   "./icons/icon.svg",
@@ -60,7 +63,9 @@ const FILES = [
   "./css/relatorio.css",
   "./css/home2.css",
   "./css/quiz2.css",
-  "./css/estudar.css"
+  "./css/estudar.css",
+  "./css/acesso.css",
+  "./css/turma.css"
 ];
 
 self.addEventListener("install", (e) => {

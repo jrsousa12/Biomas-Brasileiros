@@ -1,0 +1,11 @@
+/* Painel do professor (js/telas/turma.js) */
+.turma-txt{width:100%;box-sizing:border-box;margin-top:10px;padding:10px;border:3px solid var(--line);border-radius:12px;font:14px/1.4 monospace;background:var(--card);color:var(--ink);resize:vertical}
+.turma-rola{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.turma{border-collapse:collapse;width:100%;font-size:14px}
+table.turma th,table.turma td{border:1px solid var(--line);padding:6px 5px;text-align:center;white-space:nowrap}
+table.turma td.nome{text-align:left;font-weight:800;white-space:normal;min-width:80px}
+table.turma td.bom{background:var(--okbg);color:var(--ok);font-weight:800}
+table.turma td.fraco{background:var(--badbg);color:var(--bad);font-weight:800}
+table.turma tr.media td{font-weight:900;background:var(--c3);color:var(--tx)}
+.turma-erros{margin:6px 0 0;padding-left:22px}
+.turma-erros li{margin:6px 0;font-size:15px}

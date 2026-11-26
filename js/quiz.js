@@ -12,7 +12,7 @@ function prepQ(){
 function vQuiz(){
  var q=Q.list[Q.i],c=Q.color;setTheme(c[0],c[1]);
  var pc=Math.round(Q.i/Q.list.length*100);
- var h='<header class="top" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')"><h1>'+Q.title+'</h1><div class="sub">Questão '+(Q.i+1)+' de '+Q.list.length+'</div></header><main><div class="prog"><i style="width:'+pc+'%"></i></div><div class="card"><div class="q">'+q.q+'</div>';
+ var h='<header class="top" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')">'+ferramentasHTML()+'<h1>'+Q.title+'</h1><div class="sub">Questão '+(Q.i+1)+' de '+Q.list.length+'</div></header><main><div class="prog"><i style="width:'+pc+'%"></i></div><div class="card"><div class="q">'+q.q+'</div>';
  if(q.t==="mc"){
   h+=Q.opts.map(function(o,i){
    var cls="";if(Q.ans){if(o.ok)cls="right";else if(Q.sel===i)cls="wrong"}

@@ -9,6 +9,8 @@ const LARGURAS = [320, 390, 560];
 /* Roda dentro da página: devolve a lista de falhas encontradas. */
 function inspecionar() {
   const falhas = [];
+  /* Caixa com rolagem lateral proposital (ex.: tabela da turma): o que fica fora dela não conta. */
+  const dentroDeRolagem = el => { for (let p = el.parentElement; p && p !== document.body; p = p.parentElement) if (/auto|scroll/.test(getComputedStyle(p).overflowX)) return true; return false; };
   const nome = el => (el.tagName.toLowerCase() + (el.className && typeof el.className == "string" ? "." + el.className.trim().split(/\s+/).join(".") : "")) +
     ' "' + (el.textContent || "").trim().slice(0, 30) + '"';
   const rgb = s => { const m = s.match(/[\d.]+/g) || [0, 0, 0, 0]; return { r: +m[0], g: +m[1], b: +m[2], a: m[3] == null ? 1 : +m[3] }; };
@@ -37,7 +39,7 @@ function inspecionar() {
     const temTexto = [...el.childNodes].some(n => n.nodeType == 3 && /[A-Za-zÀ-ú0-9]/.test(n.textContent));
     if (temTexto) {
       if (el.scrollWidth > el.clientWidth + 1 && st.overflowX != "visible") falhas.push("Texto cortado: " + nome(el));
-      if (r.right > W + 1 || r.left < -1) falhas.push("Sai da tela: " + nome(el));
+      if ((r.right > W + 1 || r.left < -1) && !dentroDeRolagem(el)) falhas.push("Sai da tela: " + nome(el));
       const ct = Math.min(...fundos(el).map(bg => { const L1 = lum(mistura(rgb(st.color), bg)), L2 = lum(bg); return (Math.max(L1, L2) + .05) / (Math.min(L1, L2) + .05); }));
       const px = parseFloat(st.fontSize), negrito = +st.fontWeight >= 700;
       const grande = px >= 24 || (negrito && px >= 18.66);

@@ -20,7 +20,9 @@ const TELAS = [
   ["cartas", 'go("cards")'], ["mitos", 'go("mitos")'], ["desafio", 'go("final")'],
   ["resultado", 'go("result")'], ["fontes", 'go("fontes")'], ["certificado", 'go("cert")'],
   ["medalhas", 'go("medalhas")'], ["glossario", 'go("glossario")'], ["relatorio", 'go("relatorio")'],
-  ["pares", "startPares()"], ["qual-bioma", "startQualBioma()"]
+  ["turma", 'S.trails.amz={best:7,total:8,tries:1};S.wrong=["amz3"];localStorage.setItem("biomas7_turma",turmaCodigo());go("turma")'],
+  ["pares", "startPares()"], ["qual-bioma", "startQualBioma()"],
+  ["letra-grande", 'localStorage.setItem("biomas7_letra","2");aplicaLetra("2");startQualBioma()']
 ];
 (async () => {
   const nav = await chromium.launch();
