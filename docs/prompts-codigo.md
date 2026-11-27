@@ -164,6 +164,20 @@ Crie js/telas/projetor.js com vProjetor(). É um modo para o professor projetar 
 - Tudo que vem de dados passa por esc(). Pensado para tela grande, mas também deve caber no celular. Até 200 linhas; CSS só se precisar, em css/projetor.css, com classes prefixadas por projetor-.
 ```
 
+**P14 – Níveis fácil / médio / desafio** (cole junto js/trilha.js, o arquivo que sorteia as 8 perguntas)
+```
+Crie js/niveis.js com a lógica de níveis. NÃO altere os arquivos de perguntas: o nível fica num arquivo de dados à parte, igual ao mapa pergunta→seção SECAO_Q.
+- Dados: js/dados/niveis.js (você cria com valores de exemplo) define var NIVEL_Q={amz:"f,m,d,m,...",cer:"...",...}: uma string por bioma, letras separadas por vírgula, na ORDEM das perguntas de BIOMES[].q. f=fácil, m=médio, d=desafio. Posição vazia ou além do fim da lista = médio. Pergunta nova acrescentada no FIM do banco fica "m" até alguém marcar.
+- nivelDe(q): devolve "f", "m" ou "d" para a pergunta. Descubra a posição pelo bioma e pelo q.id (o id é bioma+posição; se não conseguir, procure o índice em bio(id).q).
+- Estado novo em S: S.nivel="t" (t=todos, f, m, d). Inicialize com segurança. NÃO mude outros campos.
+- nivelDefinir(n): grava S.nivel, chama save() e render().
+- nivelFiltrar(lista): recebe uma lista de perguntas e devolve só as do nível escolhido. Se sobrar menos que 8 (ou menos que a quantidade pedida), complete com as de nível mais próximo (f↔m↔d) até chegar ao total, sem repetir. Com S.nivel==="t", devolve a lista sem mudar nada.
+- nivelSeletorHTML(): devolve 4 botões grandes (mínimo 44 px) "🎲 Todos", "🌱 Fácil", "🌿 Médio", "🔥 Desafio", com o atual em destaque, chamando nivelDefinir('t'|'f'|'m'|'d').
+- Pontos: nível NÃO muda o XP. Só o desafio mostra "🔥" ao lado da pergunta; essa função é nivelEmblema(q), que devolve "🔥" ou "".
+- No GANCHOS, diga exatamente em qual linha/função de trilha.js a chamada nivelFiltrar(...) deve entrar (antes do sorteio das 8) e em qual tela nivelSeletorHTML() deve aparecer (o início da trilha de cada bioma). Não reescreva trilha.js: só diga o trecho a mudar.
+- Tudo que vem de dados passa por esc(). Até 200 linhas; sem CSS novo, se possível; se precisar, css/niveis.css com classes prefixadas por niveis-.
+```
+
 ---
 
 ## Prompt R – Revisão (use numa conversa nova)
