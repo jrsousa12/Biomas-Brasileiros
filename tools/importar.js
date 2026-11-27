@@ -54,21 +54,24 @@ function gravar(arqDestino, listas) {
   if (!teste) fs.writeFileSync(arqDestino, t);
 }
 if (bioma && (novos.q.length || novos.sp.length)) {
-  // Destino: o "-extra" se já existe; senão o principal, a menos que estoure o limite (aí nasce o "-extra").
-  const simula = (re1, re2) => { let s = fs.readFileSync(bioma.arq, "utf8");
+  // Destino: principal → "-extra" → "-extra2": vai para o primeiro que ainda couber no limite de tamanho (o arquivo novo nasce na hora).
+  const RQ = /\bq\.push\.apply\(b\.q,\[/, RS = /\bsp\.push\.apply\(b\.sp,\[/;
+  const extra2 = bioma.extra.replace(/-extra\.js$/, "-extra2.js");
+  const passa = (f, re1, re2) => { let s = fs.readFileSync(f, "utf8");
     [[re1, novos.q, "q"], [re2, novos.sp, "sp"]].forEach(([re, it, tp]) => { if (it.length) s = inserirNoFim(s, re, it.map((o) => serializar(o, tp === "q" ? o.t : tp))); });
     return limite(s).passou; };
-  const usaExtra = fs.existsSync(bioma.extra) || simula(/\bq:\[/, /\bsp:\[/);
-  if (!usaExtra) gravar(bioma.arq, [[/\bq:\[/, novos.q, "q"], [/\bsp:\[/, novos.sp, "sp"]]);
+  const dest = fs.existsSync(extra2) ? extra2
+    : fs.existsSync(bioma.extra) ? (passa(bioma.extra, RQ, RS) ? extra2 : bioma.extra)
+    : passa(bioma.arq, /\bq:\[/, /\bsp:\[/) ? bioma.extra : bioma.arq;
+  if (dest === bioma.arq) gravar(dest, [[/\bq:\[/, novos.q, "q"], [/\bsp:\[/, novos.sp, "sp"]]);
   else {
-    if (!fs.existsSync(bioma.extra)) {
-      if (!teste) fs.writeFileSync(bioma.extra, modeloExtra(bioma.id));
-      const rel = path.relative(ROOT, bioma.extra);
+    if (!fs.existsSync(dest)) {
+      if (!teste) fs.writeFileSync(dest, modeloExtra(bioma.id));
+      const rel = path.relative(ROOT, dest);
       console.log("Novo arquivo " + rel + " — rode: node tools/integrar.js " + rel + " --antes js/dados/mitos-fontes.js");
     }
-    const base = fs.existsSync(bioma.extra) ? bioma.extra : null;
-    if (base) gravar(base, [[/\bq\.push\.apply\(b\.q,\[/, novos.q, "q"], [/\bsp\.push\.apply\(b\.sp,\[/, novos.sp, "sp"]]);
-    else console.log("(simulação) iria para o arquivo -extra de " + bioma.nome);
+    if (fs.existsSync(dest)) gravar(dest, [[RQ, novos.q, "q"], [RS, novos.sp, "sp"]]);
+    else console.log("(simulação) iria para o arquivo " + path.basename(dest) + " de " + bioma.nome);
   }
 }
 if (novos.mito.length) gravar(ARQ_MITOS, [[/var MITOS=\[/, novos.mito, "mito"]]);

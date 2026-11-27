@@ -24,6 +24,8 @@ function carregar() {
     vm.runInContext(fs.readFileSync(path.join(DIR_BIOMAS, f), "utf8"), ctx);
     const extra = path.join(DIR_BIOMAS, f.replace(/\.js$/, "-extra.js"));
     if (fs.existsSync(extra)) vm.runInContext(fs.readFileSync(extra, "utf8"), ctx); // perguntas/espécies acrescentadas depois
+    const extra2 = extra.replace(/-extra\.js$/, "-extra2.js"); // quando o "-extra" também passa do limite
+    if (fs.existsSync(extra2)) vm.runInContext(fs.readFileSync(extra2, "utf8"), ctx);
     const b = ctx.BIOMES[0];
     return { id: b.id, nome: b.nome, arq: path.join(DIR_BIOMAS, f), extra, dados: b };
   });
