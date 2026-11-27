@@ -9,7 +9,7 @@ BIOMES.push(
  q:[
   {t:"mc",q:"Qual é o menor bioma brasileiro?",o:["Pampa","Caatinga","Pantanal","Cerrado"],a:2,e:"O Pantanal tem 1,8% do território."},
   {t:"tf",q:"Verdadeiro ou falso: o Pantanal fica alagado o ano inteiro.",a:false,e:"Falso. Ele alterna cheia e seca. Na seca, a água recua para as lagoas."},
-  {t:"mc",q:"O que é o “pulso de inundação” do Pantanal?",o:["Um terremoto que abala as margens dos rios","O ciclo de cheia e seca dos rios","A migração das aves que chegam em grande número","Um tipo de planta aquática típica da região"],a:1,e:"O ciclo anual de cheia e seca dos rios do bioma."},
+  {t:"mc",q:"O que é o “pulso de inundação” do Pantanal?",o:["Um alagamento fixo, que dura o ano todo","O ciclo de cheia e seca dos rios","A migração das aves que chegam em grande número","Um tipo de planta aquática típica da região"],a:1,e:"O ciclo anual de cheia e seca dos rios do bioma."},
   {t:"order",q:"Monte a cadeia alimentar, do produtor ao decompositor:",items:["Plantas aquáticas","Capivara","Onça-pintada","Fungos e bactérias"],e:"Plantas aquáticas alimentam a capivara, caçada pela onça-pintada. Os decompositores fecham o ciclo."},
   {t:"mc",q:"Qual é a ave símbolo do Pantanal?",o:["Tuiuiú","Arara-vermelha","Quero-quero","Tucano"],a:0,e:"O tuiuiú é a ave símbolo do Pantanal, de pescoço vermelho e grande porte."},
   {t:"mc",q:"Em quais estados brasileiros fica o Pantanal?",o:["AM e PA","MS e MT","RS e SC","BA e PI"],a:1,e:"Mato Grosso do Sul e Mato Grosso."},
