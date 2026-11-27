@@ -16,6 +16,6 @@ function vLesson(){
 function lessonNext(){
  var b=TR.b;
  if(TR.step<b.cards.length-1){TR.step++;render();window.scrollTo(0,0)}
- else{startQuiz({title:b.emoji+" "+b.nome,list:shuffle(b.q.slice()).slice(0,8),color:[b.c1,b.c2],mode:"trail",bid:b.id})}
+ else{startQuiz({title:b.emoji+" "+b.nome,list:nivelFiltrar(shuffle(b.q.slice()),8),color:[b.c1,b.c2],mode:"trail",bid:b.id})}
 }
 function lessonPrev(){TR.step--;render();window.scrollTo(0,0)}

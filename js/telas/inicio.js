@@ -21,6 +21,6 @@ function vHome(){
  }).join("");
  return headerHTML("Olá, "+esc(S.name||"explorador(a)")+"! 👋","Escolha um bioma e comece sua trilha")+
  '<main>'+guiaHTML(done)+seqHTML()+sessCardHTML()+'<div class="card"><div class="small"><b>O Brasil dividido em biomas</b> (toque numa faixa)</div><div class="landbar">'+bar+'</div>'+legendaHTML()+'<div class="small">Faixas proporcionais à área de cada bioma (IBGE, 2019).</div></div>'+'<div class="card"><div class="small"><b>🗺️ Mapa do seu progresso</b> (cinza = trilha ainda não feita)</div>'+mapaHTML()+'</div>'+
- '<h2>Suas trilhas <span class="small">('+done+'/6 concluídas)</span></h2><div class="tiles">'+tiles+'</div>'+
+ nivelSeletorHTML()+'<h2>Suas trilhas <span class="small">('+done+'/6 concluídas)</span></h2><div class="tiles">'+tiles+'</div>'+
  '<h2>Mais para explorar</h2><div class="atalhos">'+atalhosHTML()+'</div></main>';
 }
