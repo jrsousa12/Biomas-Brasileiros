@@ -2,9 +2,7 @@
 "use strict";
 (function(b){
 b.q.push.apply(b.q,[
- {t:"mc",q:"Qual árvore é um dos símbolos da Mata Atlântica e deu nome ao país?",o:["Seringueira","Pau-brasil","Araucária","Castanheira"],a:1,e:"O pau-brasil foi muito explorado nos primeiros séculos da colonização."},
  {t:"mc",q:"Qual animal da Mata Atlântica é um pequeno primata ameaçado de extinção?",o:["Mico-leão-dourado","Tamanduá-bandeira","Capivara","Arara-azul"],a:0,e:"O mico-leão-dourado vive em áreas de Mata Atlântica do Sudeste."},
- {t:"mc",q:"Como costuma ser a umidade em grande parte da Mata Atlântica?",o:["Muito baixa","Variável apenas no inverno","Alta durante boa parte do ano","Nula perto dos rios"],a:2,e:"A presença de vegetação densa ajuda a manter o ambiente úmido."},
  {t:"mc",q:"O que é um fragmento de Mata Atlântica?",o:["Uma floresta totalmente submersa","Uma parte isolada da floresta","Uma montanha coberta de neve","Uma área sem vegetação"],a:1,e:"Muitos trechos da Mata Atlântica ficaram separados ao longo do tempo."},
  {t:"mc",q:"Qual formação vegetal da Mata Atlântica ocorre em áreas mais frias do Sul do Brasil?",o:["Manguezal","Restinga","Floresta com araucárias","Caatinga"],a:2,e:"A araucária é característica de regiões mais elevadas e frias."},
  {t:"mc",q:"Qual ambiente costeiro pode fazer parte do domínio da Mata Atlântica?",o:["Manguezal","Pantanal","Campo alagado","Vereda"],a:0,e:"Os manguezais são importantes para muitas espécies de peixes e aves."},
@@ -15,7 +13,6 @@ b.q.push.apply(b.q,[
  {t:"tf",q:"Verdadeiro ou falso: Toda a Mata Atlântica permanece preservada como era originalmente.",a:false,e:"Falso. Grande parte da vegetação original foi modificada ao longo do tempo."},
  {t:"tf",q:"Verdadeiro ou falso: Manguezais podem estar associados à Mata Atlântica.",a:true,e:"Verdadeiro. Eles fazem parte de ambientes costeiros ligados ao bioma."},
  {t:"order",q:"Coloque em ordem: crescimento de uma árvore da Mata Atlântica.",items:["Semente","Broto","Árvore jovem","Árvore adulta"],e:"O desenvolvimento das árvores ocorre em etapas sucessivas."},
- {t:"order",q:"Coloque em ordem: caminho da água até um rio.",items:["Chuva","Infiltração no solo","Nascentes","Rio"],e:"A água da chuva pode alimentar nascentes e rios."},
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples da Mata Atlântica.",items:["Fruto","Inseto","Ave","Gavião"],e:"A energia passa dos produtores para os consumidores em sequência."}
 ]);
 b.sp.push.apply(b.sp,[

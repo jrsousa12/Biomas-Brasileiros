@@ -2,15 +2,12 @@
 "use strict";
 (function(b){
 b.q.push.apply(b.q,[
- {t:"mc",q:"Qual fenômeno ajuda a Amazônia a distribuir umidade para outras regiões do Brasil?",o:["Ondas de calor","Rios voadores","Correntes marítimas","Marés fluviais"],a:1,e:"Os rios voadores são fluxos de vapor de água transportados pela atmosfera."},
- {t:"mc",q:"Qual tipo de solo é comum em muitas áreas da Amazônia?",o:["Solo muito fértil em toda parte","Solo rico em calcário","Solo geralmente pobre em nutrientes","Solo coberto por gelo"],a:2,e:"Grande parte dos solos amazônicos tem poucos nutrientes disponíveis."},
  {t:"mc",q:"O que são plantas epífitas encontradas na Amazônia?",o:["Plantas que vivem sobre outras plantas","Plantas que crescem apenas na água salgada","Plantas que vivem enterradas","Plantas sem folhas"],a:0,e:"Epífitas usam outras plantas como apoio, sem retirar delas seu alimento."},
  {t:"mc",q:"Qual animal da Amazônia é conhecido por viver em grupos barulhentos nas copas das árvores?",o:["Peixe-boi","Macaco-guariba","Tartaruga-da-amazônia","Arraia"],a:1,e:"O macaco-guariba é famoso por seus chamados fortes."},
  {t:"mc",q:"Qual é a principal origem da água dos rios amazônicos?",o:["Chuva","Degelo de geleiras locais","Água do mar","Nascentes termais"],a:0,e:"As chuvas abundantes abastecem os rios da região."},
  {t:"mc",q:"Quem são os povos indígenas da Amazônia?",o:["Habitantes recentes das capitais","Povos originários da região","Somente trabalhadores rurais","Moradores de outros países"],a:1,e:"Os povos indígenas vivem na Amazônia há muito tempo e possuem culturas diversas."},
  {t:"mc",q:"Qual atividade representa uma ameaça à floresta quando ocorre de forma ilegal?",o:["Pesquisa científica","Ecoturismo","Extração ilegal de madeira","Observação de aves"],a:2,e:"A retirada ilegal de madeira pode causar degradação ambiental."},
  {t:"mc",q:"Qual é uma função das unidades de conservação na Amazônia?",o:["Expandir áreas urbanas","Proteger ambientes naturais","Construir hidrovias","Aumentar o desmatamento"],a:1,e:"Essas áreas ajudam a conservar espécies e ecossistemas."},
- {t:"mc",q:"Em uma floresta densa da Amazônia, o que costuma acontecer com a luz solar perto do chão?",o:["Fica mais intensa que no topo","Desaparece completamente","Chega filtrada pelas copas","Vem apenas à noite"],a:2,e:"As copas das árvores bloqueiam parte da luz que chega ao solo."},
  {t:"tf",q:"Verdadeiro ou falso: A Amazônia abriga grande variedade de espécies de seres vivos.",a:true,e:"Verdadeiro. A região é conhecida por sua alta biodiversidade."},
  {t:"tf",q:"Verdadeiro ou falso: Todos os rios da Amazônia têm águas da mesma cor.",a:false,e:"Falso. Existem rios com diferentes características e colorações."},
  {t:"tf",q:"Verdadeiro ou falso: Áreas protegidas podem contribuir para a conservação da floresta amazônica.",a:true,e:"Verdadeiro. Elas ajudam a preservar espécies e habitats."},
