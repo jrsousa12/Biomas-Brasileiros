@@ -16,5 +16,9 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: níveis de uma cadeia alimentar amazônica.",items:["Planta aquática","Peixe herbívoro","Peixe maior","Boto"],e:"A energia passa dos produtores para consumidores em diferentes níveis."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Uacari-branco",e:"🐒",st:"Vulnerável",f:"Tem rosto vermelho e vive em grupos nas copas."},
+ {n:"Jacu-estalo",e:"🐦",st:"",f:"Ajuda a espalhar sementes ao se alimentar de frutos."},
+ {n:"Andiroba",e:"🌳",st:"",f:"Suas sementes produzem um óleo muito utilizado na região."},
+ {n:"Açaizeiro",e:"🌴",st:"",f:"Produz frutos roxos muito consumidos na Amazônia."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="amz";})[0]);

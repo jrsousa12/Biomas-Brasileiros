@@ -16,5 +16,6 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples da Caatinga.",items:["Planta","Inseto","Lagarto","Serpente"],e:"A energia passa dos produtores para os consumidores em sequência."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Mandacaru",e:"🌵",st:"",f:"Armazena água no caule para resistir à seca."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="caa";})[0]);

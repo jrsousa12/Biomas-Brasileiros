@@ -16,5 +16,6 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples do Pantanal.",items:["Planta aquática","Peixe pequeno","Jacaré","Onça-pintada"],e:"A energia é transferida entre os níveis da cadeia alimentar."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Arara-azul-grande",e:"🦜",st:"Vulnerável",f:"Usa cocos de palmeiras como importante fonte de alimento."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="pan";})[0]);

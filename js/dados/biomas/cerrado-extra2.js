@@ -18,5 +18,7 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples do Cerrado.",items:["Capim","Gafanhoto","Seriema","Onça-pintada"],e:"A energia passa dos produtores para os consumidores em sequência."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Ipê-amarelo",e:"🌼",st:"",f:"Suas flores amarelas aparecem com destaque na estação seca."},
+ {n:"Baruzeiro",e:"🌳",st:"",f:"Produz o baru, uma semente muito apreciada na região."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="cer";})[0]);

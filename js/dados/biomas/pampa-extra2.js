@@ -15,5 +15,6 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples do Pampa.",items:["Capim","Gafanhoto","Ave","Gavião"],e:"A energia passa dos produtores para diferentes consumidores."},
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Capim-flechilha",e:"🌾",st:"",f:"É uma gramínea típica dos campos do Pampa."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="pam";})[0]);

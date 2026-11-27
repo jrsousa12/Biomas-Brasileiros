@@ -16,5 +16,6 @@ b.q.push.apply(b.q,[
  {t:"order",q:"Coloque em ordem: cadeia alimentar simples da Mata Atlântica.",items:["Fruto","Inseto","Ave","Gavião"],e:"A energia passa dos produtores para os consumidores em sequência."}
 ]);
 b.sp.push.apply(b.sp,[
+ {n:"Jacutinga",e:"🐦",st:"Em perigo",f:"Ajuda a espalhar sementes pela floresta."}
 ]);
 })(BIOMES.filter(function(x){return x.id==="mat";})[0]);
