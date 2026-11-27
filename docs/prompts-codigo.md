@@ -164,7 +164,7 @@ Crie js/telas/projetor.js com vProjetor(). É um modo para o professor projetar 
 - Tudo que vem de dados passa por esc(). Pensado para tela grande, mas também deve caber no celular. Até 200 linhas; CSS só se precisar, em css/projetor.css, com classes prefixadas por projetor-.
 ```
 
-**P14 – Níveis fácil / médio / desafio** (cole junto js/trilha.js, o arquivo que sorteia as 8 perguntas)
+**P14 – Níveis fácil / médio / desafio** (cole junto js/telas/trilha.js, o arquivo que sorteia as 8 perguntas)
 ```
 Crie js/niveis.js com a lógica de níveis. NÃO altere os arquivos de perguntas: o nível fica num arquivo de dados à parte, igual ao mapa pergunta→seção SECAO_Q.
 - Dados: js/dados/niveis.js (você cria com valores de exemplo) define var NIVEL_Q={amz:"f,m,d,m,...",cer:"...",...}: uma string por bioma, letras separadas por vírgula, na ORDEM das perguntas de BIOMES[].q. f=fácil, m=médio, d=desafio. Posição vazia ou além do fim da lista = médio. Pergunta nova acrescentada no FIM do banco fica "m" até alguém marcar.
