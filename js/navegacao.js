@@ -36,5 +36,6 @@ function render(){
  else if(view==="projetor")h=vProjetor();
  document.getElementById("app").innerHTML=h;
  renderNav();
+ leitorAplicar();
  sessSave();
 }

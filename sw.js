@@ -35,6 +35,7 @@ const FILES = [
   "./js/tema.js",
   "./js/modo.js",
   "./js/acesso.js",
+  "./js/leitor.js",
   "./js/telas/relampago.js",
   "./js/navegacao.js",
   "./js/dialogo.js",
@@ -79,6 +80,7 @@ const FILES = [
   "./css/quiz2.css",
   "./css/estudar.css",
   "./css/acesso.css",
+  "./css/leitor.css",
   "./css/turma.css"
 ];
 

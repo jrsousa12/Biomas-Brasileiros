@@ -1,0 +1,5 @@
+/* Leitor (js/leitor.js): botão Ouvir e palavra destacada */
+.ouvir{display:block;margin:0 0 8px auto;min-height:44px;padding:8px 16px;border:2px solid var(--c1,#1b8a4b);border-radius:18px;background:var(--card,#fff);color:var(--ink,#222);font-family:inherit;font-size:14px;font-weight:800;cursor:pointer}
+.ouvir-bloco.lendo>.ouvir{background:var(--c1,#1b8a4b);color:#fff}
+.lw.on{background:#ffe066;color:#222;border-radius:4px;box-shadow:0 0 0 2px #ffe066}
+@media print{.ouvir{display:none}}
